@@ -16,4 +16,10 @@ class ApplicationController < ActionController::Base
   		return false
   	end
   end
+
+  def inviteFriends
+    @invitedFriends = Invitefriend.where(:user_id => current_user.id).pluck(:inviteid)
+    return @invitedFriends
+  end
+
 end
