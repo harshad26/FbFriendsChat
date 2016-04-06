@@ -34,3 +34,34 @@ table caption {
   padding-top: 140px;
   font-size: 14px;
 }
+
+.alignment {
+	text-align: center;
+}
+
+.table > tbody > tr > td {
+	border-top: none;
+}
+
+span.glyphicon {
+	font-size: 24px;
+}
+
+.icon-margin {
+	margin: 10px;
+}
+
+.navbar-default-bottom {
+	background-color: #f8f8f8;
+	border-color: #e7e7e7;
+}
+
+.navbar-default-bottom .navbar-collapse,
+.navbar-default-bottom .navbar-collapse ul {
+	width: 100%;
+}
+
+.navbar-default-bottom .navbar-collapse ul li {
+	width: 33%;
+	text-align: center;
+}

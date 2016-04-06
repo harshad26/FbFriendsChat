@@ -1,34 +1,39 @@
-<h2>Friend List</h2>
+<!-- <h2>Friend List</h2> -->
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
       <div class="table-responsive">
-        <table >
+        <table width="100%" class="table">
           <tbody>
-          	<% @fb_friends.in_groups_of(3, false).each do |fb_friend| %>
+          	<% if @fb_friends %>
+          		<% @fb_friends.in_groups_of(3, false).each_with_index do |fb_friend, index| %>
 	            <tr>
 	              <div class="row">
-						      <div class='float-left fb-avatar-section'>
-						      	<% fb_friend.each do |item| %>
-						      		<td>
-								        <div class="item">
-								          <%= image_tag "http://graph.facebook.com/#{item.identifier}/picture", :class => 'float-left' %>
-													<div class='float-left fb-avatar-desc'>
-														<div class='float-left full-width fb-avatar-name' id="fb_name_<%= item.identifier%>">
-															<%= item.raw_attributes['name'] %>
-														</div>
-													<div>
-								        </div>
-							       	</td>
-							      <% end %>
-									</div>
-								</div>	
+			      	<div class='fb-avatar-section'>
+			      		<% fb_friend.each do |item| %>
+			      			<% #if !@invitedusers.include? item.raw_attributes['id'] %>
+					      		<td width="33%">
+							        <div class="alignment fb-photo">
+							        	<%= image_tag "http://graph.facebook.com/#{item.identifier}/picture", :class => 'float-left fbphoto', :id => item.raw_attributes['id'] %>
+											<div class='float-left fb-avatar-desc'>
+												<div class='float-left full-width fb-avatar-name' id="fb_name_<%= item.identifier%>">
+													<%= item.raw_attributes['name'] %>
+												</div>
+											<div>							
+							        </div>
+						       	</td>
+						    <% # => end %>
+				      	<% end %>
+						</div>
+					</div>	
 	            </tr>
 	          <% end %>
+	        <% else %>
+	        	No friends found in your account.
+	        <% end %>
           </tbody>
         </table>
       </div><!--end of .table-responsive-->
     </div>
   </div>
 </div>
-

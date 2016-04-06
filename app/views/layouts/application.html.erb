@@ -46,7 +46,7 @@
           <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand" href="#">FbFriendsChat</a>
-        <div class="navbar-collapse collapse navbar-responsive-collapse">
+        <div class="navbar-collapse collapse navbar-responsive-collapse pull-right">
           <ul class="nav navbar-nav">
             <li>
               <% if current_user %>
@@ -55,8 +55,6 @@
                 <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
               <% end %>
             </li>
-            <li><%= link_to "Link2", "/path2"  %></li>
-            <li><%= link_to "Link3", "/path3"  %></li>
           </ul>
         </div>
       </div>
@@ -68,9 +66,28 @@
           <%= bootstrap_flash %>
           <%= yield %>
         </div>
-        
-
-    </div> <!-- /container -->
-
+      </div> <!-- /container -->
+    </div>
+    <% if current_user %>
+      <%= render  partial: "shared/footer" %>
+    <% end %>
   </body>
 </html>
+
+<script type="text/javascript">
+  $(function(){
+      $('.fbphoto').click(function() {
+          var fbid = $(this).attr('id');
+           $.ajax({
+                  type: "GET",
+                  url: '/users/invitefriend/' + fbid,
+                  dataType: "JSON",
+                  success: function(data) {
+                    if(data.text == "0") {
+                      alert("something went wrong");
+                    }
+                  }
+                });
+      });
+  });
+</script>
