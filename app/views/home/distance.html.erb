@@ -1,0 +1,32 @@
+<table width="100%" class="table">
+  	<tbody>
+	  	<tr>
+	  	<% if current_user.multi_friends %>
+	  		<% current_user.multi_friends.each do |item| %>
+	  		<% #abort item.inspect %>
+		  		<tr>
+		          	<div class="row">
+			      		<div class='fb-avatar-section'>
+				      		<td width="33%">
+						        <div class="alignment ">
+						        	<%= image_tag "http://graph.facebook.com/#{item[0]}/picture", :class => "float-left #{@classphoto}", :id => item[0] %>
+										<div class='float-left fb-avatar-desc'>
+											<div class='float-left full-width fb-avatar-name' id="fb_name_<%= item[0]%>">
+												<%= item[1] %></br>
+												<%= dist(item[0]) %>&nbsp;&nbsp;<span>Miles</span>
+											</div>
+										<div>							
+						        </div>
+					       	</td>
+					       </tr>
+						</div>
+					</div>	
+				</tr>
+	      	<% end %>
+	    <% else %>
+	    	  	<%= abort %>
+
+	    	No friends found in your account.
+	    <% end %>
+  	</tbody>
+</table>

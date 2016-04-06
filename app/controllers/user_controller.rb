@@ -1,5 +1,6 @@
 class UserController < ApplicationController
 	before_filter :login_user
+	
 
   	def invitefriend
 	  	if params[:id]

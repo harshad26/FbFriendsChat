@@ -1,0 +1,34 @@
+<%#= abort @friendsHash.inspect %>
+<table width="100%" class="table">
+  	<tbody>
+	  	<tr>
+	  	<% if current_user.multi_friends %>
+	  		<% cnt = 0 %>
+	  		<% current_user.multi_friends.each do |item| %>
+	  			<% if cnt==3 %>
+	  				</tr>
+	  				<tr>
+	  				<% cnt = 0 %>
+	  			<% end %>
+	  			<% @classphoto =  (@alreadyinvitedusers.include? item[0]) ? "fb-invited" : "fb-photo" %>
+	          	<div class="row">
+		      		<div class='fb-avatar-section'>
+			      		<td width="33%">
+					        <div class="alignment ">
+					        	<%= image_tag "http://graph.facebook.com/#{item[0]}/picture", :class => "float-left #{@classphoto}", :id => item[0] %>
+									<div class='float-left fb-avatar-desc'>
+										<div class='float-left full-width fb-avatar-name' id="fb_name_<%= item[0]%>">
+											<%= item[1] %>
+										</div>
+									<div>							
+					        </div>
+				       	</td>
+					</div>
+				</div>	
+				<% cnt += 1 %>
+	      	<% end %>
+	    <% else %>
+	    	No friends found in your account.
+	    <% end %>
+  	</tbody>
+</table>

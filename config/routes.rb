@@ -16,9 +16,12 @@ Rails.application.routes.draw do
 
     get 'users/invitefriend/:id' => 'user#invitefriend'
 
+
     get '/update_location' => 'home#update_location'
 
     get '/distance' => 'home#distance'
+
+    get 'searchfriends' => 'home#friendslist'
 
     resources :users
   # The priority is based upon order of creation: first created -> highest priority.
