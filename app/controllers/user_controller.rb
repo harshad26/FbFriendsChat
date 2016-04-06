@@ -15,4 +15,6 @@ class UserController < ApplicationController
 		end
 	  	return
   	end
+
+  	
 end

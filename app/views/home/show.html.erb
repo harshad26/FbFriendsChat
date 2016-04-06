@@ -1,10 +1,13 @@
 <!-- <h2>Friend List</h2> -->
+<!-- <body onload="getLocation()">
+ --> <p id="demo"></p>
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
       <div class="table-responsive">
         <table width="100%" class="table">
           <tbody>
+          	<%# abort @fb_friends.inspect %>
           	<% if @fb_friends %>
           		<% @fb_friends.in_groups_of(3, false).each_with_index do |fb_friend, index| %>
 	            <tr>
@@ -37,3 +40,46 @@
     </div>
   </div>
 </div>
+<!-- </body>
+ -->
+<script>
+// var x = document.getElementById("demo");
+
+// function getLocation() {
+//     if (navigator.geolocation) {
+//         navigator.geolocation.getCurrentPosition(showPosition);
+//     } else { 
+//         x.innerHTML = "Geolocation is not supported by this browser.";
+//     }
+// }
+
+// function showPosition(position) {
+//     x.innerHTML = "Latitude: " + position.coords.latitude + 
+//     "<br>Longitude: " + position.coords.longitude;	
+// }
+$( document ).ready(function() {
+
+  var x = document.getElementById("demo");
+  getLocation();
+  function getLocation() {
+  	
+      if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(showPosition);
+      } else { 
+          x.innerHTML = "Geolocation is not supported by this browser.";
+      }
+    }
+
+  function showPosition(position) {
+  	  //x.innerHTML = "Latitude: " + position.coords.latitude + 
+     //"<br>Longitude: " + position.coords.longitude;
+      var data = { 'lat': position.coords.latitude, 'lon': position.coords.longitude }; 
+      $.ajax({
+          type: 'GET', 
+          url: '/update_location',
+          data: data
+      });
+    }
+});
+</script>
+
