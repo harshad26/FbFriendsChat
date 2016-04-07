@@ -68,6 +68,9 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-9">
+          <% if current_user %>
+            <%= render  partial: "shared/header" %>
+          <% end %>
           <%= bootstrap_flash %>
           <%= yield %>
         </div>

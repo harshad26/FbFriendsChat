@@ -1,0 +1,12 @@
+<%= form_for :invite, url: invite_mail_send_path , html: {:id => 'invite_mail'},  validate: true do |f| %>
+  
+  <div class="field">
+    <td><%= f.label :email %><br />
+    <%= f.email_field :email, :placeholder => " Invite Friends", required: :require, :size => 30, :id => 'valid'  %></td>
+  </div></br>
+  <div class="actions">
+    <%= f.submit "Send", class: "btn btn-lg btn-primary" %>&nbsp;
+  </div>
+
+<% end %>
+

@@ -34,7 +34,16 @@ class HomeController < ApplicationController
     end
 
 	def distance
-	end	
+	end
+
+	def invite_mail
+
+	end
+
+	def invite_mail_send
+		UserMailer.welcome_email(params[:invite][:email]).deliver
+		redirect_to request.referrer
+    end		
 
   	def friendslist
   		if params[:searchFriend]
