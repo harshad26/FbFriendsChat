@@ -1,4 +1,5 @@
 class HomeController < ApplicationController
+	before_filter :login_user, :only => [:searchlist, :distance]
 	respond_to :html, :js
 
 	def show
@@ -28,6 +29,18 @@ class HomeController < ApplicationController
 		end
 	end
 
+	# Search page for friends
+	def searchlist
+		@friendsHash = current_user.multi_friends
+		# Get current user invited friends
+		inviteFriends
+		@alreadyinvitedusers = []
+		if !@invitedFriends.blank?
+			@invitedFriends = @invitedFriends.map(&:inspect).join(', ')
+			@alreadyinvitedusers = User.where("id in (#{@invitedFriends})").pluck(:uid)
+		end
+	end
+
     def update_location
 	    current_user.update_attributes(:latitude => params[:lat], :longitude => params[:lon])
 	    render nothing: true
@@ -53,4 +66,3 @@ class HomeController < ApplicationController
   		end
   	end
 end
-

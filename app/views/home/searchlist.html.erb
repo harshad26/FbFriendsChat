@@ -1,0 +1,25 @@
+<%= form_tag("/searchfriends", method: 'get', :remote => true) do %>
+  <input type="search" class="form-control search-margin-top" name="searchFriend" id="searchFriend" placeholder="Search" />
+<% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="table-responsive" id="friendslist">
+        <% if current_user %>
+          <%= render 'friendslist' %>
+        <% end %>
+      </div><!--end of .table-responsive-->
+    </div>
+  </div>
+</div>
+
+<script>
+$( document ).ready(function() {
+	// <!-- Form submit after write more than 2 char or none -->
+    $('#searchFriend').keyup(function(e) {
+    	var existingString = $("#searchFriend").val();
+    	if (existingString.length < 2 && existingString.length>0) return;
+	    $('#searchFriend').submit();
+	});
+});
+</script>

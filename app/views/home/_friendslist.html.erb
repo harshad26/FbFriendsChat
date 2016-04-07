@@ -2,9 +2,9 @@
 <table width="100%" class="table">
   	<tbody>
 	  	<tr>
-	  	<% if current_user.multi_friends %>
+	  	<% if @friendsHash %>
 	  		<% cnt = 0 %>
-	  		<% current_user.multi_friends.each do |item| %>
+	  		<% @friendsHash.each do |item| %>
 	  			<% if cnt==3 %>
 	  				</tr>
 	  				<tr>

@@ -1,11 +1,7 @@
-<%= form_tag("/searchfriends", method: 'get', :remote => true) do %>
-      <input type="search" class="form-control search-margin-top" name="searchFriend" id="searchFriend" placeholder="Search" />
-    <% end %>
- <p id="demo"></p>
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
-      <div class="table-responsive" id="friendslist">
+      <div class="table-responsive">
         <% if current_user %>
           <%= render 'friendslist' %>
         <% end %>
@@ -17,7 +13,6 @@
 <script>
 $( document ).ready(function() {
 
-  // var x = document.getElementById("demo");
   getLocation();
   function getLocation() {
   	
