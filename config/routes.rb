@@ -23,6 +23,10 @@ Rails.application.routes.draw do
 
     get 'searchfriends' => 'home#friendslist'
 
+    get '/invite_mail' => 'home#invite_mail'
+
+    post '/invite_mail_send' => 'home#invite_mail_send'
+
     resources :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
