@@ -1,4 +1,5 @@
 class HomeController < ApplicationController
+	before_filter :login_user, :only => [:searchlist, :distance]
 	respond_to :html, :js
 
 	def show
@@ -25,6 +26,18 @@ class HomeController < ApplicationController
 				@invitedFriends = @invitedFriends.map(&:inspect).join(', ')
 				@alreadyinvitedusers = User.where("id in (#{@invitedFriends})").pluck(:uid)
 			end
+		end
+	end
+
+	# Search page for friends
+	def searchlist
+		@friendsHash = current_user.multi_friends
+		# Get current user invited friends
+		inviteFriends
+		@alreadyinvitedusers = []
+		if !@invitedFriends.blank?
+			@invitedFriends = @invitedFriends.map(&:inspect).join(', ')
+			@alreadyinvitedusers = User.where("id in (#{@invitedFriends})").pluck(:uid)
 		end
 	end
 
@@ -62,4 +75,3 @@ class HomeController < ApplicationController
   		end
   	end
 end
-

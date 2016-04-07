@@ -15,12 +15,9 @@ Rails.application.routes.draw do
     root to: "home#show"
 
     get 'users/invitefriend/:id' => 'user#invitefriend'
-
-
     get '/update_location' => 'home#update_location'
-
     get '/distance' => 'home#distance'
-
+    get '/searchlist' => 'home#searchlist'
     get 'searchfriends' => 'home#friendslist'
 
     get '/invite_mail' => 'home#invite_mail'
