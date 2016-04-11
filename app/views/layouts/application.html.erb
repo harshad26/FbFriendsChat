@@ -32,12 +32,6 @@
 
     <%= javascript_include_tag "application" %>
 
-    <!-- <link href="/font-awesome-4.5.0/font-awesome-4.5.0/css/font-awesome.css" type="text/css" rel="stylesheet" />
-    <link href="/font-awesome-4.5.0/font-awesome-4.5.0/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
-    <link href="/css/bootstrap.css" type="text/css" rel="stylesheet" />
-    <link href="/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
-    <link href="/css/bootstrap-theme.css" type="text/css" rel="stylesheet" />
-    <link href="/css/bootstrap-theme.min.css" type="text/css" rel="stylesheet" /> -->
     <link href="hey.css" type="text/css" rel="stylesheet" />
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
@@ -54,31 +48,28 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">FbFriendsChat</a>        
-
-    <!-- <div class="input-append search-margin-top">
-        <input type="text" class="input-medium search-query" name="s" placeholder="Search" value="">
-    </div> -->
     
         <div class="navbar-collapse collapse navbar-responsive-collapse pull-right">
           <ul class="nav navbar-nav">
             <li>
-              <% if current_user %>
-                <%= link_to "Sign out", signout_path, id: "sign_out" %>
-              <% else %>
+              <%# if current_user %>
+                <%#= link_to "Sign out", signout_path, id: "sign_out" %>
+              <%# else %>
                 <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
-              <% end %>
+              <%# end %>
             </li>
           </ul>
-        </div>
+        </div> 
       </div>
     </div>
 
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <% if current_user %>
+          <% if current_user && !current_page?(searchlist_path)  %>
             <%= render  partial: "shared/header" %>
+          <% elsif current_user && current_page?(searchlist_path)  %>
+            <%= render  partial: "shared/search_header" %>
           <% end %>
           <%= bootstrap_flash %>
           <%= yield %>
@@ -94,22 +85,22 @@
 <script type="text/javascript">
   $(function(){
       $('.fb-photo').click(function() {
-          var fbid = $(this).attr('id');
-          var obj = $(this);
-           $.ajax({
-                  type: "GET",
-                  url: '/users/invitefriend/' + fbid,
-                  dataType: "JSON",
-                  success: function(data) {
-                    if(data.text == "0") {
-                      alert("something went wrong");
-                    } else {
-                      $("#"+fbid).removeClass("fb-photo");
-                      obj.unbind();
-                      // Write code for mark on photo
-                    }
+        var fbid = $(this).attr('id');
+        var obj = $(this);
+        $.ajax({
+                type: "GET",
+                url: '/users/invitefriend/' + fbid,
+                dataType: "JSON",
+                success: function(data) {
+                  if(data.text == "0") {
+                    alert("something went wrong");
+                  } else {
+                    $("#"+fbid).removeClass("fb-photo");
+                    obj.unbind();
+                    // Write code for mark on photo
                   }
-                });
+                }
+             });  
       });
   });
 </script>
