@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
 
 	attr_accessible :provider, :uid, :name, :oauth_token, :oauth_expires_at, :latitude, :longitude
-
+  has_many :conversations, :foreign_key => :sender_id
 	
   serialize :multi_friends, Hash
   

@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-	before_filter :login_user, :only => [:searchlist, :distance]
+	before_filter :login_user, :only => [:searchlist, :distance, :matchfriends]
 	respond_to :html, :js
 
 	def show
@@ -51,6 +51,17 @@ class HomeController < ApplicationController
 
 	def invite_mail
 
+	end
+
+	# Match friends list
+	def matchfriends
+		inviteFriends
+		@alreadyinvitedusers = []
+		if !@invitedFriends.blank?
+			@invitedFriends = @invitedFriends.map(&:inspect).join(', ')
+			@alreadyinvitedusers = User.where("id in (#{@invitedFriends})")
+		end
+		# abort @alreadyinvitedusers.inspect
 	end
 
 	def invite_mail_send
