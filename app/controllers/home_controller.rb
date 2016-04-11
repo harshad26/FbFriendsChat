@@ -47,11 +47,7 @@ class HomeController < ApplicationController
     end
 
 	def distance
-	end
-
-	def invite_mail
-
-	end
+	end	
 
 	# Match friends list
 	def matchfriends
@@ -63,11 +59,6 @@ class HomeController < ApplicationController
 		end
 		# abort @alreadyinvitedusers.inspect
 	end
-
-	def invite_mail_send
-		UserMailer.welcome_email(params[:invite][:email]).deliver
-		redirect_to request.referrer
-    end		
 
   	def friendslist
   		if params[:searchFriend]

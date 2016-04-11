@@ -4,12 +4,16 @@ class UserController < ApplicationController
 	
 	# Mark on friends
   	def invitefriend
+  		# abort params.inspect
 	  	if params[:id]
 		  	user = User.find_by_uid(params[:id])
 		  	invitefriend = Invitefriend.where("(user_id = #{current_user.id} and inviteid = #{user.id}) OR (user_id = #{user.id} and inviteid = #{current_user.id})")
-		  	if invitefriend
+		  	if invitefriend.count > 0
+		  		# abort invitefriend.inspect
 		  		invitefriend = invitefriend[0]
-		  		invitefriend.invite_accepted = true
+		  		if invitefriend.inviteid == current_user.id
+		  			invitefriend.invite_accepted = true
+		  		end
 		  	else
 		  		invitefriend = Invitefriend.new(:user_id => current_user.id, :inviteid => user.id)
 		  	end
