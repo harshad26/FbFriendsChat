@@ -1,0 +1,28 @@
+<table width="100%" class="table">
+  	<tbody>
+	  	<% if @alreadyinvitedusers.count>0 %>
+	  		<% @alreadyinvitedusers.each do |item| %>
+	  				<tr>
+			          	<div class="row">
+				      		<div class='fb-avatar-section'>
+					      		<td width="33%">
+							        <div class="alignment ">
+							        	<%= image_tag "http://graph.facebook.com/#{item.uid}/picture", :class => "float-left", :id => item.uid %>
+											<div class='float-left fb-avatar-desc'>
+												<div class='float-left full-width fb-avatar-name' id="fb_name_<%= item.uid%>">
+													<%= item.name %>
+												</div>
+											<div>
+											 <%= link_to "Send Message", "#", class: "btn btn-success btn-xs start-conversation",
+		                    "data-sid" => current_user.id, "data-rip" => item.id %>						
+							        </div>
+						       	</td>
+							</div>
+						</div>
+					</tr>
+	      	<% end %>
+	    <% else %>
+	    	No friends invited.
+	    <% end %>
+  	</tbody>
+</table>

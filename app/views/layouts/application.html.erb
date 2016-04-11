@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content='<%= current_user ? current_user.id : "" %>' name='user-id'/>
     <title><%= content_for?(:title) ? yield(:title) : "FbFriendsChat" %></title>
     <%= csrf_meta_tags %>
 
@@ -94,6 +95,7 @@
   $(function(){
       $('.fb-photo').click(function() {
           var fbid = $(this).attr('id');
+          var obj = $(this);
            $.ajax({
                   type: "GET",
                   url: '/users/invitefriend/' + fbid,
@@ -101,6 +103,10 @@
                   success: function(data) {
                     if(data.text == "0") {
                       alert("something went wrong");
+                    } else {
+                      $("#"+fbid).removeClass("fb-photo");
+                      obj.unbind();
+                      // Write code for mark on photo
                     }
                   }
                 });

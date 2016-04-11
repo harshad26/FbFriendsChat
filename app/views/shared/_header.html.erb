@@ -1,11 +1,32 @@
-<div class="navbar navbar-default-bottom">
+<!-- <div class="navbar navbar-default-bottom">
   <div class="container">
       <div class="navbar-collapse collapse navbar-responsive-collapse pull-left">
       <ul class="nav navbar-nav">
         <li> <span class="glyphicon glyphicon-user icon-margin"></span>  </li>
         <li> <span class="glyphicon glyphicon-envelope icon-margin"></span> </li>
-        <li> <%= link_to '', invite_mail_path, class: "glyphicon glyphicon-envelope icon-margin" %></li>
+        <li> <%#= link_to '', invite_mail_path, class: "glyphicon glyphicon-envelope icon-margin" %></li>
       </ul>
     </div>
   </div>
-</div>  
+</div>  --> 
+
+<!--header-start-->
+
+<div class="header navbar-fixed-top">
+<div class="row">
+<div class="col-lg-12 col-md-12 col-sm-12">
+<div class="col-lg-4 col-md-4 col-sm-4">
+<%= link_to '<span> <i class="fa fa-5x fa-search"></i></span>'.html_safe, searchlist_path %>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-4">
+<%= link_to '<span> <i class="fa fa-5x fa-envelope-o"></i></span>'.html_safe, invite_mail_path %>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-4">
+<span>
+<i class="fa fa-5x fa-wrench"></i>
+</span>
+</div>
+</div>
+</div>
+</div>
+<!--header-end-->

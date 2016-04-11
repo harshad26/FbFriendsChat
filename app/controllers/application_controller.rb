@@ -17,8 +17,20 @@ class ApplicationController < ActionController::Base
   	end
   end
 
+  # Already invited friends list ids in array
   def inviteFriends
-    @invitedFriends = Invitefriend.where(:user_id => current_user.id).pluck(:inviteid)
+    @invitedFriendsLists = Invitefriend.select("id, user_id, inviteid").where("user_id = #{current_user.id} OR inviteid = #{current_user.id}")
+    @invitedFriends = []
+    if @invitedFriendsLists
+      @invitedFriendsLists.each do |frd|
+        if frd.user_id != current_user.id
+          @invitedFriends << frd.user_id 
+        else
+          @invitedFriends << frd.inviteid
+        end
+      end
+    else
+    end
     return @invitedFriends
   end
 

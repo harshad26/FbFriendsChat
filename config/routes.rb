@@ -19,11 +19,15 @@ Rails.application.routes.draw do
     get '/distance' => 'home#distance'
     get '/searchlist' => 'home#searchlist'
     get 'searchfriends' => 'home#friendslist'
-
+    get 'matchfriends' => 'home#matchfriends'
     get '/invite_mail' => 'home#invite_mail'
 
     post '/invite_mail_send' => 'home#invite_mail_send'
 
+    resources :conversations do
+      resources :messages
+    end
+    
     resources :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

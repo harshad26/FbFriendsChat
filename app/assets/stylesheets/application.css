@@ -38,6 +38,9 @@ table caption {
 .alignment {
 	text-align: center;
 }
+.alignment img {
+	width: 15%;
+}
 
 .table > tbody > tr > td {
 	border-top: none;
