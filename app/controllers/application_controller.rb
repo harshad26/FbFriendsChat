@@ -19,7 +19,7 @@ class ApplicationController < ActionController::Base
 
   # Already invited friends list ids in array
   def inviteFriends
-    @invitedFriendsLists = Invitefriend.select("id, user_id, inviteid").where("user_id = #{current_user.id} OR inviteid = #{current_user.id}")
+    @invitedFriendsLists = Invitefriend.select("id, user_id, inviteid").where("user_id = #{current_user.id} OR (inviteid = #{current_user.id} and invite_accepted = true)")
     @invitedFriends = []
     if @invitedFriendsLists
       @invitedFriendsLists.each do |frd|
