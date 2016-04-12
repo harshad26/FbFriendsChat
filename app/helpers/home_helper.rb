@@ -30,4 +30,10 @@ module HomeHelper
 		end    
 	    return @d
     end
+
+    def times(id)
+    	@invitedFriendDate = Invitefriend.select("created_at").where("(user_id = #{current_user.id} and inviteid = #{id}) OR (user_id = #{id} and (inviteid = #{current_user.id} or invite_accepted = true))")
+        @c = ((Time.now - @invitedFriendDate[0].created_at)/60 ).to_i
+		return @c.to_s
+	end
 end

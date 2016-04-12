@@ -1,15 +1,15 @@
 @charset "utf-8";
 /* CSS Document */
   body{
-  width:100% !important;	
-  overflow-x:hidden;
+    width:100% !important;	
+    overflow-x:hidden;
   }
   .container{
-  width:100% !important;
-  height:auto;
-  overflow-x:hidden;	
-  margin-top: 5%;
-
+    width:100% !important;
+    height:auto;
+    overflow-x:hidden;	
+    margin-top: -1%;
+    margin-bottom: 5%;
   }
   .header{
   	padding: 10px;
@@ -28,10 +28,6 @@
     background: #ddd;	
   	overflow-x: hidden;
   }
-  /*.middle{
-  width:100%;
-  height:auto;	
-  }*/
   img{
     width:100%;
     height:auto;
@@ -39,8 +35,6 @@
   .image{
   	margin: 5px;
     border: 1px solid #ccc;
-      
-     
   }
   .desc{
     padding: 15px;
@@ -50,12 +44,12 @@
     border:1px solid #ooo;	
   }
   .polaroid {
-    width: 100%;
+    width: 60%;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin-bottom: 5%;
+    margin-left: 22%;
   }
-  
   .left_side{
   	margin-top:7%;
   }
@@ -70,41 +64,132 @@
     margin-bottom: 1%;
   }
   .row_margin{
-   margin-bottom:10%;	
+    margin-bottom:10%;	
   }
-
-  /*css for searchbar-start*/
   .search {
     position: relative;
-   /* color: #aaa;*/
-   height:100px;
-   margin-bottom: 1%;
+    height:100px;
+    margin-bottom: 1%;
   }
-
   .search input {
-    width: 100%;
+    width: 100% !important;
     height: 100%;
     text-indent: 11%;
     font-size: 45px;
     color: #000;
     background: #fff;
     border: 1px solid #aaa;
-    /*border-radius: 5px;
-    box-shadow: 0 0 3px #ccc, 0 10px 15px #ebebeb inset;*/
   }
-
-  /*.search input { text-indent: 32px;}*/
   .search .fa-search { 
     position: absolute;
     top: 10px;
-    /* left: 0; */
     color: #000;
-    margin-left: 2%;
+    margin-left: -45%;
     margin-top: 0.2%
   }
   .invitation{
     text-align: left;
     margin-left: 40%;
+    margin-top: 15%
+  }
+  .form-control{
+     width: 30% !important;
+  }
+  .a1{
+    border-bottom: 1px solid black;
+    width: 50%;
+    font-style: normal;
+    font-size: larger;
+  }
+  .a1 img{
+    margin-left: 84%;
+    margin-bottom: 10%;
+    margin-top: 10%;
+  }
+  .a11{
+    margin-left: 15%;
+    margin-top: 5%;
+  }
+  .b1{
+    border-bottom: 1px solid black;
+ }
+ .b1 img{
+    margin-top: 0%;
+    width: 100%;
+ }
+ .head1 a{
+    margin-left: 90%;
+    font-size: larger;
+ }
+ .polaroid1 {
+    width: 20%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 2%;
+    margin-left: 40%;
+    margin-bottom: 0.5%;
+  }
+  .table-responsive {
+    overflow-x: hidden ;
+   }
+  
+  #sign_in img{
+    width: 50%;
+    margin-left: 50%;
+  }
+  .mess {
+    margin-top: 20%;
+    margin-left: 44%;
+    font-size: large;
+    font-family: initial;
+  }
+  .tint {
+    position: relative;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    -webkit-box-shadow: rgba(0,0,0,.2) 3px 5px 5px;
+    -moz-box-shadow: rgba(0,0,0,.2) 3px 5px 5px;
+    box-shadow: rgba(0,0,0,.2) 3px 5px 5px;
+    margin-top: 2%;
+  }
+  
+  .tint:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(95, 185, 98, 0.5);
+    -moz-transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    transition: all .3s linear;
+    height: 81.5%;
+  }
+  /*for check sign start */
+
+  .tint1:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url(images/check.png) no-repeat;
+    -moz-transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    transition: all .3s linear;
+    height: 85.5%;
+    background-size: 98% 90%;
+    margin-left: 2%;
   }
 
-  /*css for searchbar-end*/
+  /*for check sign end */

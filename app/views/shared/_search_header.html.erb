@@ -1,0 +1,15 @@
+<!--header-start-->
+
+<div class="header navbar-fixed-top">
+	<div class="row">
+		<div class="col-lg-12 col-md-12 col-sm-12">
+			<%= form_tag("/searchfriends", method: 'get', :remote => true) do %>
+				  <div class="search">
+				      <span class="fa fa-5x fa-search"></span>
+				      <input type="search" class="form-control search-margin-top" name="searchFriend" id="searchFriend" placeholder="Search" />
+				   </div>    
+			  <% end %>
+		</div>            
+	</div>
+</div>
+<!--header-end-->

@@ -52,27 +52,25 @@ class HomeController < ApplicationController
 	# Match friends list
 	def matchfriends
 		inviteFriends
+		@acceptedFriends = (@invitedFriends) ? Invitefriend.where("inviteid IN (?) and invite_accepted = (?)", @invitedFriends, true).pluck(:inviteid) : []
+		# @acceptedFriendsMins = (@invitedFriends) ? Invitefriend.where("inviteid IN (?) and invite_accepted = (?)", @invitedFriends, true).pluck(:inviteid) : []
 		@alreadyinvitedusers = []
 		if !@invitedFriends.blank?
 			@invitedFriends = @invitedFriends.map(&:inspect).join(', ')
 			@alreadyinvitedusers = User.where("id in (#{@invitedFriends})")
 		end
-		# abort @alreadyinvitedusers.inspect
 	end
 
   	def friendslist
   		if params[:searchFriend]
   			@friendsHash = current_user.multi_friends
-
   			# Get current user invited friends
   			inviteFriends
-
   			@alreadyinvitedusers = []
 			if !@invitedFriends.blank?
 				@invitedFriends = @invitedFriends.map(&:inspect).join(', ')
 				@alreadyinvitedusers = User.where("id in (#{@invitedFriends})").pluck(:uid)
 			end
-
 			@friendsHash = @friendsHash.select{|key, hash| hash.downcase.include?(params[:searchFriend].downcase) }
   		end
   	end

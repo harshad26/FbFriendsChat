@@ -5,24 +5,32 @@
 	  				<tr>
 			          	<div class="row">
 				      		<div class='fb-avatar-section'>
-					      		<td width="33%">
+					      		<td width="33%" class="b1">
 							        <div class="alignment ">
+                                         <% if @acceptedFriends.include? item.id %>
+							        		<div class="image polaroid1 tint tint1">
+							        	<% else %>
+                                        	<div class="image polaroid1 tint ">
+                                         <% end %>
 							        	<%= image_tag "http://graph.facebook.com/#{item.uid}/picture", :class => "float-left", :id => item.uid %>
-											<div class='float-left fb-avatar-desc'>
-												<div class='float-left full-width fb-avatar-name' id="fb_name_<%= item.uid%>">
+											<div class='float-left fb-avatar-desc' style="margin-bottom: -10%;">
+												<div class='float-left full-width fb-avatar-name' id="fb_name_<%= item.uid%>" style=" font-size: large;">
 													<%= item.name %>
 												</div>
 											<div>
-											 <%= link_to "Send Message", "#", class: "btn btn-success btn-xs start-conversation",
-		                    "data-sid" => current_user.id, "data-rip" => item.id %>						
-							        </div>
+											<%= link_to "Send Message", "#", class: "btn btn-success btn-xs start-conversation",
+		                    "data-sid" => current_user.id, "data-rip" => item.id %>	</div>
+		                             <%=times(item.id) %> Mins
+							        </div><hr>
 						       	</td>
 							</div>
 						</div>
 					</tr>
 	      	<% end %>
 	    <% else %>
-	    	No friends invited.
+	    <%# abort %>
+	        <div class="mess">
+	    	<span > No friends invited. </span></div>
 	    <% end %>
   	</tbody>
 </table>

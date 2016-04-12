@@ -4,21 +4,25 @@
 	  	<% if current_user.multi_friends %>
 	  		<% current_user.multi_friends.each do |item| %>
 	  		<% #abort item.inspect %>
-		  		<tr>
+		  		<tr class="a1">
 		          	<div class="row">
 			      		<div class='fb-avatar-section'>
-				      		<td width="33%">
-						        <div class="alignment ">
-						        	<%= image_tag "http://graph.facebook.com/#{item[0]}/picture", :class => "float-left #{@classphoto}", :id => item[0] %>
+				      		<!-- <td width="33%"> -->
+						        <div class="alignment "><td width="13%">
+						        	<%= image_tag "http://graph.facebook.com/#{item[0]}/picture", :class => "float-left #{@classphoto}", :id => item[0] %></td><td>
 										<div class='float-left fb-avatar-desc'>
-											<div class='float-left full-width fb-avatar-name' id="fb_name_<%= item[0]%>">
+										  <div class="a11">
+											<div class='float-left full-width fb-avatar-name' id="fb_name_<%= item[0]%>" style="font-family: bold">
 												<%= item[1] %></br>
-												<%= dist(item[0]) %>&nbsp;&nbsp;<span>Miles</span>
+												<%= dist(item[0]) %>&nbsp;&nbsp;<span>Miles Away</span>
+                                             
 											</div>
-										<div>							
+										  </div>
+										<div></td>							
 						        </div>
-					       	</td>
-					       </tr>
+                                
+					       	<!-- </td> -->
+					       
 						</div>
 					</div>	
 				</tr>
@@ -28,5 +32,6 @@
 
 	    	No friends found in your account.
 	    <% end %>
+	</tr>
   	</tbody>
 </table>
