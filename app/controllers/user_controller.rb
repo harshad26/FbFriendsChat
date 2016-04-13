@@ -1,7 +1,8 @@
 class UserController < ApplicationController
 	before_filter :login_user
 	after_action :chatConversation, :only => [:invitefriend]
-	
+	skip_before_action :verify_authenticity_token
+
 	# Mark on friends
   	def invitefriend
   		# abort params.inspect
