@@ -53,6 +53,7 @@ class HomeController < ApplicationController
 
 	def invite_mail_send
 		if params[:invite] and !params[:invite][:email].blank?
+			puts "#{root_url} ----------- "
 			appUrl = root_url
 			UserMailer.welcome_email(params[:invite][:email],appUrl).deliver_later
 			redirect_to invite_mail_path, :notice => "Successfully sent invitation."
