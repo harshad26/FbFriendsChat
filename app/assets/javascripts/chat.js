@@ -88,7 +88,7 @@ var ready = function () {
             if ($("#chatbox_" + conversation_id).length > 0) {
                 if ($("#chatbox_" + conversation_id).css('display') == 'none') {
                     $("#chatbox_" + conversation_id).css('display', 'block');
-                    chatBox.restructure();
+                    // chatBox.restructure();
                 }
                 $("#chatbox_" + conversation_id + " .chatboxtextarea").focus();
                 return;

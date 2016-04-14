@@ -36,4 +36,8 @@ module HomeHelper
         @c = ((Time.now - @invitedFriendDate[0].created_at)/60 ).to_i
 		return @c.to_s
 	end
+
+	def conversation_interlocutor(conversation)
+    	conversation.recipient == current_user ? conversation.sender : conversation.recipient
+  	end
 end

@@ -1,13 +1,14 @@
 class HomeController < ApplicationController
 	before_filter :login_user, :only => [:searchlist, :distance, :matchfriends]
 	respond_to :html, :js
-
+	 
 	def show
 		if current_user
 			@user_fb_token = current_user.oauth_token
 			@friendsHash = Hash.new()
 			unless @user_fb_token.blank?
 				@fb_friends = FbGraph::User.me(@user_fb_token).friends
+				# abort @fb_friends.inspect
 				@fb_friends = @fb_friends.sort_by { |fb_frnd| fb_frnd.raw_attributes['name']}
 				if @fb_friends
 					@fb_friends.each do |frd|
@@ -46,13 +47,28 @@ class HomeController < ApplicationController
 	    render nothing: true
     end
 
-	def distance
+	def distance 
+
 	end	
+
+	 def messages
+      	@conversations = Conversation.involving(current_user).order("created_at DESC")
+      	inviteFriends
+      	@invitedFriends = @invitedFriends.map(&:inspect).join(', ')
+      	@alreadyinvitedusers1 = User.where("id in (#{@invitedFriends})")
+	 end 	
 
 	# Match friends list
 	def matchfriends
 		inviteFriends
-		@acceptedFriends = (@invitedFriends) ? Invitefriend.where("inviteid IN (?) and invite_accepted = (?)", @invitedFriends, true).pluck(:inviteid) : []
+		@acceptedFriendsIds = (@invitedFriends) ? Invitefriend.where("(user_id IN (?) OR inviteid IN (?)) and invite_accepted = (?)", @invitedFriends, @invitedFriends, true).pluck(:inviteid, :user_id) : []
+		@acceptedFriends = []
+		if @acceptedFriendsIds.count > 0
+			@acceptedFriendsIds.each do |accId|
+				@acceptedFriends << accId[0]
+				@acceptedFriends << accId[1]
+			end
+		end
 		# @acceptedFriendsMins = (@invitedFriends) ? Invitefriend.where("inviteid IN (?) and invite_accepted = (?)", @invitedFriends, true).pluck(:inviteid) : []
 		@alreadyinvitedusers = []
 		if !@invitedFriends.blank?

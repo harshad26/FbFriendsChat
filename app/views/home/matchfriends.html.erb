@@ -18,8 +18,7 @@
 													<%= item.name %>
 												</div>
 											<div>
-											<%= link_to "Send Message", "#", class: "btn btn-success btn-xs start-conversation",
-		                    "data-sid" => current_user.id, "data-rip" => item.id %>	</div>
+										</div>
 		                             <%=times(item.id) %> Mins
 							        </div><hr>
 						       	</td>
@@ -28,7 +27,7 @@
 					</tr>
 	      	<% end %>
 	    <% else %>
-	    <%# abort %>
+	    
 	        <div class="mess">
 	    	<span > No friends invited. </span></div>
 	    <% end %>

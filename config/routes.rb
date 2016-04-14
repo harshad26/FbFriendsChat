@@ -21,6 +21,7 @@ Rails.application.routes.draw do
     get 'searchfriends' => 'home#friendslist'
     get 'matchfriends' => 'home#matchfriends'
     get 'invite_mail' => 'home#invite_mail' 
+    get 'messages' => 'home#messages'
      post '/invite_mail_send' => 'home#invite_mail_send'
     resources :conversations do
       resources :messages

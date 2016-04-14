@@ -143,6 +143,27 @@
     font-size: large;
     font-family: initial;
   }
+  .fb-photo{
+    cursor: pointer;
+  }
+  .media{
+    width: 65%;
+  }
+  .media img{
+    width: 12%;
+    margin-left: 20%;
+    border-bottom: 1px solid black;
+    float: left;
+  }
+  .media p, h4{
+      text-align: center;
+  }
+  .media-body{
+    padding-top: 6%;
+  }
+  .media-list {
+    margin-top: 3%;
+  }
   .tint {
     position: relative;
     float: left;
@@ -169,7 +190,7 @@
     -ms-transition: all .3s linear;
     -o-transition: all .3s linear;
     transition: all .3s linear;
-    height: 81.5%;
+    height: 86.5%;
   }
   /*for check sign start */
 

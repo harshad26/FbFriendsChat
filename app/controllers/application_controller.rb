@@ -3,11 +3,14 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
   helper_method :current_user
+  
   include HomeHelper
 
   def current_user
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
   end
+
+   
 
   private
 
@@ -24,19 +27,19 @@ class ApplicationController < ActionController::Base
 
   # Already invited friends list ids in array
   def inviteFriends
-    @invitedFriendsLists = Invitefriend.select("id, user_id, inviteid, created_at").where("((user_id = #{current_user.id}) OR (inviteid = #{current_user.id} and invite_accepted = true)) and invite_timeout = false")
+    @invitedFriendsLists = Invitefriend.select("id, user_id, inviteid, invite_accepted, created_at").where("((user_id = #{current_user.id}) OR (inviteid = #{current_user.id} and invite_accepted = true)) and invite_timeout = false")
     @invitedFriends = []
     if @invitedFriendsLists
       @invitedFriendsLists.each do |frd|
         minutes = getMinutes(frd.created_at)
-        if minutes <= 120
+        if (minutes <= 120 || frd.invite_accepted == true)
           
           if frd.user_id != current_user.id
             @invitedFriends << frd.user_id 
           else
             @invitedFriends << frd.inviteid
           end
-        else
+        elsif frd.invite_accepted == false
           frd.invite_timeout = true
           frd.save
         end

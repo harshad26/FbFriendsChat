@@ -1,0 +1,29 @@
+<div style="height: auto; overflow-y: hidden;">
+  
+  <% if @conversations.any? %>
+
+      <ul class="media-list">
+        <% @alreadyinvitedusers1.each do |item| %>
+          <% @conversations.each do |conversation| %>
+            <li class="media">
+              
+              <%= link_to image_tag("http://graph.facebook.com/#{conversation_interlocutor(conversation).uid}/picture"), "distance_path", class: "float-left #{@classphoto} start-conversation", "data-sid" => current_user.id, 'data-no-turbolink' => true, "data-rip" => item.id %>
+             
+
+              <div class="media-body">
+                <%= link_to "", conversation_path(conversation), class: "conversation", "data-cid" => conversation.id %>
+                    <h4 class="media-heading"><%= conversation_interlocutor(conversation).name %></h4>
+                    <p><%= conversation.messages.last.nil? ? "No messages" : truncate(conversation.messages.last.body, length: 45) %></p>
+              </div>
+            </li>
+          <% end %>
+        <% end %>
+      </ul>
+       
+  <% else %>
+      <p>You have no conversations. Click send message with any user to create one.</p>
+  <% end %>
+   
+</div>
+
+
