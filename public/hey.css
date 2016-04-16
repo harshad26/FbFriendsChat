@@ -346,6 +346,7 @@
     width: 135%;
     margin: 0px;
     margin-left: -14%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.19) !important;
   }
   .desc {
     padding: 3px;
@@ -382,6 +383,205 @@
   .a1 td{
     width: 25%;
   }
+  .media-list {
+    margin-top: 3%;
+    border-bottom: 1px solid #000;
+    padding-bottom: 3%;
+  }
+  .media-body {
+    padding-top: 5%;
+    /* margin-left: -9% !important; */
+    width: auto;
+    padding-left: 10%;
+    float: left;
+  }
+  .media {
+    width: 100% !important;
+  }
+  .media img {
+      width: 25%;
+      margin-left: 0%;
+      border: none; 
+      float: left;
+  }
+  hr {
+    margin-top: 0px; 
+    margin-bottom: 0px;
+    border: 0;
+    border-top: none;
+  }
+  .fb-avatar-desc{
+    padding-top: 5%;
+    margin-bottom:0px !important;
+    font-size: 12px;
+  }
+  .fb-avatar-name{
+    font-size: 15px !important;
+    padding-bottom: 3%;
+  }
+  .polaroid1 {
+    width: 50%;
+    margin-left: 25%; 
+  }
+  .tint:before{
+    height: 74%;
+  }
+  #sign_in img {
+    width: 150%;
+    margin-left: -35%;
+  }
+  .col-lg-4 , .col-md-4 , .col-sm-4{
 
+        padding-left: 6%;
+    padding-right: 6%;
+  }
 }
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+
+  .fa-5x {
+    font-size: 2.5em;
+  }
+  .table-responsive{
+    border: none !important;
+  }
+  .polaroid{
+    width: 100%;
+    margin: 0px;
+    margin-left: -14%;
+    margin-top: 10%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.19) !important;
+  }
+  .desc {
+    padding: 3px;
+    text-align: center;
+    font-size: 17px;
+  }
+  .search .fa-search {
+    position: absolute;
+    top: 10px;
+    color: #000;
+    margin-left: -46%;
+    margin-top: 0.2%;
+    width: 0px; 
+  }
+  .search input {
+   
+    text-indent: 9%;
+    font-size: 24px;
+  }  
+  .search {
+    height: 50px;
+  }
+  .search .fa-5x{
+    font-size: 2em;
+  }
+  .a11 {
+    margin-top: 27%;
+    margin-left: 0px;
+  }
+  .a1 img {
+    margin-left: 5%;
+    margin-bottom: 10%;
+    margin-top: 8%;
+    width: 72%;
+  }
+  .a1 td{
+    width: 25%;
+  }
+  .media-list {
+    margin-top: 3%;
+    border-bottom: 1px solid #000;
+    padding-bottom: 3%;
+  }
+  .media-body {
+    padding-top: 9%;
+    /* margin-left: -9% !important; */
+    width: auto;
+    padding-left: 10%;
+    float: left;
+  }
+  .media {
+    width: 100% !important;
+  }
+  .media img {
+      width: 28%;
+      margin-left: 0%;
+      border: none; 
+      float: left;
+  }
+  hr {
+    margin-top: 0px; 
+    margin-bottom: 0px;
+    border: 0;
+    border-top: none;
+  }
+  .fb-avatar-desc{
+    padding-top: 5%;
+    margin-bottom:0px !important;
+    font-size: 20px;
+  }
+  .fb-avatar-name{
+    font-size: 27px !important;
+    padding-bottom: 3%;
+  }
+  .polaroid1 {
+        width: 35%;
+    margin-left: 30%;
+  }
+  .tint:before{
+    height: 77%;
+  }
+  #sign_in img {
+    width: 150%;
+    margin-left: -50%;
+  }
+  .media-list .media-heading {
+    font-size: 30px;
+  }
+  .media-list p{
+    font-size: 20px;
+
+  }
+}
+@media only screen and (min-device-width: 1025px) and (max-device-width: 1600px) {
+  .polaroid{
+    margin-top: 10%;
+  }
+  .table{
+    margin-top: 3%;
+  }
+  .tint:before{
+    height: 77.1%;
+  }
+  .fb-avatar-name{
+    font-size: 22px !important;
+  }
+  .polaroid1{
+    font-size: 19px !important;
+  }
+  .media-list {
+    margin-top: 4%;
+  }
+.media {
+    width: 100%;
+  }
+  .media img{
+    margin-left: 10%;
+  }
+  .media-list p{
+    font-size: 18px;
+  }
+  .media-heading{
+    font-size: 24px;
+  }
+  .media-body {
+    padding-top: 4%;
+    width: auto;
+    float: left;
+    padding-left: 20%;
+  }
+}
+
+
 /*added on 16/4 for responsive-end*/
