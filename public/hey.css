@@ -215,24 +215,7 @@
 
   /*for check sign end */
 /*added on 16/4 for responsive-start*/
-@media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
 
-  .fa-5x {
-    font-size: 2.5em;
-  }
-  .table-responsive{
-    border: none !important;
-  }
-  .polaroid{
-    width: 100%;
-    margin:0px;
-  }
-  .desc {
-    padding: 3px;
-    text-align: center;
-    font-size: 10px;
-  }
-}
 .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
     float: left;
   }
@@ -350,4 +333,55 @@
   .col-lg-1 {
     width: 8.33333333%;
   }
+
+  @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+
+  .fa-5x {
+    font-size: 2.5em;
+  }
+  .table-responsive{
+    border: none !important;
+  }
+  .polaroid{
+    width: 135%;
+    margin: 0px;
+    margin-left: -14%;
+  }
+  .desc {
+    padding: 3px;
+    text-align: center;
+    font-size: 10px;
+  }
+  .search .fa-search {
+    position: absolute;
+    top: 10px;
+    color: #000;
+    margin-left: -46%;
+    margin-top: 0.2%;
+    width: 0px; 
+  }
+  .search input {
+   
+    text-indent: 13%;
+    font-size: 20px;
+  }  
+  .search {
+    height: 50px;
+  }
+  .search .fa-5x{
+    font-size: 2em;
+  }
+  .a11 {
+    margin-top: 33%;
+  }
+  .a1 img {
+    margin-left: 5%;
+    margin-bottom: 10%;
+    margin-top: 0%;
+  }
+  .a1 td{
+    width: 25%;
+  }
+
+}
 /*added on 16/4 for responsive-end*/
