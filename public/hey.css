@@ -482,15 +482,7 @@
   .chatboxtextarea{
     width: 99%;
   }
-  .chatboxcontent li {
-    padding: 0.5rem;
-    overflow: hidden;
-    display: flex;
-  }
-  .self {
-    justify-content: flex-end;
-    align-items: flex-end;
-  }
+  
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
