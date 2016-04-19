@@ -453,6 +453,7 @@
   }
   .chatboxcontent{
     width: 100%;
+    height: 40%;
   }
   .image.polaroid.tint:before {
     height: 69%;
