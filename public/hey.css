@@ -459,6 +459,9 @@
   .image.polaroid.tint:before {
     height: 69%;
   }
+  .chatboxtextarea{
+    width: 99%;
+  }
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
