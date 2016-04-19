@@ -40,9 +40,8 @@
 
 .chatboxcontent {
     font-family: arial, sans-serif;
-    /*height: 280px;*/
-    height: 90%;
-    /*width: 280px;*/
+
+    height: 100%;
     width: 100%;
     overflow-y: auto;
     padding: 7px;
@@ -163,7 +162,6 @@
 .chatboxinfo {
     margin-left: -1em;
     color: #666666;
-
 }
 
 .chatboxoptions {
