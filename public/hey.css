@@ -675,6 +675,9 @@
   div#chatbox_1 {
     right: 0px !important;
   }
+  textarea#message_body {
+    width: 50%;
+  }
 }
 @media only screen and (min-device-width: 375px) and (max-device-width: 436px) {
   div#chatbox_1 {
