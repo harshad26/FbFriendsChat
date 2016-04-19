@@ -576,7 +576,7 @@
     position: expression("absolute");
     /*width: 280px;*/
     width: 100%;
-    height: 79%;
+    height: 78%;
     margin-bottom: 20%;
     display: none;
   }
@@ -586,6 +586,9 @@
   }
   div#chatbox_1 {
     right: 0px !important;
+  }
+  .chatboxtextarea {
+    width: 50%;
   }
 }
 @media only screen and (min-device-width: 1025px) and (max-device-width: 1600px) {
