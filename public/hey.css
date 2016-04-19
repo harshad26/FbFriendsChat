@@ -146,9 +146,7 @@
   .fb-photo{
     cursor: pointer;
   }
-  .fb-invited{
-    cursor: default;
-  }
+  
   .media{
     width: 65%;
   }
@@ -172,7 +170,7 @@
     float: left;
     margin-right: 20px;
     margin-bottom: 20px;
-    cursor: pointer;
+    /*cursor: pointer;*/
     -webkit-box-shadow: rgba(0,0,0,.2) 3px 5px 5px;
     -moz-box-shadow: rgba(0,0,0,.2) 3px 5px 5px;
     box-shadow: rgba(0,0,0,.2) 3px 5px 5px;
