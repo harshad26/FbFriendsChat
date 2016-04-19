@@ -444,6 +444,12 @@
     margin-bottom: 40%;
     display: none;
   }
+  div#chatbox_1 {
+    right: 0px !important;
+  }
+  .chatboxcontent{
+    width: 100%;
+  }
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
@@ -538,6 +544,9 @@
   .polaroid1 {
         width: 35%;
     margin-left: 30%;
+  }
+  .image .polaroid .tint:before{
+    height: 87%;
   }
   .tint:before{
     height: 75%;
