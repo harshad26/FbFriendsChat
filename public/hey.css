@@ -146,7 +146,7 @@
   .fb-photo{
     cursor: pointer;
   }
-  
+
   .media{
     width: 65%;
   }
@@ -630,6 +630,9 @@
     height: 70%;
     margin-bottom: 14%;
     display: none;
+  }
+  .image.polaroid.tint:before {
+    height: 81%;
   }
 }
 
