@@ -212,6 +212,9 @@
     background-size: 98% 90%;
     margin-left: 2%;
   }
+  .image.polaroid.tint::before {
+    height: 84%;
+  }
 
   /*for check sign end */
 /*added on 16/4 for responsive-start*/
