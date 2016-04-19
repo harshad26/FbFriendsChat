@@ -662,12 +662,12 @@
     position: expression("absolute");
     width: 100%;
     height: 64%;
-    margin-bottom: 15%;
+    margin-bottom: 1%;
     display: none;
   }
   .chatboxcontent {
     width: 100%;
-    height: 100%;
+    height: 70%;
   }
   .image.polaroid.tint:before {
     height: 81%;
