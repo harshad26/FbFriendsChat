@@ -214,7 +214,7 @@
     margin-left: 2%;
   }
   .image.polaroid.tint::before {
-    height: 84%;
+    height: 84.2%;
   }
   div#chatbox_1 {
     right: 0px !important;
@@ -226,6 +226,15 @@
   .chatboxcontent {
     width: 100%;
     height: 680px;
+  }
+  .chatboxmessagecontent{
+    width: 12%;
+  }
+  .other{
+    margin-left: 2%;
+  }
+  .self{
+    margin-right: 2%;
   }
 
   /*for check sign end */
