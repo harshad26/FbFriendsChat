@@ -484,7 +484,11 @@
     width: 35%;
   }
   .self{
+    
     margin-right: 2% !important;
+    -webkit-justify-content:flex-end;
+    align-items: flex-end;
+
   }
 }
 
