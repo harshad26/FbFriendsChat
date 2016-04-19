@@ -580,6 +580,13 @@
     margin-bottom: 20%;
     display: none;
   }
+  .chatboxcontent {
+    width: 100%;
+    height: 100%;
+  }
+  div#chatbox_1 {
+    right: 0px !important;
+  }
 }
 @media only screen and (min-device-width: 1025px) and (max-device-width: 1600px) {
   .polaroid{
