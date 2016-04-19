@@ -484,11 +484,9 @@
     width: 35%;
   }
   .self{
-    
     margin-right: 2% !important;
-    -webkit-justify-content:flex-end;
-    align-items: flex-end;
-
+    justify-content: flex-end !important;
+    align-items: flex-end !important;
   }
 }
 
