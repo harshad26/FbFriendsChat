@@ -545,8 +545,8 @@
         width: 35%;
     margin-left: 30%;
   }
-  .image .polaroid .tint:before{
-    height: 87%;
+  .image.polaroid.tint:before {
+    height: 88%;
   }
   .tint:before{
     height: 75%;
