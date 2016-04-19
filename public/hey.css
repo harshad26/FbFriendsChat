@@ -146,6 +146,9 @@
   .fb-photo{
     cursor: pointer;
   }
+  .fb-invited{
+    cursor: none;
+  }
   .media{
     width: 65%;
   }
