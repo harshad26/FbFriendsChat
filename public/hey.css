@@ -483,6 +483,9 @@
   .chatboxmessagecontent {
     width: 35%;
   }
+  .self{
+    margin-right: 2% !important;
+  }
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
