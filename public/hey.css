@@ -147,7 +147,7 @@
     cursor: pointer;
   }
   .fb-invited{
-    cursor: none;
+    cursor: default;
   }
   .media{
     width: 65%;
