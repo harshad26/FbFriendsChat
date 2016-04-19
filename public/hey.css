@@ -216,6 +216,17 @@
   .image.polaroid.tint::before {
     height: 84%;
   }
+  div#chatbox_1 {
+    right: 0px !important;
+  }
+  .chatbox {
+    width: 100%;
+    margin-bottom: 5%;
+  }
+  .chatboxcontent {
+    width: 100%;
+    height: 680px;
+  }
 
   /*for check sign end */
 /*added on 16/4 for responsive-start*/
