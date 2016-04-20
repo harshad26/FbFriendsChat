@@ -665,6 +665,9 @@
     float: left;
     padding-left: 20%;
   }
+  .image.polaroid.tint::before {
+    height: 100%;
+  }
   
 
 }
