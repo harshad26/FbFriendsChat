@@ -3,28 +3,19 @@
   <% if @conversations.any? %>
 
       <ul class="media-list">
-        <% @alreadyinvitedusers1.each do |item| %>
           <% @conversations.each do |conversation| %>
             <li class="media">
-              
-              <%= link_to image_tag("http://graph.facebook.com/#{conversation_interlocutor(conversation).uid}/picture"), "distance_path", class: "float-left #{@classphoto} start-conversation", "data-sid" => current_user.id, 'data-no-turbolink' => true, "data-rip" => item.id %>
-             
-
+              <%= link_to image_tag("http://graph.facebook.com/#{conversation_interlocutor(conversation).uid}/picture"),  conversation_path(conversation), class: "float-left #{@classphoto} start-conversation conversation", "data-cid" => conversation.id %>
               <div class="media-body">
-                <%= link_to "", conversation_path(conversation), class: "conversation", "data-cid" => conversation.id %>
-                    <h4 class="media-heading"><%= conversation_interlocutor(conversation).name %></h4>
-                    <p><%= conversation.messages.last.nil? ? "No messages" : truncate(conversation.messages.last.body, length: 45) %></p>
+                    <h4 class="media-heading"><%= link_to conversation_interlocutor(conversation).name, conversation_path(conversation), class: "conversation", style: "color:#000;", "data-cid" => conversation.id %></h4>
+                    <% last_message = conversation.messages.last.nil? ? "No messages" : truncate(conversation.messages.last.body, length: 45) %>
+                    <p><%= link_to last_message, conversation_path(conversation), class: "conversation", style: "color:#000;", "data-cid" => conversation.id %></p>
               </div>
             </li>
           <% end %>
-        <% end %>
       </ul>
-       
   <% else %>
-
       <p class="mess">You have no conversations. Click send message with any user to create one.</p>
   <% end %>
    
 </div>
-
-

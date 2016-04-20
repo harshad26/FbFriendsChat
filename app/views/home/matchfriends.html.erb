@@ -1,35 +1,36 @@
 <table width="100%" class="table">
   	<tbody>
-	  	<% if @alreadyinvitedusers.count>0 %>
-	  		<% @alreadyinvitedusers.each do |item| %>
-	  				<tr>
-			          	<div class="row">
-				      		<div class='fb-avatar-section'>
-					      		<td width="33%" class="b1">
-							        <div class="alignment ">
-                                         <% if @acceptedFriends.include? item.id %>
-							        		<div class="image polaroid1 tint tint1">
-							        	<% else %>
-                                        	<div class="image polaroid1 tint ">
-                                         <% end %>
-							        	<%= image_tag "http://graph.facebook.com/#{item.uid}/picture", :class => "float-left", :id => item.uid %>
-											<div class='float-left fb-avatar-desc' style="margin-bottom: -10%;">
-												<div class='float-left full-width fb-avatar-name' id="fb_name_<%= item.uid%>" style=" font-size: large;">
-													<%= item.name %>
-												</div>
-											<div>
-										</div>
-		                             <%=times(item.id) %> Mins
-							        </div><hr>
-						       	</td>
+		  	<% if @alreadyinvitedusers.count>0 %>
+		  		<% @alreadyinvitedusers.each do |item| %>
+		  				<tr>
+				          	<div class="row">
+					      		<div class='fb-avatar-section'>
+						      		<td width="33%" class="b1">
+								        <div class="alignment ">
+	                                         <% if @acceptedFriends.include? item.id %>
+								        		<div class="image polaroid1 tint tint1">
+								        	<% else %>
+	                                        	<div class="image polaroid1 tint ">
+	                                         <% end %>
+								        	<%= image_tag "http://graph.facebook.com/#{item.uid}/picture", :class => "float-left", :id => item.uid %>
+												<div class='float-left fb-avatar-desc' style="margin-bottom: -10%;">
+													<div class='float-left full-width fb-avatar-name' id="fb_name_<%= item.uid%>" style=" font-size: large;">
+														<%= item.name %>
+													</div>
+												<div>
+											</div>
+			                             <%=times(item.id) %> Mins</br>
+			                             <%#= m1[0] %>&nbsp;&nbsp;<span>Miles Away</span>
+								        </div><hr>
+							       	</td>
+								</div>
 							</div>
-						</div>
-					</tr>
-	      	<% end %>
-	    <% else %>
-	    
-	        <div class="mess">
-	    	<span > No friends invited. </span></div>
-	    <% end %>
+						</tr>
+					<% end %>	
+		    <% else %>
+		    
+		        <div class="mess">
+		    	<span > No friends invited. </span></div>
+		    <% end %>
   	</tbody>
 </table>

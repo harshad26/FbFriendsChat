@@ -1,6 +1,8 @@
 class HomeController < ApplicationController
 	before_filter :login_user, :only => [:searchlist, :distance, :matchfriends]
 	respond_to :html, :js
+	include HomeHelper
+	helper_method :dist
 	 
 	def show
 		if current_user
@@ -8,7 +10,6 @@ class HomeController < ApplicationController
 			@friendsHash = Hash.new()
 			unless @user_fb_token.blank?
 				@fb_friends = FbGraph::User.me(@user_fb_token).friends
-				# abort @fb_friends.inspect
 				@fb_friends = @fb_friends.sort_by { |fb_frnd| fb_frnd.raw_attributes['name']}
 				if @fb_friends
 					@fb_friends.each do |frd|
@@ -27,6 +28,15 @@ class HomeController < ApplicationController
 				@invitedFriends = @invitedFriends.map(&:inspect).join(', ')
 				@alreadyinvitedusers = User.where("id in (#{@invitedFriends})").pluck(:uid)
 			end
+
+            @dt = {}
+            current_user.multi_friends.each do |k,v| 
+            	dist = dist(k)
+            	dist = (dist == 'No found') ? 99999 : dist
+                @dt.merge!( k => dist)
+            end
+
+            @sortFriends = @dt.sort_by {|_k, val| val}
 		end
 	end
 
@@ -40,6 +50,14 @@ class HomeController < ApplicationController
 			@invitedFriends = @invitedFriends.map(&:inspect).join(', ')
 			@alreadyinvitedusers = User.where("id in (#{@invitedFriends})").pluck(:uid)
 		end
+		@dt = {}
+        current_user.multi_friends.each do |k,v| 
+            dist = dist(k)
+        	dist = (dist == 'No found') ? 99999 : dist
+            @dt.merge!( k => dist)
+        end
+
+        @sortFriends = @dt.sort_by {|_k, val| val}
 	end
 
     def update_location
@@ -48,7 +66,7 @@ class HomeController < ApplicationController
     end
 
 	def distance 
-
+     
 	end	
 
 	def invite_mail_send
@@ -64,9 +82,6 @@ class HomeController < ApplicationController
 
 	def messages
       	@conversations = Conversation.involving(current_user).order("created_at DESC")
-      	inviteFriends
-      	@invitedFriends = @invitedFriends.map(&:inspect).join(', ')
-      	@alreadyinvitedusers1 = User.where("id in (#{@invitedFriends})")
 	end 	
 
 	# Match friends list
@@ -86,11 +101,21 @@ class HomeController < ApplicationController
 			@invitedFriends = @invitedFriends.map(&:inspect).join(', ')
 			@alreadyinvitedusers = User.where("id in (#{@invitedFriends})")
 		end
+
+		@dt = {}
+        current_user.multi_friends.each do |k,v| 
+            dist = dist(k)
+        	dist = (dist == 'No found') ? 99999 : dist
+            @dt.merge!( k => dist)
+        end
+
+        @sortFriends = @dt.sort_by {|_k, val| val}
 	end
 
   	def friendslist
   		if params[:searchFriend]
   			@friendsHash = current_user.multi_friends
+
   			# Get current user invited friends
   			inviteFriends
   			@alreadyinvitedusers = []
@@ -99,6 +124,15 @@ class HomeController < ApplicationController
 				@alreadyinvitedusers = User.where("id in (#{@invitedFriends})").pluck(:uid)
 			end
 			@friendsHash = @friendsHash.select{|key, hash| hash.downcase.include?(params[:searchFriend].downcase) }
+
+			@dt = {}
+            @friendsHash.each do |k,v| 
+                dist = dist(k)
+	        	dist = (dist == 'No found') ? 99999 : dist
+	            @dt.merge!( k => dist)
+            end
+
+            @sortFriends = @dt.sort_by {|_k, val| val}
   		end
   	end
 end

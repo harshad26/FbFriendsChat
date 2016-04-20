@@ -32,16 +32,21 @@ class ApplicationController < ActionController::Base
     if @invitedFriendsLists
       @invitedFriendsLists.each do |frd|
         minutes = getMinutes(frd.created_at)
-        if (minutes <= 120 || frd.invite_accepted == true)
+        if (minutes <= 120)
           
           if frd.user_id != current_user.id
             @invitedFriends << frd.user_id 
           else
             @invitedFriends << frd.inviteid
           end
-        elsif frd.invite_accepted == false
-          frd.invite_timeout = true
-          frd.save
+           
+        else
+          @conv = Conversation.where("((sender_id = #{frd.user_id} and recipient_id = #{frd.inviteid}) OR (sender_id = #{frd.inviteid} and recipient_id = #{frd.user_id}))")
+          @conv.destroy_all 
+          frd.delete
+        # elsif frd.invite_accepted == false
+        #   frd.invite_timeout = true
+        #   frd.save
         end
       end
     end
