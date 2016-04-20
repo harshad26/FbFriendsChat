@@ -3,12 +3,12 @@ class HomeController < ApplicationController
 	respond_to :html, :js
 	 
 	def show
+
 		if current_user
 			@user_fb_token = current_user.oauth_token
 			@friendsHash = Hash.new()
 			unless @user_fb_token.blank?
 				@fb_friends = FbGraph::User.me(@user_fb_token).friends
-				# abort @fb_friends.inspect
 				@fb_friends = @fb_friends.sort_by { |fb_frnd| fb_frnd.raw_attributes['name']}
 				if @fb_friends
 					@fb_friends.each do |frd|
