@@ -610,7 +610,7 @@
     position: fixed;
     position: expression("absolute");
     /*width: 280px;*/
-    width: 100%;
+    width: 95.5%;
     height: 78%;
     margin-bottom: 20%;
     display: none;
@@ -624,6 +624,7 @@
   }
   .chatboxtextarea {
     width: 50%;
+    margin-left: 4%;
   }
 }
 @media only screen and (min-device-width: 1025px) and (max-device-width: 1600px) {
