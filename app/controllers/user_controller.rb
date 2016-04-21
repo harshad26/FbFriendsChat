@@ -5,14 +5,20 @@ class UserController < ApplicationController
 
 	# Mark on friends
   	def invitefriend
+
 	  	if params[:id]
 		  	user = User.find_by_uid(params[:id])
 		  	invitefriend = Invitefriend.where("(user_id = #{current_user.id} and inviteid = #{user.id}) OR (user_id = #{user.id} and inviteid = #{current_user.id})")
 		  	if invitefriend.count > 0
 		  		invitefriend = invitefriend[0]
-		  		if invitefriend.inviteid == current_user.id
+		  		if invitefriend.inviteid == current_user.id and invitefriend.invite_accepted == false
+
 		  			invitefriend.invite_accepted = true
 		  			chatConversation
+		  		else
+		  			invitefriend.destroy
+		  			@conv = Conversation.where("((sender_id = #{current_user.id} and recipient_id = #{user.id}) OR (sender_id = #{user.id} and recipient_id = #{current_user.id}))")
+          			@conv.destroy_all
 		  		end
 		  	else
 		  		invitefriend = Invitefriend.new(:user_id => current_user.id, :inviteid => user.id)
@@ -38,5 +44,9 @@ class UserController < ApplicationController
 		    Message.create!(:conversation_id => @conversation.id, :body => "Hey", :user_id => user.id)
 		end
   	end
+
+  	# def vanish
+   #   abort 
+  	# end 	
 
 end
