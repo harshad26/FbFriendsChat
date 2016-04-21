@@ -79,9 +79,11 @@
 
 <script type="text/javascript">
   $(function(){
-      $('.fb-photo').click(function() {
+      
+      $(document).on('click', '.fb-photo', function(){ 
         var fbid = $(this).attr('id');
         var obj = $(this);
+        
         $.ajax({
                 type: "GET",
                 url: '/users/invitefriend/' + fbid,
@@ -91,11 +93,32 @@
                     alert("something went wrong");
                   } else {
                     $("#"+fbid).removeClass("fb-photo");
-                    obj.unbind();
-                    // Write code for mark on photo
+                    $("#"+fbid).addClass("fb-invited");
+                    $("#"+fbid).parent().addClass("tint");
                   }
                 }
              });  
       });
+
+      $(document).on('click', '.tint', function(){
+        var fbid = $(".tint").children(".fb-invited").attr("id");
+        var obj = $(this);
+        $.ajax({
+          type: "GET",
+          url: '/users/invitefriend/' + fbid,
+          dataType: "json",
+          success: function(data) {
+                    if(data.text == "0") {
+                      alert("something went wrong");
+                    } else {
+                      $("#"+fbid).addClass("fb-photo");
+                      $("#"+fbid).removeClass("fb-invited");
+                      $("#"+fbid).parent().removeClass("tint");
+                    }
+                  }
+
+        });
+      });
+
   });
 </script>
