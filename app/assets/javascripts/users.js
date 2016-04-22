@@ -37,6 +37,10 @@ var ready = function () {
 
         var id = $(this).data('cid');
         chatBox.close(id);
+        // Show Header when close chat
+        $(".footer").show();
+        $(".header").show();
+        $(".navbar-static-top").show();
     });
 
 
@@ -61,6 +65,10 @@ var ready = function () {
 
         var conversation_id = $(this).data('cid');
         chatBox.chatWith(conversation_id);
+        // Hide Header when open chat
+        $(".footer").hide();
+        $(".header").hide();
+        $(".navbar-static-top").hide();
     });
 
 

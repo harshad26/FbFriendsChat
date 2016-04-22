@@ -2,17 +2,11 @@
 	<div class="row">
 		<div class="col-lg-12 col-md-12 col-sm-12">
 			  	<% if @friendsHash.count > 0 %>
-			  		<% cnt = 0 %>
 			  		<% @sortFriends.each do |item| %>			  		
-				  			<% if cnt==3 %>
-				  				</tr>
-				  				<tr>
-				  				<% cnt = 0 %>
-				  			<% end %>
 				  			<% @classphoto =  (@alreadyinvitedusers.include? item[0]) ? "fb-invited" : "fb-photo" %>
 				          	<div class="col-lg-4 col-md-4 col-sm-4">
 				          		<% if @classphoto == "fb-invited" %>
-				          			<div class="image polaroid tint ">
+				          			<div class="image polaroid tint">
 				          	 	<% else %>		
 				          			<div class="image polaroid">
 				          		<% end %>	
@@ -22,7 +16,6 @@
 										<%= (item[1] == 99999) ? "Not Shared Miles" : item[1].to_s + " Miles Away" %>
 									</div>
 								</div>								
-							    <% cnt += 1 %>
 						    </div>
 						<% end %>    
 			    <% else %>

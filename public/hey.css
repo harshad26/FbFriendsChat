@@ -27,6 +27,7 @@
     text-align: center;
     background: #ddd;	
   	overflow-x: hidden;
+    height: 15%;
   }
   img{
     width:100%;
@@ -89,11 +90,11 @@
   }
   .invitation{
     text-align: left;
-    margin-left: 40%;
+    margin-left: 36%;
     margin-top: 15%
   }
   .form-control{
-     width: 30% !important;
+     width: 50% !important;
   }
   .a1{
     border-bottom: 1px solid black;
@@ -165,12 +166,39 @@
   .media-list {
     margin-top: 3%;
   }
+  .tint2 {
+    position: relative;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    -webkit-box-shadow: rgba(0,0,0,.2) 3px 5px 5px;
+    -moz-box-shadow: rgba(0,0,0,.2) 3px 5px 5px;
+    box-shadow: rgba(0,0,0,.2) 3px 5px 5px;
+    margin-top: 2%;
+  }
+  .tint2:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(95, 185, 98, 0.5);
+    -moz-transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    transition: all .3s linear;
+    height: 100%;
+  }
   .tint {
     position: relative;
     float: left;
     margin-right: 20px;
     margin-bottom: 20px;
-    /*cursor: pointer;*/
+    cursor: pointer;
     -webkit-box-shadow: rgba(0,0,0,.2) 3px 5px 5px;
     -moz-box-shadow: rgba(0,0,0,.2) 3px 5px 5px;
     box-shadow: rgba(0,0,0,.2) 3px 5px 5px;
@@ -220,12 +248,12 @@
     right: 0px !important;
   }
   .chatbox {
-    width: 100%;
-    margin-bottom: 5%;
+   /* width: 100%;
+    margin-bottom: 5%;*/
   }
   .chatboxcontent {
-    width: 100%;
-    height: 680px;
+/*    width: 100%;
+    height: 680px;*/
   }
   .chatboxtextarea {
     margin-left: 2%;
@@ -369,7 +397,7 @@
   }
   .polaroid{
     width: 135%;
-    margin: 0px;
+    margin: 0px 0px 10px 0px;
     margin-left: -14%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.19) !important;
   }
@@ -466,22 +494,31 @@
     position: expression("absolute");
     /*width: 280px;*/
     width: 100%;
-    height: 50%;
-    margin-bottom: 40%;
+    /*height: 50%;*//*added on 22/4*/
+    /*margin-bottom: 40%;*//*added on 22/4*/
+    height: 100%;/*added on 22/4*/
     display: none;
+  }
+  .chatboxtitle{
+    padding: 1%;/*added on 22/4*/
   }
   div#chatbox_1 {
     right: 0px !important;
   }
   .chatboxcontent{
     width: 100%;
-    height: 83%;
+    /*height: 83%;*/
+    height: 78%;/*added on 22/4*/
   }
   .image.polaroid.tint:before {
     height: 100%;
   }
+  .chatboxinput{
+    padding: 0px;/*added on 22/4*/
+  }
   .chatboxtextarea{
-    width: 99%;
+    /*width: 99%;*/
+    width: 96%;/*added on 22/4*/
   }
   .chatboxmessagecontent {
     width: 35%;
@@ -692,6 +729,12 @@
   }
   textarea#message_body {
     width: 50%;
+  }
+  .polaroid{
+    width: 135%;
+    margin: 0px 0px 10px 0px;
+    margin-left: -14%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.19) !important;
   }
 }
 @media only screen and (min-device-width: 375px) and (max-device-width: 436px) {
