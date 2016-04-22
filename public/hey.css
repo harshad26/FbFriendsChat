@@ -397,7 +397,8 @@
   }
   .polaroid{
     width: 135%;
-    margin: 0px 0px 10px 0px;
+    /*margin: 0px 0px 10px 0px;*//*added on 22/4*/
+        margin: 12% 0%;/*added on 22/4*/
     margin-left: -14%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.19) !important;
   }
@@ -405,7 +406,8 @@
     padding: 3px;
     text-align: center;
     font-size: 10px;
-    min-height: 60px;
+    /*min-height: 60px;*//*added on 22/4*/
+    min-height: 70px;/*added on 22/4*/
   }
   .search .fa-search {
     position: absolute;
