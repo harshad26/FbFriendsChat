@@ -651,21 +651,21 @@
     position: fixed;
     position: expression("absolute");
     /*width: 280px;*/
-    width: 95.5%;
-    height: 78%;
-    margin-bottom: 20%;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0%;
     display: none;
   }
   .chatboxcontent {
     width: 100%;
-    height: 100%;
+    height: 89%;
   }
   div#chatbox_1 {
     right: 0px !important;
   }
   .chatboxtextarea {
-    width: 50%;
-    margin-left: 4%;
+    width: 94%;
+    /*margin-left: 4%;*/
   }
 }
 @media only screen and (min-device-width: 1025px) and (max-device-width: 1600px) {
