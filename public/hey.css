@@ -26,7 +26,7 @@
     /* padding-bottom: 0; */
     text-align: center;
     background: #ddd;	
-  	overflow-x: hidden;
+  	overflow: hidden;
     height: 15%;
   }
   img{
@@ -397,8 +397,7 @@
   }
   .polaroid{
     width: 135%;
-    /*margin: 0px 0px 10px 0px;*//*added on 22/4*/
-        margin: 12% 0%;/*added on 22/4*/
+    margin: 0px 0px 10px 0px;
     margin-left: -14%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.19) !important;
   }
@@ -530,6 +529,9 @@
   }
   .chatboxcontent li {
     display: flex !important;
+  }
+  img.heyimg {
+    width: 50% !important;
   }
 }
 
