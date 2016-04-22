@@ -36,7 +36,6 @@ class HomeController < ApplicationController
             	dist = (dist == 'No found') ? 99999 : dist
                 @dt.merge!( k => dist)
             end
-
             @sortFriends = @dt.sort_by {|_k, val| val}
 		end
 	end
@@ -72,7 +71,7 @@ class HomeController < ApplicationController
 
 	def invite_mail_send
 		if params[:invite] and !params[:invite][:email].blank?
-			puts "#{root_url} ----------- "
+			# puts "#{root_url} ----------- "
 			appUrl = root_url
 			UserMailer.welcome_email(params[:invite][:email],appUrl).deliver_later
 			redirect_to invite_mail_path, :notice => "Successfully sent invitation."
@@ -87,30 +86,30 @@ class HomeController < ApplicationController
 
 	# Match friends list
 	def matchfriends
-		inviteFriends
-		@acceptedFriendsIds = (@invitedFriends) ? Invitefriend.where("(user_id IN (?) OR inviteid IN (?)) and invite_accepted = (?)", @invitedFriends, @invitedFriends, true).pluck(:inviteid, :user_id) : []
+		@invitedAcceptedFrdsLists = Invitefriend.where("(user_id = #{current_user.id} OR inviteid = #{current_user.id}) and invite_accepted = true")
 		@acceptedFriends = []
-		if @acceptedFriendsIds.count > 0
-			@acceptedFriendsIds.each do |accId|
-				@acceptedFriends << accId[0]
-				@acceptedFriends << accId[1]
+		if @invitedAcceptedFrdsLists.count > 0
+			@invitedAcceptedFrdsLists.each do |frd|
+				if frd.user_id != current_user.id
+					@acceptedFriends << frd.user_id 
+				else
+					@acceptedFriends << frd.inviteid
+				end
 			end
 		end
-		# @acceptedFriendsMins = (@invitedFriends) ? Invitefriend.where("inviteid IN (?) and invite_accepted = (?)", @invitedFriends, true).pluck(:inviteid) : []
+
 		@alreadyinvitedusers = []
-		if !@invitedFriends.blank?
-			@invitedFriends = @invitedFriends.map(&:inspect).join(', ')
-			@alreadyinvitedusers = User.where("id in (#{@invitedFriends})")
-		end
-
 		@dt = {}
-        current_user.multi_friends.each do |k,v| 
-            dist = dist(k)
-        	dist = (dist == 'No found') ? 99999 : dist
-            @dt.merge!( k => dist)
-        end
-
-        @sortFriends = @dt.sort_by {|_k, val| val}
+		if !@acceptedFriends.blank?
+			@acceptedFriends = @acceptedFriends.map(&:inspect).join(', ')
+			@alreadyinvitedusers = User.where("id in (#{@acceptedFriends})")
+			@alreadyinvitedusers.each do |v| 
+                dist = dist(v.uid)
+	        	dist = (dist == 'No found') ? 99999 : dist
+	            @dt.merge!( v.id => dist)
+            end
+		end
+    	
 	end
 
   	def friendslist

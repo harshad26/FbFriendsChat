@@ -11,15 +11,15 @@
     position: expression("absolute");
     /*width: 280px;*/
     width: 100%;
-    height: 80% !important;
-    margin-bottom: 5% !important;
+    height: 90%;
+    margin-bottom: 5%;
     display: none;
 }
 
 .chatboxhead {
     background: #666;
     color: white;
-    padding: 0.5rem;
+    padding: 1.5rem;
     overflow: hidden;
     width: 100%;
     border-right: 1px solid rgba(85, 85, 85, 0.87);
