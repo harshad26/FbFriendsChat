@@ -537,6 +537,9 @@
     width: 106% !important;
     margin-left: -76%;
   }
+  .footer {
+    height: 16%;
+  }
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
@@ -674,6 +677,9 @@
   .form-control {
     width: 93% !important;
     margin-left: -31%;
+  }
+  .footer {
+    height: 7%;
   }
 }
 @media only screen and (min-device-width: 1025px) and (max-device-width: 1600px) {
