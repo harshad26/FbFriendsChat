@@ -393,6 +393,46 @@
     width: 8.33333333%;
   }
 
+  @media only screen and (min-device-width: 320px) and (device-height: 480px) {
+    .chatbox {
+      margin-bottom: 10% !important;
+      height: 93% !important;
+    }
+    .chatboxcontent {
+      height: 83% !important;
+    }
+  }
+
+  @media only screen and (min-device-width: 320px) and (device-height: 568px) {
+    .chatbox {
+      margin-bottom: 5% !important;
+      height: 97% !important;
+    }
+    .chatboxcontent {
+      height: 83% !important;
+    }
+  }
+
+  @media only screen and (min-device-width: 360px) and (device-height: 640px) {
+    .chatbox {
+      margin-bottom: 0% !important;
+      height: 100% !important;
+    }
+    .chatboxcontent {
+      height: 83% !important;
+    }
+  }
+
+  @media only screen and (min-device-width: 411px) and (device-height: 731px) {
+    .chatbox {
+      margin-bottom: 0% !important;
+      height: 100% !important;
+    }
+    .chatboxcontent {
+      height: 83% !important;
+    }
+  }
+
   @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
 
   .fa-5x {
@@ -496,16 +536,7 @@
         padding-left: 6%;
     padding-right: 6%;
   }
-  .chatbox {
-    position: fixed;
-    position: expression("absolute");
-    /*width: 280px;*/
-    width: 100%;
-    /*height: 50%;*//*added on 22/4*/
-    /*margin-bottom: 40%;*//*added on 22/4*/
-    height: 100%;/*added on 22/4*/
-    display: none;
-  }
+  
   .chatboxtitle{
     padding: 1%;/*added on 22/4*/
   }
@@ -540,8 +571,8 @@
     width: 50% !important;
   }
   .form-control {
-    width: 106% !important;
-    margin-left: -56%;
+    /*width: 106% !important;
+    margin-left: -56%;*/
   }
   .form-control-invite {
     width: 106% !important;
@@ -687,8 +718,8 @@
     /*margin-left: 4%;*/
   }
   .form-control {
-    width: 93% !important;
-    margin-left: -31%;
+    /*width: 93% !important;*/
+    /*margin-left: -31%;*/
   }
   .form-control-invite {
     width: 93% !important;
