@@ -92,16 +92,20 @@
                   if(data.text == "0") {
                     alert("something went wrong");
                   } else {
+                    if(data.text == "2") {
+                      $("#"+fbid).parent().addClass("tint tint1");  
+                    } else {
+                      $("#"+fbid).parent().addClass("tint");
+                    }
                     $("#"+fbid).removeClass("fb-photo");
                     $("#"+fbid).addClass("fb-invited");
-                    $("#"+fbid).parent().addClass("tint");
                   }
                 }
              });  
       });
 
       $(document).on('click', '.tint', function(){
-        var fbid = $(".tint").children(".fb-invited").attr("id");
+        var fbid = $(this).children(".fb-invited").attr("id");
         var obj = $(this);
         $.ajax({
           type: "GET",
@@ -114,6 +118,7 @@
                       $("#"+fbid).addClass("fb-photo");
                       $("#"+fbid).removeClass("fb-invited");
                       $("#"+fbid).parent().removeClass("tint");
+                      $("#"+fbid).parent().removeClass("tint1");
                     }
                   }
 

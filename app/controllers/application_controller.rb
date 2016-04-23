@@ -53,4 +53,17 @@ class ApplicationController < ActionController::Base
     return @invitedFriends
   end
 
+  def acceptedFriends
+    @invitedAcceptedFrdsLists = Invitefriend.where("(user_id = #{current_user.id} OR inviteid = #{current_user.id}) and invite_accepted = true")
+    @acceptedFriends = []
+    if @invitedAcceptedFrdsLists.count > 0
+      @invitedAcceptedFrdsLists.each do |frd|
+        if frd.user_id != current_user.id
+          @acceptedFriends << frd.user_id 
+        else
+          @acceptedFriends << frd.inviteid
+        end
+      end
+    end
+  end
 end

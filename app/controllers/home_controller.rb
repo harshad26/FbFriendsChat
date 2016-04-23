@@ -21,12 +21,21 @@ class HomeController < ApplicationController
 			# Save frieds hash array into database - serialization
 			current_user.multi_friends = @friendsHash
 			current_user.save
+
 			# Get current user invited friends
 			inviteFriends
 			@alreadyinvitedusers = []
 			if !@invitedFriends.blank?
 				@invitedFriends = @invitedFriends.map(&:inspect).join(', ')
 				@alreadyinvitedusers = User.where("id in (#{@invitedFriends})").pluck(:uid)
+			end
+
+			# Get user Accepted friends UID
+			acceptedFriends
+			@alreadyAcceptedUsers = []
+			if !@acceptedFriends.blank?
+				@acceptedFriends = @acceptedFriends.map(&:inspect).join(', ')
+				@alreadyAcceptedUsers = User.where("id in (#{@acceptedFriends})").pluck(:uid)
 			end
 
             @dt = {}
@@ -50,6 +59,15 @@ class HomeController < ApplicationController
 			@invitedFriends = @invitedFriends.map(&:inspect).join(', ')
 			@alreadyinvitedusers = User.where("id in (#{@invitedFriends})").pluck(:uid)
 		end
+
+		# Get user Accepted friends UID
+		acceptedFriends
+		@alreadyAcceptedUsers = []
+		if !@acceptedFriends.blank?
+			@acceptedFriends = @acceptedFriends.map(&:inspect).join(', ')
+			@alreadyAcceptedUsers = User.where("id in (#{@acceptedFriends})").pluck(:uid)
+		end
+		
 		@dt = {}
         current_user.multi_friends.each do |k,v| 
             dist = dist(k)
@@ -71,7 +89,6 @@ class HomeController < ApplicationController
 
 	def invite_mail_send
 		if params[:invite] and !params[:invite][:email].blank?
-			# puts "#{root_url} ----------- "
 			appUrl = root_url
 			UserMailer.welcome_email(params[:invite][:email],appUrl).deliver_later
 			redirect_to invite_mail_path, :notice => "Successfully sent invitation."
@@ -86,17 +103,7 @@ class HomeController < ApplicationController
 
 	# Match friends list
 	def matchfriends
-		@invitedAcceptedFrdsLists = Invitefriend.where("(user_id = #{current_user.id} OR inviteid = #{current_user.id}) and invite_accepted = true")
-		@acceptedFriends = []
-		if @invitedAcceptedFrdsLists.count > 0
-			@invitedAcceptedFrdsLists.each do |frd|
-				if frd.user_id != current_user.id
-					@acceptedFriends << frd.user_id 
-				else
-					@acceptedFriends << frd.inviteid
-				end
-			end
-		end
+		acceptedFriends
 
 		@alreadyinvitedusers = []
 		@dt = {}
@@ -123,6 +130,15 @@ class HomeController < ApplicationController
 				@invitedFriends = @invitedFriends.map(&:inspect).join(', ')
 				@alreadyinvitedusers = User.where("id in (#{@invitedFriends})").pluck(:uid)
 			end
+
+			# Get user Accepted friends UID
+			acceptedFriends
+			@alreadyAcceptedUsers = []
+			if !@acceptedFriends.blank?
+				@acceptedFriends = @acceptedFriends.map(&:inspect).join(', ')
+				@alreadyAcceptedUsers = User.where("id in (#{@acceptedFriends})").pluck(:uid)
+			end
+
 			@friendsHash = @friendsHash.select{|key, hash| hash.downcase.include?(params[:searchFriend].downcase) }
 
 			@dt = {}
