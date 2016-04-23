@@ -5,6 +5,7 @@ class HomeController < ApplicationController
 	helper_method :dist
 	 
 	def show
+
 		if current_user
 			@user_fb_token = current_user.oauth_token
 			@friendsHash = Hash.new()
