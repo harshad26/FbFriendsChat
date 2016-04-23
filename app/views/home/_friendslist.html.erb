@@ -4,8 +4,11 @@
 			  	<% if @friendsHash.count > 0 %>
 			  		<% @sortFriends.each do |item| %>			  		
 				  			<% @classphoto =  (@alreadyinvitedusers.include? item[0]) ? "fb-invited" : "fb-photo" %>
+				  			<% @classphoto =  (@alreadyAcceptedUsers.include? item[0]) ? "fb-invited fb-accepted" : @classphoto %>
 				          	<div class="col-lg-4 col-md-4 col-sm-4">
-				          		<% if @classphoto == "fb-invited" %>
+				          		<% if @classphoto == "fb-invited fb-accepted" %>
+				          			<div class="image polaroid tint tint1">
+				          		<% elsif @classphoto == "fb-invited" %>
 				          			<div class="image polaroid tint">
 				          	 	<% else %>		
 				          			<div class="image polaroid">

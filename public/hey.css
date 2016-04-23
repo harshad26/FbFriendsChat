@@ -27,7 +27,6 @@
     text-align: center;
     background: #ddd;	
   	overflow: hidden;
-    height: 15%;
   }
   img{
     width:100%;
@@ -95,6 +94,13 @@
   }
   .form-control{
      width: 50% !important;
+  }
+  .form-control-invite{
+    width: 50% !important;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 34px;
+    padding: 5px;
   }
   .a1{
     border-bottom: 1px solid black;
@@ -535,11 +541,17 @@
   }
   .form-control {
     width: 106% !important;
-    margin-left: -76%;
+    margin-left: -56%;
   }
-  .footer {
-    height: 16%;
+  .form-control-invite {
+    width: 106% !important;
+    margin-left: -56%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 34px;
+    padding: 5px;
   }
+
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
@@ -677,6 +689,14 @@
   .form-control {
     width: 93% !important;
     margin-left: -31%;
+  }
+  .form-control-invite {
+    width: 93% !important;
+    margin-left: -31%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 34px;
+    padding: 5px;
   }
   .footer {
     height: 7%;

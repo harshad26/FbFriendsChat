@@ -15,16 +15,19 @@ class UserController < ApplicationController
 
 		  			invitefriend.invite_accepted = true
 		  			chatConversation
+		  			flag = "2"
 		  		else
 		  			invitefriend.destroy
 		  			@conv = Conversation.where("((sender_id = #{current_user.id} and recipient_id = #{user.id}) OR (sender_id = #{user.id} and recipient_id = #{current_user.id}))")
           			@conv.destroy_all
+          			flag = "1"
 		  		end
 		  	else
 		  		invitefriend = Invitefriend.new(:user_id => current_user.id, :inviteid => user.id)
+		  		flag = "1"
 		  	end
 		  	if invitefriend.save
-		  		render :json => { :text => "1"}
+		  		render :json => { :text => flag}
 		  	else
 		  		render :json => { :text => "0"}
 		  	end
