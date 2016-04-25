@@ -3,6 +3,8 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
   helper_method :current_user
+  before_action :check_messages
+  before_action :read_messages, :only => [:messages]
   
   include HomeHelper
 
@@ -10,9 +12,32 @@ class ApplicationController < ActionController::Base
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
   end
 
-   
-
   private
+
+  # Mark as read in table of logged in user
+  def read_messages
+    @useConversations = Message.where("user_id = (?)", current_user.id).pluck(:conversation_id)
+    if @useConversations.count > 0
+      @useConversations = @useConversations.uniq # Unique
+      @useConversations = @useConversations.map(&:inspect).join(', ')
+      @updatemsg = Message.where("user_id != (?) and conversation_id IN (?)", current_user.id, @useConversations).update_all(:mark_as_read => true)
+      session[:mark_messages] = 0 # Mark as read messages
+    end
+  end
+
+  def check_messages
+    if session[:mark_messages] != 1
+      @useConversations = Message.where("user_id = (?)", current_user.id).pluck(:conversation_id)
+      if @useConversations.count > 0
+        @useConversations = @useConversations.uniq # Unique
+        @useConversations = @useConversations.map(&:inspect).join(', ')
+        @unreadMsg = Message.select("id").where("user_id != (?) and conversation_id IN (?) and mark_as_read = (?)", current_user.id, @useConversations, false).count
+        if @unreadMsg > 0
+          session[:mark_messages] = 1
+        end
+      end
+    end
+  end
 
   def getMinutes(created_at)
     @c = ((Time.now - created_at)/60 ).to_i

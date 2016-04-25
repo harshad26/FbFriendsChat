@@ -79,6 +79,13 @@
   </body>
 </html>
 
+<% 
+# Mark as read all messages
+if params[:action] == "messages"
+  session[:mark_messages] = 0
+end 
+%>
+
 <script type="text/javascript">
   $(function(){
       
@@ -95,9 +102,16 @@
                     alert("something went wrong");
                   } else {
                     if(data.text == "2") {
-                      $("#"+fbid).parent().addClass("tint tint1");  
+                      $("#"+fbid).parent().parent().addClass("tint tint1");  
+                      $(".fa-envelope-o").addClass("redCls");
+
+                      var linkHtml = obj.parent().html();
+                      linkHtml = '<a href="/conversations/'+data.convId+'" data-cid="'+data.convId+'" class="float-left conversation conversation'+data.userId+'">' + linkHtml + '</a>';
+                      obj.parent().html(linkHtml);
+                      obj.parent().parent().attr("data-id", data.userId);
+
                     } else {
-                      $("#"+fbid).parent().addClass("tint");
+                      $("#"+fbid).parent().parent().addClass("tint");
                     }
                     $("#"+fbid).removeClass("fb-photo");
                     $("#"+fbid).addClass("fb-invited");
@@ -106,26 +120,43 @@
              });  
       });
 
-      $(document).on('click', '.tint', function(){
-        var fbid = $(this).children(".fb-invited").attr("id");
-        var obj = $(this);
-        $.ajax({
-          type: "GET",
-          url: '/users/invitefriend/' + fbid,
-          dataType: "json",
-          success: function(data) {
-                    if(data.text == "0") {
-                      alert("something went wrong");
-                    } else {
-                      $("#"+fbid).addClass("fb-photo");
-                      $("#"+fbid).removeClass("fb-invited");
-                      $("#"+fbid).parent().removeClass("tint");
-                      $("#"+fbid).parent().removeClass("tint1");
+      $(document).on('click', '.tint', function(e){
+        if($(e.target).is('.tint')){
+          var fbid = $(this).find(".fb-invited").attr("id");
+          if($(this).hasClass("tint1"))
+            return false;
+
+          var obj = $(this);
+          $.ajax({
+            type: "GET",
+            async: "false",
+            url: '/users/invitefriend/' + fbid,
+            dataType: "json",
+            success: function(data) {
+                      if(data.text == "0") {
+                        alert("something went wrong");
+
+                      // Already accepted then mark and call chat
+                      } else if(data.text == "2") { 
+                        $("#"+fbid).parent().parent().addClass("tint1");
+                        $(".fa-envelope-o").addClass("redCls");
+                        
+                        var linkHtml = obj.find('.imgReplace').html();
+                        linkHtml = '<a href="/conversations/'+data.convId+'" data-cid="'+data.convId+'" class="float-left conversation conversation'+data.userId+'">' + linkHtml + '</a>';
+                        obj.find('.imgReplace').html(linkHtml);
+                        obj.attr("data-id", data.userId);
+
+                      // // Remove marked
+                      } else {
+                        $("#"+fbid).addClass("fb-photo");
+                        $("#"+fbid).removeClass("fb-invited");
+                        $("#"+fbid).parent().parent().removeClass("tint");
+                        $("#"+fbid).parent().parent().removeClass("tint1");
+                      }
                     }
-                  }
 
-        });
+          });
+        }
       });
-
   });
 </script>

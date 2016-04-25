@@ -4,6 +4,9 @@
     width:100% !important;	
     overflow-x:hidden;
   }
+  .redCls {
+    color: red;
+  }
   .container{
     width:100% !important;
     height:auto;

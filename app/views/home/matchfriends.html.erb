@@ -6,10 +6,12 @@
 					<div class="row">
 						<div class="col-lg-12 col-md-12 col-sm-12">
 							  	<% if @alreadyinvitedusers.count > 0 %>
-							  		<% @alreadyinvitedusers.each do |item| %>			  		
+							  		<% @alreadyinvitedusers.each do |item| %>
+							  		<%# abort item.id.inspect %>			  		
 								  			<% 
 									  			@convFriends = Conversation.where("((sender_id IN (?) and recipient_id IN (?)) OR (sender_id IN (?) and recipient_id IN (?))) ", item.id, current_user.id, current_user.id, item.id)
 				      		  		%>
+				      		  			<%# abort @convFriends.inspect %>
 								          	<div class="col-lg-4 col-md-4 col-sm-4">
 								          		<div class="image polaroid tint2 tint1" data-id="<%=item.id%>">
 									          		<%= link_to image_tag("http://graph.facebook.com/#{item.uid}/picture"),  conversation_path(@convFriends[0]), class: "float-left conversation conversation#{item.id}", "data-cid" => @convFriends[0].id %>
@@ -36,9 +38,11 @@
 
 <script type="text/javascript">
 (function a() {
-    $(".tint1").click(function(){
-  		var cid = $(this).attr("data-id");
-  		$(".conversation"+cid).click();
+    $(".tint1").click(function(e){
+    	if($(e.target).is('.tint1')){
+	  		var cid = $(this).attr("data-id");
+	  		$(".conversation"+cid).click();
+	  	}
   	});
 })();
 </script>

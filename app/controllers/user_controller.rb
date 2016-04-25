@@ -15,6 +15,11 @@ class UserController < ApplicationController
 
 		  			invitefriend.invite_accepted = true
 		  			chatConversation
+		  			convId = @conversation.id
+		  			flag = "2"
+		  		elsif invitefriend.invite_accepted == true
+		  			@conversation = Conversation.where("(sender_id = #{current_user.id} and recipient_id = #{user.id}) OR (recipient_id = #{current_user.id} and sender_id = #{user.id})")
+	  				convId = (@conversation) ? @conversation[0].id : 0
 		  			flag = "2"
 		  		else
 		  			invitefriend.destroy
@@ -27,7 +32,7 @@ class UserController < ApplicationController
 		  		flag = "1"
 		  	end
 		  	if invitefriend.save
-		  		render :json => { :text => flag}
+		  		render :json => { :text => flag, :convId => convId, :userId => user.id}
 		  	else
 		  		render :json => { :text => "0"}
 		  	end
@@ -46,10 +51,8 @@ class UserController < ApplicationController
 		    Message.create!(:conversation_id => @conversation.id, :body => "Hey", :user_id => current_user.id)
 		    Message.create!(:conversation_id => @conversation.id, :body => "Hey", :user_id => user.id)
 		end
-  	end
 
-  	# def vanish
-   #   abort 
-  	# end 	
+		return @conversation
+  	end	
 
 end

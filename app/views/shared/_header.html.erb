@@ -6,7 +6,11 @@
 				<%= link_to '<span> <i class="fa fa-5x fa-search"></i></span>'.html_safe, searchlist_path %>
 			</div>
 			<div class="col-lg-4 col-md-4 col-sm-4">
-				<%= link_to '<span> <i class="fa fa-5x fa-envelope-o"></i></span>'.html_safe, messages_path %>
+				<% if session[:mark_messages] == 1 %>
+					<%= link_to '<span> <i class="fa fa-5x fa-envelope-o redCls"></i></span>'.html_safe, messages_path %>
+				<% else %>
+					<%= link_to '<span> <i class="fa fa-5x fa-envelope-o"></i></span>'.html_safe, messages_path %>
+				<% end %>
 			</div>
 			<div class="col-lg-4 col-md-4 col-sm-4">
 				<span>

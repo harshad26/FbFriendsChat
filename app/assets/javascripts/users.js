@@ -60,7 +60,7 @@ var ready = function () {
      * conversation chatbox
      */
 
-    $('a.conversation').click(function (e) {
+    $(document).on('click', 'a.conversation', function(e){
         e.preventDefault();
 
         var conversation_id = $(this).data('cid');

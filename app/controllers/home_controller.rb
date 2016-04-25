@@ -46,7 +46,6 @@ class HomeController < ApplicationController
                 @dt.merge!( k => dist)
             end
             @sortFriends = @dt.sort_by {|_k, val| val}
-            
 		end
 	end
 
@@ -99,8 +98,8 @@ class HomeController < ApplicationController
 	end
 
 	def messages
-      	@conversations = Conversation.involving(current_user).order("created_at DESC")
-	end 	
+		@conversations = Conversation.involving(current_user).order("created_at DESC")
+	end
 
 	# Match friends list
 	def matchfriends
