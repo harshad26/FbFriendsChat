@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   helper_method :current_user
   # before_action :check_messages
-  # before_action :read_messages, :only => [:messages]
+  before_action :read_messages, :only => [:messages]
   
   include HomeHelper
 
@@ -15,15 +15,15 @@ class ApplicationController < ActionController::Base
   private
 
   # Mark as read in table of logged in user
-  # def read_messages
-  #   @useConversations = Message.where("user_id = (?)", current_user.id).pluck(:conversation_id)
-  #   if @useConversations.count > 0
-  #     @useConversations = @useConversations.uniq # Unique
-  #     @useConversations = @useConversations.map(&:inspect).join(', ')
-  #     @updatemsg = Message.where("user_id != (?) and conversation_id IN (?)", current_user.id, @useConversations).update_all(:mark_as_read => true)
-  #     session[:mark_messages] = 0 # Mark as read messages
-  #   end
-  # end
+  def read_messages
+    @useConversations = Message.where("user_id = (?)", current_user.id).pluck(:conversation_id)
+    if @useConversations.count > 0
+      @useConversations = @useConversations.uniq # Unique
+      @useConversations = @useConversations.map(&:inspect).join(', ')
+      @updatemsg = Message.where("user_id != (?) and conversation_id IN (?)", current_user.id, @useConversations).update_all(:mark_as_read => true)
+      session[:mark_messages] = 0 # Mark as read messages
+    end
+  end
 
   # def check_messages
   #   if session[:mark_messages] != 1 and current_user
