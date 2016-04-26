@@ -400,6 +400,7 @@
     .chatbox {
       margin-bottom: 10% !important;
       height: 93% !important;
+      overflow-x: hidden !important; 
     }
     .chatboxcontent {
       height: 83% !important;
