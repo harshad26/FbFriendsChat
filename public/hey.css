@@ -586,7 +586,27 @@
     height: 34px;
     padding: 5px;
   }
-
+  /*  add 26-04 to remove slider start  */
+  body {
+    width: 100% !important;
+    overflow-x: hidden;
+    height: 480px;
+    transform: scaleX(1);
+  }
+.container {
+    width: 100% !important;
+    height: auto;
+    overflow-x: hidden;
+    padding-top: 10%;
+    margin-bottom: 5%;
+    /* position: relative; */
+  }
+.navbar-default {
+    background-color: #f8f8f8;
+    border-color: #e7e7e7;
+    display: none;
+  }
+  /*  add 26-04 to remove slider end */
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
