@@ -29,13 +29,15 @@ class ApplicationController < ActionController::Base
     if (session[:mark_messages].nil? or session[:mark_messages] != 1) and current_user
       @useConversations = Message.select("conversation_id").where("user_id = (?)", current_user.id).count
       if @useConversations > 0
-         @useConversations = Message.where("user_id = (?)", current_user.id).pluck(:conversation_id)
-         @useConversations = @useConversations.uniq # Unique
-         @useConversations = @useConversations.map(&:inspect).join(', ')
-         @unreadMsg = Message.select("id").where("user_id != (?) and  mark_as_read = (?)", current_user.id,  false).count
+         @user_Conversations = Message.where("user_id = (?)", current_user.id).pluck(:conversation_id)
+         @user_Conversations = @user_Conversations.uniq # Unique
+         @user_Conversations_list = @user_Conversations.map(&:inspect).join(', ')
+         if @user_Conversations_list
+          @unreadMsg = Message.select("id").where("user_id != (?) and conversation_id IN (?) and mark_as_read = (?)", current_user.id, @user_Conversations_list, false).count
       #   if @unreadMsg > 0
       #     session[:mark_messages] = 1
       #   end
+         end
       end
     end
   end
