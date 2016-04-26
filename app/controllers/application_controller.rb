@@ -3,8 +3,8 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
   helper_method :current_user
-  # before_action :check_messages
-  # before_action :read_messages, :only => [:messages]
+   before_action :check_messages
+   before_action :read_messages, :only => [:messages]
   
   include HomeHelper
 
@@ -28,6 +28,7 @@ class ApplicationController < ActionController::Base
   def check_messages
     if session[:mark_messages] != 1 and current_user
       @useConversations = Message.where("user_id = (?)", current_user.id).pluck(:conversation_id)
+
       if @useConversations.count > 0
         @useConversations = @useConversations.uniq # Unique
         @useConversations = @useConversations.map(&:inspect).join(', ')
