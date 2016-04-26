@@ -32,12 +32,11 @@ class ApplicationController < ActionController::Base
          @user_Conversations = Message.where("user_id = (?)", current_user.id).pluck(:conversation_id)
          @user_Conversations = @user_Conversations.uniq # Unique
          @user_Conversations_list = @user_Conversations.map(&:inspect).join(', ')
-         # abort @user_Conversations.inspect
          if @user_Conversations_list
           @unreadMsg = Message.select("id").where("user_id != #{current_user.id} and conversation_id in (#{@user_Conversations_list}) and mark_as_read = false").count
-      #   if @unreadMsg > 0
-      #     session[:mark_messages] = 1
-      #   end
+          if @unreadMsg > 0
+            session[:mark_messages] = 1
+          end
          end
       end
     end
