@@ -26,9 +26,9 @@ class ApplicationController < ActionController::Base
   end
 
   def check_messages
-    if session[:mark_messages] and session[:mark_messages] != 1 and current_user
+    if (session[:mark_messages].nil? or session[:mark_messages] != 1) and current_user
       @useConversations = Message.select("conversation_id").where("user_id = (?)", current_user.id).count
-      if @useConversations.count > 0
+      if @useConversations > 0
         @useConversations = Message.where("user_id = (?)", current_user.id).pluck(:conversation_id)
         @useConversations = @useConversations.uniq # Unique
         @useConversations = @useConversations.map(&:inspect).join(', ')
