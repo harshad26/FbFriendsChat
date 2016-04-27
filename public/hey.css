@@ -404,7 +404,7 @@
      
     }
     .chatboxcontent {
-      height: 83% !important;
+      height: 82% !important;
     }
   }
 
@@ -414,7 +414,8 @@
       height: 97% !important;
     }
     .chatboxcontent {
-      height: 83% !important;
+     /* height: 83% !important;*/
+     height: 99% !important;
     }
   }
 
