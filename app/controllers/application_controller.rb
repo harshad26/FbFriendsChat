@@ -20,7 +20,8 @@ class ApplicationController < ActionController::Base
     if @useConversations.count > 0
       @useConversations = @useConversations.uniq # Unique
       @useConversations = @useConversations.map(&:inspect).join(', ')
-      @updatemsg = Message.where("user_id != (?) and conversation_id IN (?)", current_user.id, @useConversations).update_all(:mark_as_read => true)
+      #@updatemsg = Message.where("user_id != (?) and conversation_id IN (?)", current_user.id, @useConversations).update_all(:mark_as_read => true)
+      @updatemsg = Message.where("user_id != #{current_user.id} and conversation_id in (#{@useConversations})").update_all(:mark_as_read => true)
       session[:mark_messages] = 0 # Mark as read messages
     end
   end
