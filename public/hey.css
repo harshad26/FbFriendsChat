@@ -451,6 +451,7 @@
     margin: 0px 0px 10px 0px;
     margin-left: -14%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.19) !important;
+    margin-top: 10%;
   }
   .desc {
     padding: 3px;
@@ -490,7 +491,8 @@
     width: 25%;
   }
   .media-list {
-    margin-top: 3%;
+   /* margin-top: 3%;*/
+    margin-top: 10%;
     border-bottom: 1px solid #000;
     padding-bottom: 3%;
   }
