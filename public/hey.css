@@ -457,13 +457,13 @@
       height: 100% !important;
     }
     .chatboxcontent {
-      height: 90% !important;
+      height: 100% !important;
     }
     .chatboxtextarea{
       height: 40px !important;/*added on 28/4*/
     }
     .footer{
-          margin-bottom: -67% !important;
+          margin-bottom: -50% !important;
     }
   }
 
