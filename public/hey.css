@@ -397,29 +397,30 @@
     width: 8.33333333%;
   }
 
-  @media only screen and (min-device-width: 320px) and (device-height: 480px) {
+  @media only screen and (min-device-width: 320px) and (max-device-height: 480px) {
     .chatbox {
       margin-bottom: 10% !important;
       height: 93% !important;
      
     }
     .chatboxcontent {
-      height: 81% !important;
+      /*height: 81% !important;*//*added on 28/4*/
+      height: 78% !important;/*added on 28/4*/
     }
   }
 
-  @media only screen and (min-device-width: 320px) and (device-height: 568px) {
+  @media only screen and (min-device-width: 320px) and (max-device-height: 568px) {
     .chatbox {
       margin-bottom: 5% !important;
       height: 97% !important;
     }
     .chatboxcontent {
-     /* height: 83% !important;*/
-     height: 99% !important;
+      height: 83% !important;/*added on 28/4*/
+     /*height: 99% !important;*//*added on 28/4*/
     }
   }
 
-  @media only screen and (min-device-width: 360px) and (device-height: 640px) {
+  @media only screen and (min-device-width: 360px) and (max-device-height: 640px) {
     .chatbox {
       margin-bottom: 0% !important;
       height: 100% !important;
@@ -429,7 +430,7 @@
     }
   }
 
-  @media only screen and (min-device-width: 411px) and (device-height: 731px) {
+  @media only screen and (min-device-width: 411px) and (max-device-height: 731px) {
     .chatbox {
       margin-bottom: 0% !important;
       height: 100% !important;
@@ -842,7 +843,8 @@
   }
   .chatboxcontent {
     width: 100%;
-    height: 100%;
+    /*height: 100%;*//*added on 28/4*/
+    height: 99%;/*added on 28/4*/
   }
 
 }
@@ -866,14 +868,14 @@
 }
 @media only screen and (min-device-width: 360px) and (max-device-width: 411px) {
   .footer{
-    /*margin-bottom: -45%;*/
-    margin-bottom: -10%;
+    /*margin-bottom: -45%;*//*added on 28/4*/
+    margin-bottom: -10%;/*added on 28/4*/
   }
   .container{
-   /* height: 122%;*/
+   /* height: 122%;*//*added on 28/4*/
   }
   .chatboxcontent {
-    /*height: 113% !important;*/
+    /*height: 113% !important;*//*added on 28/4*/
   }
 
 }
