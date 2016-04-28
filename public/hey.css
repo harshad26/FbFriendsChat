@@ -408,7 +408,7 @@
       height: 78% !important;/*added on 28/4*/
     }
     .chatboxtextarea{
-      height: auto !important;
+      height: auto !important;/*added on 28/4*/
     }
   }
 
@@ -421,6 +421,9 @@
       height: 80% !important;/*added on 28/4*/
      /*height: 99% !important;*//*added on 28/4*/
     }
+    .chatboxtextarea{
+      height: auto !important;/*added on 28/4*/
+    }
   }
 
   @media only screen and (min-device-width: 360px) and (max-device-height: 640px) {
@@ -431,6 +434,9 @@
     .chatboxcontent {
       height: 83% !important;
     }
+    .chatboxtextarea{
+      height: auto !important;/*added on 28/4*/
+    }
   }
 
   @media only screen and (min-device-width: 411px) and (max-device-height: 731px) {
@@ -440,6 +446,9 @@
     }
     .chatboxcontent {
       height: 83% !important;
+    }
+    .chatboxtextarea{
+      height: auto !important;/*added on 28/4*/
     }
   }
 
@@ -616,6 +625,10 @@
     display: none;
   }
   /*  add 26-04 to remove slider end */
+
+  .chatboxtextarea{
+      height: auto !important;/*added on 28/4*/
+    }
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
