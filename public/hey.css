@@ -851,12 +851,12 @@
 /*added on 16/4 for responsive-end*/
 /*added on 27/4 for footer & container responsive-start */
 
-@media only screen and (min-device-width: 420px) and (max-device-width: 436px) {
+/*@media only screen and (min-device-width: 420px) and (max-device-width: 436px) {
   .footer{
     margin-bottom: -69%;
   }
   .container{
-    /*height: 148%;*//**/
+    height: 148%;
   }
   .chatboxcontent {
     width: 100%;
@@ -886,5 +886,5 @@
   .chatboxcontent {
     height: 140%;
   }
-}
+}*/
 /*added on 27/4 for footer & container responsive-end*/
