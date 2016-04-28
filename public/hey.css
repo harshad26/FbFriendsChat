@@ -451,7 +451,7 @@
       height: 40px !important;/*added on 28/4*/
     }
   }
-  @media only screen and (min-device-width: 414px) and (min-device-height: 736px) {
+  @media only screen and (min-device-width: 375px) and (min-device-height: 667px) {
     .chatbox {
       margin-bottom: 0% !important;
       height: 100% !important;
