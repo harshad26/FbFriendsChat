@@ -11,7 +11,8 @@
     width:100% !important;
     height:auto;
     overflow-x:hidden;  
-    margin-top: -1%;
+    /*margin-top: -1%;*//*added on 28/4*/
+    margin-top: 5%;/*added on 28/4*/
     margin-bottom: 5%;
   }
   .header{
@@ -30,6 +31,7 @@
     text-align: center;
     background: #ddd; 
     overflow: hidden;
+    margin-bottom: 0% !important;/*added on 28/4*/
   }
   img{
     width:100%;
@@ -451,7 +453,7 @@
       height: 40px !important;/*added on 28/4*/
     }
   }
-  @media only screen and (min-device-width: 375px) and (min-device-height: 667px) {
+  @media only screen and (min-device-height: 667px) and (max-device-height: 668px) {
     .chatbox {
       margin-bottom: 0% !important;
       height: 100% !important;
