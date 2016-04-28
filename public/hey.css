@@ -469,6 +469,7 @@
     }
     .container{
       height: 110% !important;
+      margin-top: 0%;
     }
   }
 
@@ -909,6 +910,7 @@
   }
   .container{
    /* height: 122%;*//*added on 28/4*/
+   margin-top: 0%;/*added on 28/4*/
   }
   .chatboxcontent {
     /*height: 113% !important;*//*added on 28/4*/
