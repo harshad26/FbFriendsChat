@@ -397,8 +397,403 @@
     width: 8.33333333%;
   }
 
+  @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
+
+  .fa-5x {
+    font-size: 2.5em;
+  }
+  .table-responsive{
+    border: none !important;
+  }
+  .polaroid{
+    width: 135%;
+    margin: 0px 0px 10px 0px;
+    margin-left: -14%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.19) !important;
+    margin-top: 10%;
+  }
+  .desc {
+    padding: 3px;
+    text-align: center;
+    font-size: 10px;
+    /*min-height: 60px;*//*added on 22/4*/
+    min-height: 70px;/*added on 22/4*/
+  }
+  .search .fa-search {
+    position: absolute;
+    top: 10px;
+    color: #000;
+    margin-left: -46%;
+    margin-top: 0.2%;
+    width: 0px; 
+  }
+  .search input {
+   
+    text-indent: 13%;
+    font-size: 20px;
+  }  
+  .search {
+    height: 50px;
+  }
+  .search .fa-5x{
+    font-size: 2em;
+  }
+  .a11 {
+    margin-top: 33%;
+  }
+  .a1 img {
+    margin-left: 5%;
+    margin-bottom: 10%;
+    margin-top: 0%;
+  }
+  .a1 td{
+    width: 25%;
+  }
+  .media-list {
+   /* margin-top: 3%;*/
+    margin-top: 10%;
+    border-bottom: 1px solid #000;
+    padding-bottom: 3%;
+  }
+  .media-body {
+    padding-top: 5%;
+    /* margin-left: -9% !important; */
+    width: auto;
+    padding-left: 10%;
+    float: left;
+  }
+  .media {
+    width: 100% !important;
+  }
+  .media img {
+      width: 25%;
+      margin-left: 0%;
+      border: none; 
+      float: left;
+  }
+  hr {
+    margin-top: 0px; 
+    margin-bottom: 0px;
+    border: 0;
+    border-top: none;
+  }
+  .fb-avatar-desc{
+    padding-top: 5%;
+    margin-bottom:0px !important;
+    font-size: 12px;
+  }
+  .fb-avatar-name{
+    font-size: 15px !important;
+    padding-bottom: 3%;
+  }
+  .polaroid1 {
+    width: 50%;
+    margin-left: 25%; 
+  }
+  .tint:before{
+    height: 100%;
+  }
+  #sign_in img {
+    width: 150%;
+    margin-left: -35%;
+  }
+  .col-lg-4 , .col-md-4 , .col-sm-4{
+
+        padding-left: 6%;
+    padding-right: 6%;
+  }
   
-/*@media only screen and (min-device-width: 375px) and (max-device-width: 436px) {
+  .chatboxtitle{
+    padding: 1%;/*added on 22/4*/
+  }
+  div#chatbox_1 {
+    right: 0px !important;
+  }
+  .chatboxcontent{
+    width: 100%;
+    /*height: 83%;*/
+    height: 78%;/*added on 22/4*/
+  }
+  .image.polaroid.tint:before {
+    height: 100%;
+  }
+  .chatboxinput{
+    padding: 0px;/*added on 22/4*/
+  }
+  .chatboxtextarea{
+    /*width: 99%;*/
+    width: 96%;/*added on 22/4*/
+  }
+  .chatboxmessagecontent {
+    width: 35%;
+  }
+  .self{
+    margin-right: 2% !important;
+  }
+  .chatboxcontent li {
+    display: flex !important;
+  }
+  img.heyimg {
+    width: 50% !important;
+  }
+  .form-control {
+    /*width: 106% !important;
+    margin-left: -56%;*/
+  }
+  .form-control-invite {
+    width: 106% !important;
+    margin-left: -56%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 34px;
+    padding: 5px;
+  }
+  /*  add 26-04 to remove slider start  */
+  body {
+    width: 100% !important;
+    overflow-x: hidden;
+    height: 480px;
+    transform: scaleX(1);
+  }
+.container {
+    width: 100% !important;
+    /*height: auto;*/
+    height: 100%;/*added on 27-04*/
+    overflow-x: hidden;
+    padding-top: 10%;
+    margin-bottom: 5%;
+    /* position: relative; */
+  }
+.navbar-default {
+    background-color: #f8f8f8;
+    border-color: #e7e7e7;
+    display: none;
+  }
+  /*  add 26-04 to remove slider end */
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+
+  .fa-5x {
+    font-size: 2.5em;
+  }
+  .table-responsive{
+    border: none !important;
+  }
+  .polaroid{
+    width: 100%;
+    margin: 0px;
+    margin-left: 0%;
+    margin-top: 10%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.19) !important;
+  }
+  .desc {
+    padding: 3px;
+    text-align: center;
+    font-size: 17px;
+  }
+  .search .fa-search {
+    position: absolute;
+    top: 10px;
+    color: #000;
+    margin-left: -46%;
+    margin-top: 0.2%;
+    width: 0px; 
+  }
+  .search input {
+   
+    text-indent: 9%;
+    font-size: 24px;
+  }  
+  .search {
+    height: 50px;
+  }
+  .search .fa-5x{
+    font-size: 2em;
+  }
+  .a11 {
+    margin-top: 27%;
+    margin-left: 0px;
+  }
+  .a1 img {
+    margin-left: 5%;
+    margin-bottom: 10%;
+    margin-top: 8%;
+    width: 72%;
+  }
+  .a1 td{
+    width: 25%;
+  }
+  .media-list {
+    margin-top: 3%;
+    border-bottom: 1px solid #000;
+    padding-bottom: 3%;
+  }
+  .media-body {
+    padding-top: 9%;
+    /* margin-left: -9% !important; */
+    width: auto;
+    padding-left: 10%;
+    float: left;
+  }
+  .media {
+    width: 100% !important;
+  }
+  .media img {
+      width: 28%;
+      margin-left: 0%;
+      border: none; 
+      float: left;
+  }
+  hr {
+    margin-top: 0px; 
+    margin-bottom: 0px;
+    border: 0;
+    border-top: none;
+  }
+  .fb-avatar-desc{
+    padding-top: 2%;
+    padding-bottom: 3%;
+    margin-bottom:0px !important;
+    font-size: 20px;
+  }
+  .fb-avatar-name{
+    font-size: 27px !important;
+    padding-bottom: 3%;
+  }
+  .polaroid1 {
+        width: 35%;
+    margin-left: 30%;
+  }
+  .image.polaroid.tint:before {
+    height: 100%;
+  }
+  .tint:before{
+    height: 100%;
+  }
+  #sign_in img {
+    width: 150%;
+    margin-left: -50%;
+  }
+  .media-list .media-heading {
+    font-size: 30px;
+  }
+  .media-list p{
+    font-size: 20px;
+  }
+  .mess {
+    margin-top: 58%;
+  }
+  .chatbox {
+    position: fixed;
+    position: expression("absolute");
+    /*width: 280px;*/
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0%;
+    display: none;
+  }
+  .chatboxcontent {
+    width: 100%;
+    height: 89%;
+  }
+  div#chatbox_1 {
+    right: 0px !important;
+  }
+  .chatboxtextarea {
+    width: 94%;
+    /*margin-left: 4%;*/
+  }
+  .form-control {
+    /*width: 93% !important;*/
+    /*margin-left: -31%;*/
+  }
+  .form-control-invite {
+    width: 93% !important;
+    margin-left: -31%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 34px;
+    padding: 5px;
+  }
+  .footer {
+    height: 7%;
+  }
+}
+@media only screen and (min-device-width: 1025px) and (max-device-width: 1600px) {
+  .polaroid{
+    margin-top: 10%;
+    width: 70%;
+  }
+  .table{
+    margin-top: 3%;
+  }
+  .tint:before{
+    height: 100%%;
+  }
+  .fb-avatar-name{
+    font-size: 22px !important;
+  }
+  .polaroid1{
+    font-size: 19px !important;
+  }
+  .media-list {
+    margin-top: 4%;
+  }
+.media {
+    width: 100%;
+  }
+  .media img{
+    margin-left: 10%;
+  }
+  .media-list p{
+    font-size: 18px;
+  }
+  .media-heading{
+    font-size: 24px;
+  }
+  .media-body {
+    padding-top: 4%;
+    width: auto;
+    float: left;
+    padding-left: 20%;
+  }
+  .image.polaroid.tint::before {
+    height: 100% !important;
+  }
+  
+
+}
+@media only screen and (min-device-width: 1280px) and (max-device-width: 1441px) {
+  .chatbox {
+    position: fixed;
+    position: expression("absolute");
+    width: 100%;
+    height: 64%;
+    margin-bottom: 10%;
+    display: none;
+  }
+  .chatboxcontent {
+    width: 100%;
+    height: 88%;
+  }
+  .image.polaroid.tint:before {
+    height: 81%;
+  }
+  div#chatbox_1 {
+    right: 0px !important;
+  }
+  textarea#message_body {
+    width: 50%;
+  }
+  .polaroid{
+    width: 135%;
+    margin: 0px 0px 10px 0px;
+    margin-left: -14%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.19) !important;
+  }
+}
+@media only screen and (min-device-width: 375px) and (max-device-width: 436px) {
   div#chatbox_1 {
     margin-bottom: 40%;
     height: 60%;
@@ -409,7 +804,7 @@
   }
 
 }
-@media only screen and (min-device-width: 320px) and (device-height: 480px) {
+@media only screen and (min-device-width: 320px) and (max-device-height: 480px) {
     .chatbox {
       margin-bottom: 10% !important;
       height: 93% !important;
@@ -420,18 +815,18 @@
     }
   }
 
-  @media only screen and (min-device-width: 320px) and (device-height: 568px) {
+  @media only screen and (min-device-width: 320px) and (max-device-height: 568px) {
     .chatbox {
       margin-bottom: 5% !important;
       height: 97% !important;
     }
     .chatboxcontent {
-     /* height: 83% !important;*/
-    /* height: 99% !important;
+    /*  height: 83% !important;*/
+     height: 99% !important;
     }
   }
 
-  @media only screen and (min-device-width: 360px) and (device-height: 640px) {
+  @media only screen and (min-device-width: 360px) and (max-device-height: 640px) {
     .chatbox {
       margin-bottom: 0% !important;
       height: 100% !important;
@@ -441,7 +836,7 @@
     }
   }
 
-  @media only screen and (min-device-width: 411px) and (device-height: 731px) {
+  @media only screen and (min-device-width: 411px) and (max-device-height: 731px) {
     .chatbox {
       margin-bottom: 0% !important;
       height: 100% !important;
@@ -449,7 +844,7 @@
     .chatboxcontent {
       height: 83% !important;
     }
-  }*/
+  }
 
 
 
