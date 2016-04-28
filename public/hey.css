@@ -30,7 +30,7 @@
     text-align: center;
     background: #ddd;	
   	overflow: hidden;
-    bottom: 0;
+
   }
   img{
     width:100%;
@@ -560,6 +560,7 @@
     width: 100% !important;
     /*height: auto;*/
     height: 100%;/*added on 27-04*/
+    max-height: 100%;
     overflow-x: hidden;
     padding-top: 10%;
     margin-bottom: 5%;
@@ -719,6 +720,9 @@
   }
   .footer {
     height: 7%;
+     left: 0;
+    right: 0;
+    bottom: 0;
   }
 }
 @media only screen and (min-device-width: 1025px) and (max-device-width: 1600px) {
