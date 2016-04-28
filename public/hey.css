@@ -627,7 +627,7 @@
   /*  add 26-04 to remove slider end */
 
   .chatboxtextarea{
-      height: auto !important;/*added on 28/4*/
+      height: 40px !important;/*added on 28/4*/
     }
 }
 
