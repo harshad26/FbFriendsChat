@@ -775,7 +775,7 @@
   }
   .chatboxcontent {
     width: 100%;
-    height: 89%;
+    height: 89% !important;
   }
   div#chatbox_1 {
     right: 0px !important;
@@ -841,7 +841,9 @@
   .image.polaroid.tint::before {
     height: 100% !important;
   }
-  
+  .chatboxcontent {
+    height: 90% !important;
+}
 
 }
 @media only screen and (min-device-width: 1280px) and (max-device-width: 1441px) {
@@ -872,7 +874,15 @@
     margin-left: -14%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.19) !important;
   }
+  .chatboxcontent {
+    height: 90% !important;
 }
+}
+@media only screen and (min-device-width: 1601px) {
+  .chatboxcontent {
+    height: 90% !important;
+}
+  }
 @media only screen and (min-device-width: 375px) and (max-device-width: 436px) {
   div#chatbox_1 {
     margin-bottom: 40%;
