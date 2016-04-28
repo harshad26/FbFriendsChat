@@ -557,11 +557,11 @@
   }
 .container {
     width: 100% !important;
-    /*height: auto;*/
-    height: 100%;/*added on 27-04*/
+    height: auto;
+    /*height: 100%;*//*added on 27-04*/
     overflow-x: hidden;
     padding-top: 10%;
-    margin-bottom: 5%;
+    /*margin-bottom: 5%;*/
     /* position: relative; */
   }
 .navbar-default {
