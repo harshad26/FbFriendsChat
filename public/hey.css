@@ -401,74 +401,74 @@
 
   @media only screen and (min-device-width: 320px) and (max-device-height: 480px) {
     .chatbox {
-      margin-bottom: 10% !important;
-      height: 93% !important;
+      margin-bottom: 10%;
+      height: 93%;
      
     }
     .chatboxcontent {
       /*height: 81% !important;*//*added on 28/4*/
-      height: 78% !important;/*added on 28/4*/
+      height: 78%;/*added on 28/4*/
     }
     .chatboxtextarea{
-      height: auto !important;/*added on 28/4*/
+      height: auto;/*added on 28/4*/
     }
   }
 
   @media only screen and (min-device-width: 320px) and (min-device-height: 568px) {
     .chatbox {
-      margin-bottom: 5% !important;
-      height: 95% !important;
+      margin-bottom: 5%;
+      height: 95%;
     }
     .chatboxcontent {
-      height: 80% !important;/*added on 28/4*/
+      height: 80%;/*added on 28/4*/
      /*height: 99% !important;*//*added on 28/4*/
     }
     .chatboxtextarea{
-      height: auto !important;/*added on 28/4*/
+      height: auto;/*added on 28/4*/
     }
   }
 
   @media only screen and (min-device-width: 360px) and (max-device-height: 640px) {
     .chatbox {
-      margin-bottom: 0% !important;
-      height: 100% !important;
+      margin-bottom: 0%;
+      height: 100%;
     }
     .chatboxcontent {
-      height: 83% !important;
+      height: 83%;
     }
     .chatboxtextarea{
-      height: auto !important;/*added on 28/4*/
+      height: auto;/*added on 28/4*/
     }
   }
 
   @media only screen and (min-device-width: 411px) and (min-device-height: 731px) {
     .chatbox {
-      margin-bottom: 0% !important;
-      height: 100% !important;
+      margin-bottom: 0%;
+      height: 100%;
     }
     .chatboxcontent {
-      height: 83% !important;
+      height: 83%;
     }
     .chatboxtextarea{
-      height: 40px !important;/*added on 28/4*/
+      height: 40px;/*added on 28/4*/
     }
   }
   @media only screen and (min-device-height: 667px) and (max-device-height: 668px) {
     .chatbox {
-      margin-bottom: 0% !important;
-      height: 100% !important;
+      margin-bottom: 0%;
+      height: 100%;
     }
     .chatboxcontent {
-      height: 100% !important;
+      height: 100%;
     }
     .chatboxtextarea{
-      height: 40px !important;/*added on 28/4*/
+      height: 40px;/*added on 28/4*/
     }
     .footer{
-      margin-bottom: -30% !important;
+      margin-bottom: -30%;
     }
     .container{
-      height: 110% !important;
+      height: 110%;
       margin-top: 0%;
     }
   }
