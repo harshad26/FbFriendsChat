@@ -798,7 +798,7 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.19) !important;
   }
 }
-@media only screen and (min-device-width: 375px) and (max-device-width: 436px) {
+/*@media only screen and (min-device-width: 375px) and (max-device-width: 436px) {
   div#chatbox_1 {
     margin-bottom: 40%;
     height: 60%;
@@ -827,7 +827,7 @@
     }
     .chatboxcontent {
     /*  height: 83% !important;*/
-     height: 99% !important;
+     /*height: 99% !important;
     }
   }
 
@@ -850,7 +850,7 @@
       height: 83% !important;
     }
   }
-
+*/
 
 
 
