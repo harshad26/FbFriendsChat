@@ -866,13 +866,14 @@
 }
 @media only screen and (min-device-width: 360px) and (max-device-width: 411px) {
   .footer{
-    margin-bottom: -45%;
+    /*margin-bottom: -45%;*/
+    margin-bottom: -10%;
   }
   .container{
-    height: 122%;
+   /* height: 122%;*/
   }
   .chatboxcontent {
-    height: 113% !important;
+    /*height: 113% !important;*/
   }
 
 }
