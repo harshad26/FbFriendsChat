@@ -420,11 +420,14 @@
       height: 95%;
     }
     .chatboxcontent {
-      height: 80%;/*added on 28/4*/
+      height: 80% !important;/*added on 28/4*/
      /*height: 99% !important;*//*added on 28/4*/
     }
     .chatboxtextarea{
       height: auto;/*added on 28/4*/
+    }
+    .container{
+      margin-top: 0%;
     }
   }
 
@@ -468,7 +471,7 @@
       margin-bottom: -30%;
     }
     .container{
-      height: 110%;
+      height: 110% !important;
       margin-top: 0%;
     }
   }
