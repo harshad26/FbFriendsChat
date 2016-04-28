@@ -906,7 +906,7 @@
 @media only screen and (min-device-width: 360px) and (max-device-width: 411px) {
   .footer{
     /*margin-bottom: -45%;*//*added on 28/4*/
-    margin-bottom: -10%;/*added on 28/4*/
+    margin-bottom: -10% !important;/*added on 28/4*/
   }
   .container{
    /* height: 122%;*//*added on 28/4*/
