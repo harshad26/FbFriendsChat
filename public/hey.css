@@ -856,11 +856,11 @@
     margin-bottom: -69%;
   }
   .container{
-    height: 148%;
+    /*height: 148%;*//**/
   }
   .chatboxcontent {
     width: 100%;
-    height: 148%;
+    height: 125%;
   }
 
 }
