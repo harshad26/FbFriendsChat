@@ -30,6 +30,7 @@
     text-align: center;
     background: #ddd;	
   	overflow: hidden;
+    bottom: 0;
   }
   img{
     width:100%;
