@@ -657,8 +657,8 @@
     width: 100% !important;
     height: 100%;
     overflow-x: hidden;
-    padding-top: 10%;
-    margin-bottom: 5%;
+    /*padding-top: 10%;
+    margin-bottom: 5%;*/
   }
 .navbar-default {
     background-color: #f8f8f8;
