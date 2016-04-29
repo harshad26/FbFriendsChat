@@ -870,7 +870,8 @@
     width: 50%;
   }
   .polaroid{
-    width: 135%;
+    /*width: 135%;*//*added on 29/4*/
+    width: 100%;/*added on 29/4*/
     margin: 0px 0px 10px 0px;
     margin-left: -14%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.19) !important;
