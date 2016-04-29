@@ -430,11 +430,7 @@
     }
   }
   
-  @media only screen and (min-device-height: 854px) and (max-device-height: 856px){
-    .footer{
-      margin-bottom: -60% !important;
-    }
-  }
+  
 
   @media only screen and (min-device-width: 360px) and (max-device-height: 640px) {
     .chatbox {
