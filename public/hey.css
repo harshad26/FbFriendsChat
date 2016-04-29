@@ -14,6 +14,10 @@
     /*margin-top: -1%;*//*added on 28/4*/
     margin-top: 5%;/*added on 28/4*/
     margin-bottom: 5%;
+
+    left: 0;
+    z-index: 1;
+
   }
   .header{
     padding: 10px;
@@ -482,9 +486,9 @@
     .chatboxtextarea{
       height: 40px !important;/*added on 28/4*/
     }
-    .footer{
+    /*.footer{
       margin-bottom: -30% !important;
-    }
+    }*/
     .container{
       height: 110% !important;
       margin-top: 0%;
@@ -814,9 +818,9 @@
     height: 34px;
     padding: 5px;
   }
-  .footer {
+  /*.footer {
     height: 7%;
-  }
+  }*/
 }
 @media only screen and (min-device-width: 1025px) and (max-device-width: 1600px) {
   .polaroid{
@@ -946,9 +950,9 @@
 /*@media only screen and (min-device-width: 420px) and (max-device-width: 436px)*/ 
 @media screen and (min-device-width: 434px) and ( max-device-height: 773px ){ /* added on 29/4*/
 
-  .footer{
+  /*.footer{
     margin-bottom: -63% !important;
-  }
+  }*/
   .container{
     height: 148%;
   }
@@ -959,10 +963,9 @@
 
 }
 @media only screen and (min-device-width: 360px) and (max-device-width: 411px) {
-  .footer{
-    /*margin-bottom: -45%;*//*added on 28/4*/
-    margin-bottom: -10% !important;/*added on 28/4*/
-  }
+  /*.footer{
+    margin-bottom: -10% !important;
+  }*/
   .container{
    /* height: 122%;*//*added on 28/4*/
    margin-top: 0%;/*added on 28/4*/
@@ -973,9 +976,9 @@
 
 }
 @media only screen and (min-device-width: 412px) and (max-device-width: 415px) {
-  .footer{
+  /*.footer{
     margin-bottom: -63%;
-  }
+  }*/
   .container{
     height: 142%;
   }
