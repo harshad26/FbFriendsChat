@@ -90,7 +90,8 @@ end
 <script type="text/javascript">
   $(function(){
       
-      $(document).on('click', '.fb-photo', function(){ 
+
+      $('#friendslist').on('click', '.fb-photo', function(event) { 
         var fbid = $(this).attr('id');
         var obj = $(this);
         
@@ -103,7 +104,7 @@ end
                     alert("something went wrong");
                   } else {
                     if(data.text == "2") {
-                      $("#"+fbid).parent().parent().addClass("tint tint1");  
+                      $("#"+fbid).parent().parent().addClass("tint2 tint1");  
                       $(".fa-envelope-o").addClass("redCls");
 
                       var linkHtml = obj.parent().html();
@@ -121,7 +122,7 @@ end
              });  
       });
 
-      $(document).on('click', '.tint', function(e){
+      $('#friendslist').on('click', '.tint', function(e) {
         if($(e.target).is('.tint')){
           var fbid = $(this).find(".fb-invited").attr("id");
           if($(this).hasClass("tint1"))
@@ -140,6 +141,8 @@ end
                       // Already accepted then mark and call chat
                       } else if(data.text == "2") { 
                         $("#"+fbid).parent().parent().addClass("tint1");
+                        $("#"+fbid).parent().parent().addClass("tint2");
+                        $("#"+fbid).parent().parent().removeClass("tint");
                         $(".fa-envelope-o").addClass("redCls");
                         
                         var linkHtml = obj.find('.imgReplace').html();
