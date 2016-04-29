@@ -22,6 +22,13 @@
     background: #ddd;
     width:100%;
     overflow-x: hidden;
+
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    line-height: 45px;
+    color: #eee;
     
   }
   .footer{
@@ -32,6 +39,13 @@
     background: #ddd; 
     overflow: hidden;
     margin-bottom: 0% !important;/*added on 28/4*/
+
+    position: absolute;
+    z-index: 2;
+    
+    left: 0;
+    
+
   }
   img{
     width:100%;
@@ -929,9 +943,11 @@
 /*added on 16/4 for responsive-end*/
 /*added on 27/4 for footer & container responsive-start */
 
-@media only screen and (min-device-width: 420px) and (max-device-width: 436px) {
+/*@media only screen and (min-device-width: 420px) and (max-device-width: 436px)*/ 
+@media screen and (min-device-width: 434px) and ( max-device-height: 773px ){ /* added on 29/4*/
+
   .footer{
-    margin-bottom: -69%;
+    margin-bottom: -63% !important;
   }
   .container{
     height: 148%;
