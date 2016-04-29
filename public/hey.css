@@ -12,8 +12,8 @@
     height:auto;
     overflow-x:hidden;  
     /*margin-top: -1%;*//*added on 28/4*/
-    margin-top: 5%;/*added on 28/4*/
-    margin-bottom: 5%;
+    /*margin-top: 5%;*//*added on 28/4*/
+    /*margin-bottom: 5%;*/
 
     left: 0;
     z-index: 1;
@@ -657,8 +657,8 @@
     width: 100% !important;
     height: 100%;
     overflow-x: hidden;
-    /*padding-top: 10%;
-    margin-bottom: 5%;*/
+    padding-top: 10%;
+    margin-bottom: 5%;
   }
 .navbar-default {
     background-color: #f8f8f8;
