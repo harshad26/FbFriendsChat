@@ -270,7 +270,8 @@
   }
   .chatboxtextarea {
     margin-left: 2%;
-    width: 50%;
+    /*width: 50%;*/
+    width: 96% !important;
   }
   .other{
     margin-left: 2%;
@@ -868,7 +869,7 @@
     right: 0px !important;
   }
   textarea#message_body {
-    width: 96%;
+    width: 96%;/* addes on 29/4*/
   }
   .polaroid{
     /*width: 135%;*//*added on 29/4*/
