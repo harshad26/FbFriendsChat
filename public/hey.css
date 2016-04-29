@@ -653,13 +653,13 @@
     height: 480px;
     transform: scaleX(1);
   }
-/*.container {
+.container {
     width: 100% !important;
     height: 100%;
     overflow-x: hidden;
     padding-top: 10%;
     margin-bottom: 5%;
-  }*/
+  }
 .navbar-default {
     background-color: #f8f8f8;
     border-color: #e7e7e7;
