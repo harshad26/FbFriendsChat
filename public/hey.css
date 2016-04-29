@@ -432,7 +432,7 @@
   
   @media only screen and (min-device-width: 480px) and (max-device-height: 854px) {
     .footer{
-      margin-bottom: -10% !important;
+      margin-bottom: -30% !important;
     }
 
   }
