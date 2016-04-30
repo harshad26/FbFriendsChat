@@ -991,3 +991,13 @@
   }
 }
 /*added on 27/4 for footer & container responsive-end*/
+@media only screen and (min-device-height: 960px) and (max-device-height: 960px) {
+
+  body{
+
+    height: 960px;
+  }
+  .footer{
+    margin-bottom: 0% !important;
+  }
+}
