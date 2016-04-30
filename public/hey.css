@@ -415,7 +415,7 @@
   }
   @media only screen and (min-device-width: 480px) and (max-device-height: 854px) {
     .footer {
-      margin-bottom: -78% !important;
+     /* margin-bottom: -78% !important;*/
     }
     .chatboxcontent{
       height: 20% !important;
@@ -459,8 +459,8 @@
   }
   @media only screen and (min-device-height: 854px) and (max-device-height: 856px){
     .footer{
-      margin-bottom: -78% !important;
-    }
+/*      margin-bottom: -78% !important;
+*/    }
   }
 
   @media only screen and (min-device-width: 360px) and (max-device-height: 640px) {
@@ -505,6 +505,9 @@
     .container{
       height: 110% !important;
       margin-top: 0%;
+    }
+    body{
+      height: 551px;
     }
   }
 
@@ -663,7 +666,10 @@
   body {
     width: 100% !important;
     overflow-x: hidden;
-    height: 480px;
+    /*height: 480px;*/
+/*    height: 853px;
+*/   height: 479px;
+
     transform: scaleX(1);
   }
 .container {
@@ -983,7 +989,10 @@
 }
 @media only screen and (min-device-width: 411px) and (max-device-height: 731px) {
   .footer{
-    margin-bottom: -44% !important;
+/*    margin-bottom: -44% !important;
+*/  }
+  body{
+    height: 658px;
   }
 }
 @media only screen and (min-device-width: 414px) and (max-device-height: 736px) {
@@ -997,7 +1006,7 @@
 
 @media only screen and (min-device-width: 360px) and (max-device-width: 410px) {
   .footer{
-    margin-bottom: -45% !important;*//*added on 28/4
+    /*margin-bottom: -45% !important;*//*added on 28/4
    /* margin-bottom: -10% !important;*//*added on 28/4*/
   }
   .container{
@@ -1005,9 +1014,11 @@
    margin-top: 0%;/*added on 28/4*/
   }
   .chatboxcontent {
-    height: 113% !important;/*added on 28/4
+    height: 113% !important;/*added on 28/4 */
   }
-
+  body{
+    height: 639px;
+  }
 }
 @media only screen and (min-device-width: 412px) and (max-device-width: 415px) {
   .footer{
