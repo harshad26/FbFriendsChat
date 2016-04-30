@@ -46,7 +46,6 @@ class HomeController < ApplicationController
                 @dt.merge!( k => dist)
             end
             @sortFriends = @dt.sort_by {|_k, val| val}
-             @sortFriends +=  @sortFriends +  @sortFriends +  @sortFriends +  @sortFriends
 		end
 	end
 
