@@ -47,6 +47,7 @@
     font-size:24px;
     font-weight:bold;
     border:1px solid #ooo; 
+    min-height: 115px;
 
   }
   .polaroid {
@@ -55,6 +56,7 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     /*margin-bottom: 5%;*//*added on 28/4*/
     margin-left: 22%;
+    margin-top: 4%;
   }
   .left_side{
     margin-top:7%;
@@ -431,6 +433,7 @@
   }
 
   @media only screen and (min-device-width: 360px) and (max-device-height: 640px) {
+      /*media query for moto g*/
     .chatbox {
       margin-bottom: 0% !important;
       height: 100% !important;
@@ -441,9 +444,13 @@
     .chatboxtextarea{
       height: auto !important;/*added on 28/4*/
     }
+    .footer{
+      margin-bottom: -2% !important;
+    }
   }
 
   @media only screen and (min-device-width: 411px) and (min-device-height: 731px) {
+    /*media query for nexus-5x*/
     .chatbox {
       margin-bottom: 0% !important;
       height: 100% !important;
@@ -456,6 +463,7 @@
     }
   }
   @media only screen and (min-device-height: 667px) and (max-device-height: 668px) {
+    /*media query for iphone-6*/
     .chatbox {
       margin-bottom: 0% !important;
       height: 100% !important;
@@ -476,7 +484,7 @@
   }
 
   @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
-
+/*media query for iphone 4-5*/
   .fa-5x {
     font-size: 2.5em;
   }
@@ -495,7 +503,7 @@
     text-align: center;
     font-size: 10px;
     /*min-height: 60px;*//*added on 22/4*/
-    min-height: 70px;/*added on 22/4*/
+    min-height: 50px;/*added on 22/4*/
   }
   .search .fa-search {
     position: absolute;
@@ -655,7 +663,7 @@
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-
+/*media query for ipad*/
   .fa-5x {
     font-size: 2.5em;
   }
@@ -673,6 +681,7 @@
     padding: 3px;
     text-align: center;
     font-size: 17px;
+    min-height: 80px;
   }
   .search .fa-search {
     position: absolute;
@@ -803,6 +812,7 @@
   }
 }
 @media only screen and (min-device-width: 1025px) and (max-device-width: 1600px) {
+  /*media query for laptop-desktop*/
   .polaroid{
     margin-top: 10%;
     width: 70%;
@@ -849,6 +859,7 @@
 
 }
 @media only screen and (min-device-width: 1280px) and (max-device-width: 1441px) {
+  /*media query for laptop*/
   .chatbox {
     position: fixed;
     position: expression("absolute");
@@ -906,11 +917,13 @@
   }
 }
 @media only screen and (min-device-width: 1601px) {
+  /*media query for desktop*/
   .chatboxcontent {
     height: 90% !important;
   }
 }
 @media only screen and (min-device-width: 375px) and (max-device-width: 436px) {
+
   div#chatbox_1 {
     margin-bottom: 40%;
     height: 60%;
@@ -940,7 +953,7 @@
   }
 
 }
-@media only screen and (min-device-width: 360px) and (max-device-width: 411px) {
+@media only screen and (min-device-width: 361px) and (max-device-width: 411px) {
   .footer{
     /*margin-bottom: -45%;*//*added on 28/4*/
     margin-bottom: -10% !important;/*added on 28/4*/
