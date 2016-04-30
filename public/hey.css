@@ -23,7 +23,7 @@
     width:100%;
     overflow-x: hidden;
 
-    position: absolute;
+    position: fixed;
     z-index: 2;
     top: 0%;
     left: 0;
@@ -1017,7 +1017,7 @@
     height: 113% !important;/*added on 28/4 */
   }
   body{
-    height: 639px;
+    height: 552px;
   }
 }
 @media only screen and (min-device-width: 412px) and (max-device-width: 415px) {
