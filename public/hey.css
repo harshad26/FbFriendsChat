@@ -458,14 +458,14 @@
       /*margin-bottom: -111% !important;*/
     }
   }
-  @media only screen and (min-device-height: 854px) and (max-device-height: 856px){
+  @media only screen and (min-device-height: 854px) and (max-device-height: 854px){
     .footer{
       /*margin-bottom: -78% !important;*/
-      margin-bottom: 100% !important;
+      margin-bottom: 0% !important;
     }
-    body{
+    /*body{
       height: 854px !important;
-    }
+    }*/
   }
 
   @media only screen and (min-device-width: 360px) and (max-device-height: 640px) {
