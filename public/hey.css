@@ -445,7 +445,7 @@
       height: auto !important;/*added on 28/4*/
     }
     .footer{
-      margin-bottom: -8% !important;
+      margin-bottom: -9% !important;
     }
   }
 
@@ -664,6 +664,9 @@
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
 /*media query for ipad*/
+  .container{
+    margin-top: 5%;
+  }
   .fa-5x {
     font-size: 2.5em;
   }
@@ -813,6 +816,9 @@
 }
 @media only screen and (min-device-width: 1025px) and (max-device-width: 1600px) {
   /*media query for laptop-desktop*/
+  .container{
+    margin-top: 5%;
+  }
   .polaroid{
     margin-top: 10%;
     width: 70%;
@@ -860,6 +866,9 @@
 }
 @media only screen and (min-device-width: 1280px) and (max-device-width: 1441px) {
   /*media query for laptop*/
+  .container{
+    margin-top: 5%;
+  }
   .chatbox {
     position: fixed;
     position: expression("absolute");
@@ -918,6 +927,9 @@
 }
 @media only screen and (min-device-width: 1601px) {
   /*media query for desktop*/
+ .container{
+    margin-top: 3%;
+  }
   .chatboxcontent {
     height: 90% !important;
   }
