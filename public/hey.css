@@ -461,6 +461,7 @@
   @media only screen and (min-device-height: 854px) and (max-device-height: 856px){
     .footer{
       /*margin-bottom: -78% !important;*/
+      margin-bottom: -10% !important;
     }
     body{
       height: 854px !important;
