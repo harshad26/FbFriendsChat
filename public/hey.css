@@ -513,10 +513,11 @@
   .chatboxcontent{
     width: 100%;
     /*height: 83%;*//*added on 2/5*/
+    height: auto;
   }
   .chatboxinput {
     bottom: 0;/*added on 2/5*/
-    position: absolute;/*added on 2/5*/
+    position: fixed;/*added on 2/5*/
 }
   .image.polaroid.tint:before {
     height: 69%;
