@@ -545,6 +545,9 @@
   .invitation .btn-primary{
     line-height: 36% !important;
   }
+  img.heyimg {
+    width: 75%;
+}
   /*added on 2/5-end*/
 }
 
@@ -689,6 +692,9 @@
   .invitation .btn-primary{
     line-height: 38% !important;
   }
+  img.heyimg {
+    width: 22%;
+}
 }
 @media only screen and (min-device-width: 1025px) and (max-device-width: 1600px) {
   .polaroid{
@@ -794,10 +800,17 @@
   .invitation .btn-primary{
     line-height: 25% !important;
   }
+  img.heyimg {
+    width: 15%;
+  }
 }
 @media only screen and (min-device-width: 1601px){
   .chatboxcontent{
     height: 98%
+  }
+  img.heyimg {
+    width: 15%;
+    margin-top: 1%;
   }
 }
 /*@media only screen and (min-device-width: 375px) and (max-device-width: 436px) {
