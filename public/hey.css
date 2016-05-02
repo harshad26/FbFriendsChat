@@ -667,6 +667,14 @@
   .chatboxtextarea {
     width: 50%;
   }
+  .form-control-invite{
+    float: left;
+    width: 63%;
+    margin-left: -18%;
+  }
+  .invitation input[type="button"]{
+    line-height: 40% !important;
+  }
 }
 @media only screen and (min-device-width: 1025px) and (max-device-width: 1600px) {
   .polaroid{
