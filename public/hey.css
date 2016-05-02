@@ -749,8 +749,26 @@
   textarea#message_body {
     width: 50%;
   }
+  /* added on 2/5 start */
+  .fa-5x{
+    font-size: 3em;
+  }
+  .polaroid{
+    width: 50%;
+    margin-top: 2%;
+  }
+  .tint1:after{
+    height: 70%;
+  }
+  .search{
+    height: 80px;
+  }
+  .search .fa-search{
+    margin-top: 0.6%;
+  }
+  /* added on 2/5 end */
 }
-@media only screen and (min-device-width: 375px) and (max-device-width: 436px) {
+/*@media only screen and (min-device-width: 375px) and (max-device-width: 436px) {
   div#chatbox_1 {
     margin-bottom: 40%;
     height: 60%;
@@ -760,7 +778,7 @@
     height: 100%;
   }
 
-}
+}*/
 
 
 /*added on 16/4 for responsive-end*/
