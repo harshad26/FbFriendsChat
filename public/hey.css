@@ -751,17 +751,15 @@
     width: 96%;/* addes on 29/4*/
   }
   .polaroid{
-    /*width: 135%;*//*added on 29/4*/
-    width: 70%;/*added on 29/4*/
+    width: 50%;/*added on 2/5*/
     margin: 0px 0px 10px 0px;
-    /*margin-left: -14%;*/
     margin-top: 3%;/* addes on 29/4*/
-    margin-left: 15%;/* addes on 29/4*/
+    margin-left: 25%;/* addes on 2/5*/
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.19) !important;
   }
-  /*.chatboxcontent {
-    height: 90% !important;
-  }*/
+  .desc{
+    font-size: 16px;/* added on 2/5 */
+  }
   .fa-5x{
     font-size: 3em;/* addes on 29/4*/
   }
@@ -771,6 +769,8 @@
   }
   .search{
     height: auto;/* addes on 29/4*/
+    margin-bottom: 0%;/* added on 2/5 */
+    margin-top: -1%;/* added on 2/5 */
   }
   .search input{
     height: 70%;/* addes on 29/4*/
@@ -782,6 +782,12 @@
   .invitation{
     margin-top: 12%;/* addes on 29/4*/
     margin-left: 28%;/* addes on 29/4*/
+  }
+  .form-control-invite{
+    width: 50%;
+  }
+  .invitation .btn-primary{
+    line-height: 25% !important;
   }
 }
 /*@media only screen and (min-device-width: 375px) and (max-device-width: 436px) {
