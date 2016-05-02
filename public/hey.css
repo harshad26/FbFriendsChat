@@ -728,7 +728,7 @@
 
 }
 @media only screen and (min-device-width: 1280px) and (max-device-width: 1441px) {
-  .chatbox {
+ .chatbox {
     position: fixed;
     position: expression("absolute");
     width: 100%;
@@ -738,7 +738,8 @@
   }
   .chatboxcontent {
     width: 100%;
-    height: 88%;
+    /*height: 88%;*/
+    height: 85% !important;/* addes on 29/4*/
   }
   .image.polaroid.tint:before {
     height: 81%;
@@ -747,26 +748,41 @@
     right: 0px !important;
   }
   textarea#message_body {
-    width: 50%;
-  }
-  /* added on 2/5 start */
-  .fa-5x{
-    font-size: 3em;
+    width: 96%;/* addes on 29/4*/
   }
   .polaroid{
-    width: 50%;
-    margin-top: 2%;
+    /*width: 135%;*//*added on 29/4*/
+    width: 70%;/*added on 29/4*/
+    margin: 0px 0px 10px 0px;
+    /*margin-left: -14%;*/
+    margin-top: 3%;/* addes on 29/4*/
+    margin-left: 15%;/* addes on 29/4*/
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.19) !important;
   }
-  .tint1:after{
-    height: 70%;
+  /*.chatboxcontent {
+    height: 90% !important;
+  }*/
+  .fa-5x{
+    font-size: 3em;/* addes on 29/4*/
+  }
+  .media-body{
+    width: 55%;/* addes on 29/4*/
+    padding-left: 0%;/* addes on 29/4*/
   }
   .search{
-    height: 80px;
+    height: auto;/* addes on 29/4*/
+  }
+  .search input{
+    height: 70%;/* addes on 29/4*/
+    font-size: 32px;/* addes on 29/4*/
   }
   .search .fa-search{
-    margin-top: 0.6%;
+    top: 5%;/* addes on 29/4*/
   }
-  /* added on 2/5 end */
+  .invitation{
+    margin-top: 12%;/* addes on 29/4*/
+    margin-left: 28%;/* addes on 29/4*/
+  }
 }
 /*@media only screen and (min-device-width: 375px) and (max-device-width: 436px) {
   div#chatbox_1 {
