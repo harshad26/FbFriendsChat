@@ -672,7 +672,7 @@
     width: 63%;
     margin-left: -18%;
   }
-  .invitation input[type="button"]{
+  .invitation .btn-primary{
     line-height: 35% !important;
   }
 }
