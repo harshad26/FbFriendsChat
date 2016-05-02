@@ -531,7 +531,7 @@
     display: flex !important;
   }
   .container{
-    margin-top: 18%;/*added on 30/4*/
+    margin-top: 18% !important;/*added on 30/4*/
   }
   /*added on 2/5-start*/
   .form-control-invite{
