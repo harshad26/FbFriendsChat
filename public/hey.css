@@ -753,22 +753,22 @@
   .polaroid{
     width: 50%;/*added on 2/5*/
     margin: 0px 0px 10px 0px;
-    margin-top: 3%;/* addes on 29/4*/
-    margin-left: 25%;/* addes on 2/5*/
+    margin-top: 0%;/* added on 2/5*/
+    margin-left: 25%;/* added on 2/5*/
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.19) !important;
   }
   .desc{
     font-size: 16px;/* added on 2/5 */
   }
   .fa-5x{
-    font-size: 3em;/* addes on 29/4*/
+    font-size: 3em;/* added on 29/4*/
   }
   .media-body{
-    width: 55%;/* addes on 29/4*/
-    padding-left: 0%;/* addes on 29/4*/
+    width: 55%;/* added on 29/4*/
+    padding-left: 0%;/* added on 29/4*/
   }
   .search{
-    height: auto;/* addes on 29/4*/
+    height: auto;/* added on 29/4*/
     margin-bottom: 0%;/* added on 2/5 */
     margin-top: -1%;/* added on 2/5 */
   }
