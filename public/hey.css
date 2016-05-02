@@ -513,7 +513,7 @@
   .chatboxcontent{
     width: 100%;
     /*height: 83%;*//*added on 2/5*/
-    height: auto;
+    padding-bottom: 50%;
   }
   .chatboxinput {
     bottom: 0;/*added on 2/5*/
