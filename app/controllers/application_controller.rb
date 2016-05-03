@@ -45,7 +45,7 @@ class ApplicationController < ActionController::Base
 
   def getMinutes(created_at)
     # @c = ((Time.now - created_at)/60 ).to_i
-     @c = ((Time.zone.now.localtime - created_at.localtime)/60 ).to_i
+     @c = ((Time.now.in_time_zone("Pacific Time (US & Canada)") - created_at.localtime)/60 ).to_i
   end
 
   def login_user
