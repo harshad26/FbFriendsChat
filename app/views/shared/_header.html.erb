@@ -7,11 +7,9 @@
 			</div>
 			<div class="col-lg-4 col-md-4 col-sm-4">
 
-				<% if session[:mark_messages] == 1 and current_user %>
-				  <%# abort %>
+				<% if session[:mark_messages] == 1  %>
 					<%= link_to '<span> <i class="fa fa-5x fa-envelope-o redCls"></i></span>'.html_safe, messages_path %>
 				<% else %>
-				<%# abort %>
 					<%= link_to '<span> <i class="fa fa-5x fa-envelope-o"></i></span>'.html_safe, messages_path %>
 				<% end %>
 			</div>
