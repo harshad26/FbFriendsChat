@@ -392,6 +392,18 @@
     width: 8.33333333%;
   }
 
+  .fb img {
+    width: 42% !important;
+    margin-top: 22%;
+    margin-left: 30% !important;
+  } 
+
+  .reset_message{
+    margin-left: -41%;
+    padding-top: 2%;
+    font-size: 22px;
+  }
+
   @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
 
   .fa-5x {
@@ -548,7 +560,7 @@
   img.heyimg {
     width: 75%;
   }
-  .message{
+  .reset_message{
     margin-left: -68%;
     padding-top: 15%;
   }
@@ -704,7 +716,7 @@
   img.heyimg {
     width: 22%;
   }
-  .message{
+  .reset_message{
     margin-left: -68%;
     padding-top: 5%;
   }
@@ -830,7 +842,7 @@
     width: 15%;
     margin-top: 1%;
   }
-  .message{
+  .reset_message{
     margin-left: -72%;
     padding-top: 2%;
     font-size: 22px;

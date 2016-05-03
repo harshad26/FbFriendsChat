@@ -50,9 +50,10 @@ var ready = function () {
      */
 
     $(document).on('keydown', '.chatboxtextarea', function (event) {
-        // alert("keydown")
-        var id = $(this).data('cid');
-        chatBox.checkInputKey(event, $(this), id);
+        if (event.keyCode == 13 && event.shiftKey == 0) {
+            var id = $(this).data('cid');
+            chatBox.checkInputKey(event, $(this), id);
+        }
     });
 
     /**
@@ -75,4 +76,4 @@ var ready = function () {
 }
 
 $(document).ready(ready);
-$(document).on("page:load", ready);
+// $(document).on("page:load", ready);
