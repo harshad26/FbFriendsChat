@@ -547,7 +547,16 @@
   }
   img.heyimg {
     width: 75%;
-}
+  }
+  .message{
+    margin-left: -68%;
+    padding-top: 5%;
+  }
+  .fb img {
+    width: 44% !important;
+    margin-top: 65%;
+    margin-left: 30% !important;
+  }  
   /*added on 2/5-end*/
 }
 
@@ -694,7 +703,16 @@
   }
   img.heyimg {
     width: 22%;
-}
+  }
+  .message{
+    margin-left: -68%;
+    padding-top: 5%;
+  }
+  .fb img {
+    width: 30% !important;
+    margin-top: 61%;
+    margin-left: 36% !important;
+  }  
 }
 @media only screen and (min-device-width: 1025px) and (max-device-width: 1600px) {
   .polaroid{
@@ -812,6 +830,23 @@
     width: 15%;
     margin-top: 1%;
   }
+  .message{
+    margin-left: -72%;
+    padding-top: 2%;
+    font-size: 22px;
+  }
+  .form-control-invite{
+    margin-left: -7%;
+    width: 40%;
+  }
+  .invitation .btn-primary{
+    line-height: 30% !important;
+  }
+  .fb img {
+    width: 20% !important;
+    margin-top: 22%;
+    margin-left: 37% !important;
+  }  
 }
 /*@media only screen and (min-device-width: 375px) and (max-device-width: 436px) {
   div#chatbox_1 {
