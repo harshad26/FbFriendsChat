@@ -7,7 +7,6 @@ module HomeHelper
 		@me_latitude = current_user.latitude
 		@me_longitude = current_user.longitude
 		
-		# abort @friendsHash.inspect
 		# @friendsHash.each do |item|
 			if !@me_latitude.nil?
 				@friendDetail = User.find_by_uid(fbid)
@@ -44,7 +43,8 @@ module HomeHelper
 
     def times(id)
     	@invitedFriendDate = Invitefriend.select("created_at").where("(user_id = #{current_user.id} and inviteid = #{id}) OR (user_id = #{id} and (inviteid = #{current_user.id} or invite_accepted = true))")
-        @c = ((Time.now - @invitedFriendDate[0].created_at)/60 ).to_i
+        # @c = ((Time.now - @invitedFriendDate[0].created_at)/60 ).to_i
+        @c = ((Time.zone.now.localtime - @invitedFriendDate[0].created_at)/60 ).to_i
 		return @c.to_s
 	end
 
