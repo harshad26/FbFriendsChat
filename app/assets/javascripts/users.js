@@ -6,7 +6,9 @@ var ready = function () {
      * recipient_id
      */
 
-    $('.start-conversation').click(function (e) {
+    //$('.start-conversation').click(function (e) {
+        $(document).on('click', '.start-conversation', function(e){
+            location.reload(false);
         e.preventDefault();
 
         var sender_id = $(this).data('sid');
