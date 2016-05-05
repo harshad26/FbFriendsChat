@@ -5,6 +5,7 @@ test:
   server: "http://localhost:9292/faye"
   secret_token: "secret"
 production:
-  server: "https://intense-sea-61687.herokuapp.com/faye"  
+  server: "https://tranquil-brushlands-87976.herokuapp.com/faye" 
+  # server: "https://intense-sea-61687.herokuapp.com/faye"  
   secret_token: "fbchatonline"
   signature_expiration: 86400 # one hour
