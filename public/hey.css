@@ -94,7 +94,7 @@
   .invitation{
     text-align: left;
     margin-left: 40%;
-    margin-top: 15%
+    /*margin-top: 15%*//* added on 5-5*/
   }
   .form-control{
      width: 30% !important;
@@ -843,9 +843,24 @@
     margin-top: 1%;
   }
   .reset_message{
-    margin-left: -72%;
+    /*margin-left: -72%;
     padding-top: 2%;
-    font-size: 22px;
+    font-size: 22px;*/
+    margin-left: -72%;/*added on 5-5*/
+    padding-top: 1%;/*added on 5-5*/
+    font-size: 22px;/*added on 5-5*/
+    width: 103%;/*added on 5-5*/
+    text-align: justify;/*added on 5-5*/
+  }
+  .form-group{
+    margin-top: 2%;/*added on 5-5*/
+  }
+  .text-info{
+    font-size: 22px;/*added on 5-5*/
+  }
+  .invitition{
+    margin-left: -70%;/*added on 5-5*/
+    margin-top: 18%;/*added on 5-5*/
   }
   .form-control-invite{
     margin-left: -7%;

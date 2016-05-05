@@ -4,7 +4,6 @@
 
       <ul class="media-list">
           <% @conversations.each do |conversation| %>
-          <%# abort conversation.inspect %>
             <li class="media">
               <%= link_to image_tag("http://graph.facebook.com/#{conversation_interlocutor(conversation).uid}/picture"),  conversation_path(conversation), class: "float-left #{@classphoto} conversation", "data-cid" => conversation.id %>
               <div class="media-body">
@@ -16,8 +15,8 @@
           <% end %>
       </ul>
   <% else %>
-      <!-- <p class="mess">You have no conversations. Click send message with any user to create one.</p> -->
-       <p class="mess">You have no conversations. Conversations will automatically start after matching with a friend.</p>
+      
+       <center><p class="text-info mess">You have no conversations. Conversations will automatically start after matching with a friend..</p></center>
 
   <% end %>
    

@@ -90,7 +90,8 @@ class HomeController < ApplicationController
 	def invite_mail_send
 		if params[:invite] and !params[:invite][:email].blank?
 			appUrl = root_url
-			UserMailer.welcome_email(params[:invite][:email],appUrl).deliver_later
+			name = current_user.name
+			UserMailer.welcome_email(params[:invite][:email],appUrl, name).deliver_later
 			redirect_to invite_mail_path, :notice => "Successfully sent invitation."
 		else 
 			redirect_to request.referer, :notice => "Something went wrong. Please try again later."
@@ -103,6 +104,7 @@ class HomeController < ApplicationController
 
 	# Match friends list
 	def matchfriends
+		
 		acceptedFriends
 
 		@alreadyinvitedusers = []
