@@ -573,7 +573,10 @@
     margin-left: 30% !important;
   }  
   p.text-info.invitition {
-    margin-left: -100%;
+    margin-left: -118%;
+  }
+  p.text-info.mess {
+    text-align: justify;/*added on 5-5*/
   }
   /*added on 2/5-end*/
 }
