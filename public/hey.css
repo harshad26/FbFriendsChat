@@ -532,9 +532,9 @@
     bottom: 0;/*added on 2/5*/
     position: absolute;/*added on 2/5*/
 }
-  .image.polaroid.tint:before {
+ /* .image.polaroid.tint:before {
     height: 69%;
-  }
+  }*/
   .chatboxtextarea{
     width: 99%;
   }
@@ -674,9 +674,9 @@
         width: 35%;
     margin-left: 30%;
   }
-  .image.polaroid.tint:before {
+  /*.image.polaroid.tint:before {
     height: 87.8%;
-  }
+  }*/
   .tint:before{
     height: 75%;
   }
