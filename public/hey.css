@@ -849,6 +849,9 @@
   img.heyimg {
     width: 15%;
   }
+  p.text-info.invitition {
+    margin-left: -50%;
+  }
   
 }
 @media only screen and (min-device-width: 1601px){
