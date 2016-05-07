@@ -743,7 +743,7 @@
     text-align: justify;/*added on 5-5*/
   }
   .fb img {
-    width: 30% !important;
+    width: 35% !important;
     /*margin-top: 61%;*/
     margin-top: 6%;/*added on 7-5*/
     margin-left: 36% !important;
@@ -754,7 +754,7 @@
   } 
   img.heyfb {
     width: 12% !important;/*added on 7-5*/
-    margin-left: 46%;/*added on 7-5*/
+    margin-left: 48%;/*added on 7-5*/
     margin-top: 54% !important;/*added on 7-5*/
   }
 }
