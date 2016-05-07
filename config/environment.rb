@@ -4,12 +4,20 @@ require File.expand_path('../application', __FILE__)
 # Initialize the Rails application.
 Rails.application.initialize!
 
+# ActionMailer::Base.smtp_settings = {
+# :address => 'smtp.gmail.com',
+# :port => 587,
+# :user_name => "itserviceyouth@gmail.com",
+# :password => "Badashah26",
+# :authentication => :plain,
+# :enable_starttls_auto => true,
+# :openssl_verify_mode => 'none' 
+# }		
 ActionMailer::Base.smtp_settings = {
-:address => 'smtp.gmail.com',
-:port => 587,
-:user_name => "itserviceyouth@gmail.com",
-:password => "Badashah26",
-:authentication => :plain,
-:enable_starttls_auto => true,
-:openssl_verify_mode => 'none' 
-}
+  :address => "smtp.sendgrid.net",
+  :port => 25,
+  :domain => "sendgrid.com",
+  :authentication => :plain,
+  :user_name => "hetalkhunti",
+  :password => "hetal@123"
+}																																																																																																																															
