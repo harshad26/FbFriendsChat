@@ -800,14 +800,14 @@
   .fb img {
     width: 30% !important;/*added on 7-5*/
     /*margin-top: 61%;*/
-    margin-top: 6%;/*added on 7-5*/
+    margin-top: 4%;/*added on 7-5*/
     margin-left: 36% !important;/*added on 7-5*/
   } 
   
   img.heyfb {
     width: 8% !important;/*added on 7-5*/
     margin-left: 47%;/*added on 7-5*/
-    margin-top: 15% !important;/*added on 7-5*/
+    margin-top: 16% !important;/*added on 7-5*/
   }
 
 }
