@@ -398,6 +398,11 @@
     margin-top: 22%;
     margin-left: 30% !important;
   } 
+  img.heyfb {
+    width: 7% !important;/*added on 7-5*/
+    margin-left: 46%;/*added on 7-5*/
+    margin-top: 16% !important;/*added on 7-5*/
+  }
 
   .reset_message{
     margin-left: -41%;
@@ -569,7 +574,8 @@
   }
   .fb img {
     width: 44% !important;
-    margin-top: 65%;
+    /*margin-top: 65%;*/
+    margin-top: 6%;/*added on 7-5*/
     margin-left: 30% !important;
   }  
   p.text-info.invitition {
@@ -579,6 +585,11 @@
     text-align: justify;/*added on 5-5*/
   }
   /*added on 2/5-end*/
+  img.heyfb {
+    width: 12% !important;/*added on 7-5*/
+    margin-left: 46%;/*added on 7-5*/
+    margin-top: 57% !important;/*added on 7-5*/
+  }
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
@@ -733,13 +744,19 @@
   }
   .fb img {
     width: 30% !important;
-    margin-top: 61%;
+    /*margin-top: 61%;*/
+    margin-top: 6%;/*added on 7-5*/
     margin-left: 36% !important;
   } 
   p.text-info.invitition {
     margin-left: -70%;/*added on 5-5*/
     margin-top: 15%;/*added on 5-5*/
   } 
+  img.heyfb {
+    width: 12% !important;/*added on 7-5*/
+    margin-left: 46%;/*added on 7-5*/
+    margin-top: 54% !important;/*added on 7-5*/
+  }
 }
 @media only screen and (min-device-width: 1025px) and (max-device-width: 1600px) {
   .polaroid{
@@ -850,7 +867,7 @@
     width: 15%;
   }
   p.text-info.invitition {
-    margin-left: -50%;
+    margin-left: -50%;/*added on 6-5*/
   }
   
 }
@@ -891,8 +908,9 @@
   }
   .fb img {
     width: 20% !important;
-    margin-top: 22%;
-    margin-left: 37% !important;
+    /*margin-top: 22%;*/
+    margin-top: 5%;/*added on 7-5*/
+    margin-left: 39% !important;
   }  
 }
 /*@media only screen and (min-device-width: 375px) and (max-device-width: 436px) {
