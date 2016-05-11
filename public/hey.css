@@ -759,6 +759,8 @@
     margin-top: 50%;/*added on 11-5*/
 /*  margin-top: 20%;*//*added on 5-5*/
     text-align: justify;/*added on 5-5*/
+    font-size: 16px;/*added on 5-5*/
+
   }
   .fb img {
     width: 38% !important;
@@ -770,6 +772,7 @@
     margin-left: -70%;/*added on 5-5*/
    /* margin-top: 15%;*//*added on 5-5*/
    margin-top: 10%;/*added on 11-5*/
+   font-size: 16px;/*added on 5-5*/
   } 
   img.heyfb {
     width: 12% !important;/*added on 7-5*/
