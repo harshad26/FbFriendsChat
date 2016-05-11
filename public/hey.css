@@ -569,8 +569,15 @@
   .reset_message{
     margin-left: -68%;
    /* padding-top: 15%;*//*added on 5-5*/
+    margin-top: 10%;/*added on 11-5*/
     font-size: 12px;/*added on 5-5*/
     text-align: justify;
+  }
+  .heading_message{
+    margin-top: 5%;/*added on 11-5*/
+     margin-left: -68%;/*added on 11-5*/
+    font-size: 12px;/*added on 11-5*/
+    text-align: justify;/*added on 11-5*/
   }
   .fb img {
     width: 44% !important;
@@ -580,6 +587,7 @@
   }  
   p.text-info.invitition {
     margin-left: -118%;
+    margin-top: 10%;/*added on 11-5*/
   }
   p.text-info.mess {
     text-align: justify;/*added on 5-5*/
@@ -738,8 +746,18 @@
   }
   .reset_message{
     margin-left: -68%;
-    padding-top: 5%;
-    margin-top: 20%;/*added on 5-5*/
+    /*padding-top: 5%;*//*added on 11-5*/
+    padding-top: 0%;/*added on 11-5*/
+   /* margin-top: 20%;*//*added on 5-5*/
+    margin-top: 20%;/*added on 11-5*/
+    text-align: justify;/*added on 5-5*/
+  }
+  .heading_message{
+    margin-left: -68%;
+   /* padding-top: 5%;*/
+    padding-top: 0%;
+    margin-top: 35%;/*added on 11-5*/
+/*  margin-top: 20%;*//*added on 5-5*/
     text-align: justify;/*added on 5-5*/
   }
   .fb img {
@@ -750,7 +768,8 @@
   } 
   p.text-info.invitition {
     margin-left: -70%;/*added on 5-5*/
-    margin-top: 15%;/*added on 5-5*/
+   /* margin-top: 15%;*//*added on 5-5*/
+   margin-top: 20%;/*added on 11-5*/
   } 
   img.heyfb {
     width: 12% !important;/*added on 7-5*/
@@ -894,10 +913,17 @@
     padding-top: 2%;
     font-size: 22px;*/
     margin-left: -72%;/*added on 5-5*/
-    padding-top: 1%;/*added on 5-5*/
+    padding-top: 5%;/*added on 5-5*/
     font-size: 22px;/*added on 5-5*/
     width: 103%;/*added on 5-5*/
     text-align: justify;/*added on 5-5*/
+  }
+  .heading_message{
+    margin-left: -72%;/*added on 11-5*/
+    padding-top: 15%;/*added on 11-5*/
+    font-size: 22px;/*added on 11-5*/
+    width: 103%;/*added on 11-5*/
+    text-align: justify;/*added on 11-5*/
   }
   .form-group{
     margin-top: 2%;/*added on 5-5*/
@@ -907,7 +933,8 @@
   }
   .invitition{
     margin-left: -70%;/*added on 5-5*/
-    margin-top: 18%;/*added on 5-5*/
+   /* margin-top: 18%;*//*added on 5-5*/
+    margin-top: 6%;/*added on 11-5*/
   }
   .form-control-invite{
     margin-left: -7%;
