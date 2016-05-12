@@ -1,9 +1,19 @@
+<h4 class = "locatointitle">Share Location:</h4>
+<div class="toggle-button">
+    <!-- <button></button> -->
+    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" imyonoffswitch, checked : 'false' >
+				        <label class="onoffswitch-label" for="myonoffswitch">
+				            <span class="onoffswitch-inner"></span>
+				            <span class="onoffswitch-switch"></span>
+				        </label>
+
+</div>
 <div class="container">
 	<div class="invitation">
 		<%= form_for :invite, url: invite_mail_send_path , html: {:id => 'invite_mail'},  validate: true do |f| %>
             <center><p class="text-info heading_message"><b>What is this?</b></br></p></center>
 <center><p class="text-info reset_message">
-Hey! makes it easier for you to hang out with the people you know close by. There's no need to ask them if they're free or try to make plans for the future. Just select the friends you want to hang out with right now. If they selected you too, you will both be notified. If not, nobody will ever know. You will only know who wants to hang out with you if you want to hang out with them too. <code> Selections reset every two hours.</code></p></center>
+Hey! makes it easier for you to hang out with the people you know close by. There's no need to ask them if they're free or try to make plans for the future. Just select the friends you want to hang out with right now. If they selected you too, you will both be notified. If not, nobody will ever know. You will only know who wants to hang out with you if you want to hang out with them too. Selections reset every two hours.</p></center>
 <center><p class="text-info invitition">Invite your friends!</p></center>
             
 
@@ -21,3 +31,51 @@ Hey! makes it easier for you to hang out with the people you know close by. Ther
 		<% end %>
 	</div>
 </div>
+
+<% if current_user %>
+
+<script>
+	$(document).on('click', '.toggle-button', function() {
+	    $(this).toggleClass('toggle-button-selected');
+	    //alert($(".onoffswitch-checkbox").is(":checked"));
+	    if($(".onoffswitch-checkbox").is(":checked")== true)
+	    {
+		    	
+		    $(function(){
+
+		      // var x = document.getElementById("demo");
+		      getLocation();
+		      function getLocation() {
+		        
+		          if (navigator.geolocation) {
+		              navigator.geolocation.getCurrentPosition(showPosition);
+		          } else { 
+		              x.innerHTML = "Geolocation is not supported by this browser.";
+		          }
+		        }
+
+		      function showPosition(position) {
+		          //x.innerHTML = "Latitude: " + position.coords.latitude + 
+		         //"<br>Longitude: " + position.coords.longitude;
+		          var data = { 'lat': position.coords.latitude, 'lon': position.coords.longitude }; 
+		          $.ajax({
+		              type: 'GET', 
+		              url: '/update_location',
+		              data: data
+		          });
+		        }
+
+		      $(document).on('click', '.tint1', function(e){ 
+		        if($(e.target).is('.tint1')){ 
+		          var cid = $(this).attr("data-id");
+		          $(this).find(".conversation").click();
+		          // $(".conversation"+cid).click();
+		        }
+		    });
+
+		    });
+	    }
+	})
+	</script>
+
+<% end %>
