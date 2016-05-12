@@ -15,14 +15,14 @@
 								  		%>
 
 								  	<div class="image polaroid tint2 tint1" data-id="<%=@u1[0]%>">
-				          				<%= link_to image_tag("http://graph.facebook.com/#{item[0]}/picture"),  conversation_path(@convFriends[0]), class: "float-left conversation conversation#{@u1[0]}", "data-cid" => @convFriends[0].id %>
+				          				<%= link_to image_tag("http://graph.facebook.com/#{item[0]}/picture?type=large"),  conversation_path(@convFriends[0]), class: "float-left conversation conversation#{@u1[0]}", "data-cid" => @convFriends[0].id %>
 
 				          		<% elsif @classphoto == "fb-invited" %>
 				          			<div class="image polaroid tint">
-				          				<div class="imgReplace"><%= image_tag "http://graph.facebook.com/#{item[0]}/picture", :class => "float-left #{@classphoto}", :id => item[0] %></div>
+				          				<div class="imgReplace"><%= image_tag "http://graph.facebook.com/#{item[0]}/picture?type=large", :class => "float-left #{@classphoto}", :id => item[0] %></div>
 				          	 	<% else %>		
 				          			<div class="image polaroid">
-				          				<div class="imgReplace"><%= image_tag "http://graph.facebook.com/#{item[0]}/picture", :class => "float-left #{@classphoto}", :id => item[0] %></div>
+				          				<div class="imgReplace"><%= image_tag "http://graph.facebook.com/#{item[0]}/picture?type=large", :class => "float-left #{@classphoto}", :id => item[0] %></div>
 				          		<% end %>	
 						        	<%#= image_tag "http://graph.facebook.com/#{item[0]}/picture", :class => "float-left #{@classphoto}", :id => item[0] %>
 									<div class='desc' id="fb_name_<%= item[0]%>">
