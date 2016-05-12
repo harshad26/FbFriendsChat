@@ -5,10 +5,10 @@
       <ul class="media-list">
           <% @conversations.each do |conversation| %>
             <li class="media">
-              <%= link_to image_tag("http://graph.facebook.com/#{conversation_interlocutor(conversation).uid}/picture"),  conversation_path(conversation), class: "float-left #{@classphoto} conversation", "data-cid" => conversation.id %>
+              <%= link_to image_tag("http://graph.facebook.com/#{conversation_interlocutor(conversation).uid}/picture?type=large"),  conversation_path(conversation), class: "float-left #{@classphoto} conversation", "data-cid" => conversation.id %>
               <div class="media-body">
                     <h4 class="media-heading"><%= link_to conversation_interlocutor(conversation).name, conversation_path(conversation), class: "conversation", style: "color:#000;", "data-cid" => conversation.id %></h4>
-                    <% last_message = conversation.messages.last.nil? ? "No messages" : truncate(conversation.messages.last.body, length: 45) %>
+                    <% last_message = conversation.messages.last.nil? ? "No messages." : truncate(conversation.messages.last.body, length: 45) %>
                     <p><%= link_to last_message, conversation_path(conversation), class: "conversation", style: "color:#000;", "data-cid" => conversation.id %></p>
               </div>
             </li>

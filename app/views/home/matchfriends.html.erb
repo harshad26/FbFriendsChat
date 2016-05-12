@@ -12,7 +12,7 @@
 				      		  		%>
 								          	<div class="col-lg-4 col-md-4 col-sm-4">
 								          		<div class="image polaroid tint2 tint1" data-id="<%=item.id%>">
-									          		<%= link_to image_tag("http://graph.facebook.com/#{item.uid}/picture"),  conversation_path(@convFriends[0]), class: "float-left conversation conversation#{item.id}", "data-cid" => @convFriends[0].id %>
+									          		<%= link_to image_tag("http://graph.facebook.com/#{item.uid}/picture?type=large"),  conversation_path(@convFriends[0]), class: "float-left conversation conversation#{item.id}", "data-cid" => @convFriends[0].id %>
 																<div class='desc' id="fb_name_<%= item[0]%>">
 																	<%= item.name %></br>
 																	<%=times(item.id) %> Mins <br>
