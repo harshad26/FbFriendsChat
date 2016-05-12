@@ -409,6 +409,14 @@
     padding-top: 2%;
     font-size: 22px;
   }
+  .toggle-button { background-color: #83B152; margin: 5px 0; border-radius: 20px; border: 2px solid #D0D0D0; height: 24px; cursor: pointer; width: 50px; position: relative; display: inline-block; user-select: none; -webkit-user-select: none; -ms-user-select: none; -moz-user-select: none; margin-top: -2%; float: right; margin-right: 10%;}
+  .toggle-button button { cursor: pointer; outline: 0; display:block; position: absolute; left: 0; top: 0; border-radius: 100%; width: 30px; height: 30px; background-color: white; float: left; margin: -3px 0 0 -3px; border: 2px solid #D0D0D0; transition: left 0.3s; }
+  .toggle-button-selected { background-color: #ff1a1a; border: 2px solid #7DA652; }
+  .toggle-button-selected button { left: 26px; top: 0; margin: 0; border: none; width: 24px; height: 24px; box-shadow: 0 0 4px rgba(0,0,0,0.1); }
+  .locatointitle{
+    margin-top: 3%;
+    margin-right: -62%;
+  }
 
   @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
 
@@ -574,7 +582,8 @@
     text-align: justify;
   }
   .heading_message{
-    margin-top: 5%;/*added on 11-5*/
+    /*margin-top: 5%;*//*added on 11-5*/
+    margin-top: 0%;/*added on 12-5*/
      margin-left: -68%;/*added on 11-5*/
     font-size: 12px;/*added on 11-5*/
     text-align: justify;/*added on 11-5*/
@@ -597,6 +606,14 @@
     width: 12% !important;/*added on 7-5*/
     margin-left: 46%;/*added on 7-5*/
     margin-top: 57% !important;/*added on 7-5*/
+  }
+  .toggle-button { background-color: #83B152; margin: 5px 0; border-radius: 20px; border: 2px solid #D0D0D0; height: 24px; cursor: pointer; width: 50px; position: relative; display: inline-block; user-select: none; -webkit-user-select: none; -ms-user-select: none; -moz-user-select: none; margin-top: -10%; float: right; margin-right: 10%;}
+  .toggle-button button { cursor: pointer; outline: 0; display:block; position: absolute; left: 0; top: 0; border-radius: 100%; width: 30px; height: 30px; background-color: white; float: left; margin: -3px 0 0 -3px; border: 2px solid #D0D0D0; transition: left 0.3s; }
+  .toggle-button-selected { background-color: #ff1a1a; border: 2px solid #7DA652; }
+  .toggle-button-selected button { left: 26px; top: 0; margin: 0; border: none; width: 24px; height: 24px; box-shadow: 0 0 4px rgba(0,0,0,0.1); }
+  .locatointitle{
+    margin-top: 3%;/*added on 12-5*/
+    margin-right: 6%;/*added on 12-5*/
   }
 }
 
@@ -757,7 +774,8 @@
     margin-left: -68%;
    /* padding-top: 5%;*/
     padding-top: 0%;
-    margin-top: 50%;/*added on 11-5*/
+    /*margin-top: 50%;*//*added on 11-5*/
+    margin-top: 35%;/*added on 12-5*/
 /*  margin-top: 20%;*//*added on 5-5*/
     text-align: justify;/*added on 5-5*/
     font-size: 18px;/*added on 5-5*/
@@ -780,6 +798,15 @@
     margin-left: 46%;/*added on 7-5*/
     margin-top: 46% !important;/*added on 7-5*/
   }
+  .toggle-button { background-color: #83B152; margin: 5px 0; border-radius: 20px; border: 2px solid #D0D0D0; height: 24px; cursor: pointer; width: 50px; position: relative; display: inline-block; user-select: none; -webkit-user-select: none; -ms-user-select: none; -moz-user-select: none; margin-top: -4%; float: right; margin-right: 10%;}
+  .toggle-button button { cursor: pointer; outline: 0; display:block; position: absolute; left: 0; top: 0; border-radius: 100%; width: 30px; height: 30px; background-color: white; float: left; margin: -3px 0 0 -3px; border: 2px solid #D0D0D0; transition: left 0.3s; }
+  .toggle-button-selected { background-color: #ff1a1a; border: 2px solid #7DA652; }
+  .toggle-button-selected button { left: 26px; top: 0; margin: 0; border: none; width: 24px; height: 24px; box-shadow: 0 0 4px rgba(0,0,0,0.1); }
+  .locatointitle{
+    margin-top: 7%;/*added on 12-5*/
+    margin-right: -40%;/*added on 12-5*/
+  }
+
 }
 @media only screen and (min-device-width: 1025px) and (max-device-width: 1600px) {
   .polaroid{
@@ -938,8 +965,8 @@
   }
   .heading_message{
     margin-left: -72%;/*added on 11-5*/
-    padding-top: 15%;/*added on 11-5*/
-    font-size: 22px;/*added on 11-5*/
+    /*padding-top: 15%;*//*added on 12-5*/
+    font-size: 18px;/*added on 12-5*/
     width: 103%;/*added on 11-5*/
     text-align: justify;/*added on 11-5*/
   }
@@ -947,7 +974,8 @@
     margin-top: 2%;/*added on 5-5*/
   }
   .text-info{
-    font-size: 22px;/*added on 5-5*/
+   /* font-size: 22px;*//*added on 5-5*/
+    font-size: 18px;/*added on 12-5*/
   }
   .invitition{
     margin-left: -70%;/*added on 5-5*/
