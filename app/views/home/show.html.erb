@@ -12,3 +12,16 @@
     </div>
   </div>
 </div>
+<% if current_user %>
+
+<script>
+  $(document).on('click', '.tint1', function(e){ 
+            if($(e.target).is('.tint1')){ 
+              var cid = $(this).attr("data-id");
+              $(this).find(".conversation").click();
+              // $(".conversation"+cid).click();
+            }
+        });
+</script>
+
+<% end %>
