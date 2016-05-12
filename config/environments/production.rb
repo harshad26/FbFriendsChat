@@ -90,7 +90,7 @@ Rails.application.configure do
   #     :user_name => "itserviceyouth@gmail.com",
   #     :password => "Badashah26"
   # }
- config.action_mailer.default_url_options = { :host => 'tranquil-brushlands-87976.herokuapp.com' }
+ config.action_mailer.default_url_options = { :host => 'tranquil-wave-60133.herokuapp.com' }
  config.action_mailer.perform_deliveries = true
  config.action_mailer.raise_delivery_errors = true
  ActionMailer::Base.smtp_settings = {
