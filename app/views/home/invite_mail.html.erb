@@ -42,42 +42,38 @@ Hey! makes it easier for you to hang out with the people you know close by. Ther
 	    //alert($(".onoffswitch-checkbox").is(":checked"));
 	    //var status = ($(".onoffswitch-checkbox").is(":checked"));
 	     
-		
-
+	    var status = false;
 	    if($(".onoffswitch-checkbox").is(":checked")== true)
 	    {
-	    	$.ajax({
-		  		url: '/status/'+ $(".onoffswitch-checkbox").is(":checked"),
-				});
-		    $(function(){
-		      getLocation();
-		      function getLocation() {
-		        
-		          if (navigator.geolocation) {
-		              navigator.geolocation.getCurrentPosition(showPosition);
-		          } else { 
-		              x.innerHTML = "Geolocation is not supported by this browser.";
-		          }
-		        }
+	    	var status = true;
+	    }
 
-		      function showPosition(position) {
-		          //x.innerHTML = "Latitude: " + position.coords.latitude + 
-		         //"<br>Longitude: " + position.coords.longitude;
-		          var data = { 'lat': position.coords.latitude, 'lon': position.coords.longitude }; 
-		          $.ajax({
-		              type: 'GET', 
-		              url: '/update_location',
-		              data: data
-		          });
-		        }
-		    });
-	    }
-	    else{
-			  $.ajax({
-			  		url: '/status/'+ $(".onoffswitch-checkbox").is(":checked"),
-					});
-	    }
-	})
+	    $.ajax({
+	  		url: '/status/'+ status,
+		});
+
+	    getLocation();
+		function getLocation() {
+
+		  if (navigator.geolocation) {
+		      navigator.geolocation.getCurrentPosition(showPosition);
+		  } else { 
+		      x.innerHTML = "Geolocation is not supported by this browser.";
+		  }
+		}
+
+		function showPosition(position) {
+		  //x.innerHTML = "Latitude: " + position.coords.latitude + 
+		 //"<br>Longitude: " + position.coords.longitude;
+		  var data = { 'lat': position.coords.latitude, 'lon': position.coords.longitude }; 
+		  $.ajax({
+		      type: 'GET', 
+		      url: '/update_location',
+		      data: data
+		  });
+		}
+	    
+	});
 	</script>
 
 <% end %>
