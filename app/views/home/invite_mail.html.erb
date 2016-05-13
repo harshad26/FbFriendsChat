@@ -52,25 +52,28 @@ Hey! makes it easier for you to hang out with the people you know close by. Ther
 	  		url: '/status/'+ status,
 		});
 
-	    getLocation();
-		function getLocation() {
+	    if(status == true) {
+		    function getLocation() {
 
-		  if (navigator.geolocation) {
-		      navigator.geolocation.getCurrentPosition(showPosition);
-		  } else { 
-		      x.innerHTML = "Geolocation is not supported by this browser.";
-		  }
-		}
+			  if (navigator.geolocation) {
+			      navigator.geolocation.getCurrentPosition(showPosition);
+			  } else { 
+			      x.innerHTML = "Geolocation is not supported by this browser.";
+			  }
+			}
 
-		function showPosition(position) {
-		  //x.innerHTML = "Latitude: " + position.coords.latitude + 
-		 //"<br>Longitude: " + position.coords.longitude;
-		  var data = { 'lat': position.coords.latitude, 'lon': position.coords.longitude }; 
-		  $.ajax({
-		      type: 'GET', 
-		      url: '/update_location',
-		      data: data
-		  });
+			function showPosition(position) {
+			  //x.innerHTML = "Latitude: " + position.coords.latitude + 
+			 //"<br>Longitude: " + position.coords.longitude;
+			  var data = { 'lat': position.coords.latitude, 'lon': position.coords.longitude }; 
+			  $.ajax({
+			      type: 'GET', 
+			      url: '/update_location',
+			      data: data
+			  });
+			}
+
+			getLocation();
 		}
 	    
 	});
