@@ -38,8 +38,15 @@ Hey! makes it easier for you to hang out with the people you know close by. Ther
 	$(document).on('click', '.onoffswitch-checkbox', function() {
 	    $(this).toggleClass('toggle-button-selected');
 	    //alert($(".onoffswitch-checkbox").is(":checked"));
+	    //var status = ($(".onoffswitch-checkbox").is(":checked"));
+	     
+		
+
 	    if($(".onoffswitch-checkbox").is(":checked")== true)
 	    {
+	    	$.ajax({
+		  		url: '/status/'+ $(".onoffswitch-checkbox").is(":checked"),
+				});
 		    $(function(){
 		      getLocation();
 		      function getLocation() {
@@ -61,16 +68,12 @@ Hey! makes it easier for you to hang out with the people you know close by. Ther
 		              data: data
 		          });
 		        }
-
-		      $(document).on('click', '.tint1', function(e){ 
-		        if($(e.target).is('.tint1')){ 
-		          var cid = $(this).attr("data-id");
-		          $(this).find(".conversation").click();
-		          // $(".conversation"+cid).click();
-		        }
 		    });
-
-		    });
+	    }
+	    else{
+			  $.ajax({
+			  		url: '/status/'+ $(".onoffswitch-checkbox").is(":checked"),
+					});
 	    }
 	})
 	</script>

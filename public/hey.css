@@ -441,12 +441,12 @@
   .onoffswitch-inner:before {
     content: "ON";
     padding-left: 10px;
-    background-color: #449d44; color: #FFFFFF;
+    background-color: #2A6496; color: #FFFFFF;
   }
   .onoffswitch-inner:after {
     content: "OFF";
     padding-right: 10px;
-    background-color: #FF2424; color: #FFFFFF;
+    background-color: #DDDDDD; color: #000000;
     text-align: right;
   }
   .onoffswitch-switch {
@@ -686,12 +686,12 @@
   .onoffswitch-inner:before {
     content: "ON";
     padding-left: 10px;
-    background-color: #449d44; color: #FFFFFF;
+    background-color: #2A6496; color: #FFFFFF;
   }
   .onoffswitch-inner:after {
     content: "OFF";
     padding-right: 10px;
-    background-color: #FF2424; color: #FFFFFF;
+    background-color: #DDDDDD; color: #000000;
     text-align: right;
   }
   .onoffswitch-switch {
@@ -925,12 +925,12 @@
   .onoffswitch-inner:before {
     content: "ON";
     padding-left: 10px;
-    background-color: #449d44; color: #FFFFFF;
+    background-color: #2A6496; color: #FFFFFF;
   }
   .onoffswitch-inner:after {
     content: "OFF";
     padding-right: 10px;
-    background-color: #FF2424; color: #FFFFFF;
+    background-color: #DDDDDD; color: #000000;
     text-align: right;
   }
   .onoffswitch-switch {
@@ -1113,12 +1113,12 @@
   .onoffswitch-inner:before {
     content: "ON";
     padding-left: 10px;
-    background-color: #449d44; color: #FFFFFF;
+    background-color: #2A6496; color: #FFFFFF;
   }
   .onoffswitch-inner:after {
     content: "OFF";
     padding-right: 10px;
-    background-color: #FF2424; color: #FFFFFF;
+    background-color: #DDDDDD; color: #000000;
     text-align: right;
   }
   .onoffswitch-switch {

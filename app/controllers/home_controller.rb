@@ -7,6 +7,7 @@ class HomeController < ApplicationController
 	def show
 
 		if current_user
+			
 			@user_fb_token = current_user.oauth_token
 			@friendsHash = Hash.new()
 			unless @user_fb_token.blank?
@@ -153,4 +154,15 @@ class HomeController < ApplicationController
             @sortFriends = @dt.sort_by {|_k, val| val}
   		end
   	end
+
+  	def status
+      # abort params.inspect
+      if params[:status] =="true"
+      	session[:status] = params[:status]
+      	render nothing: true
+      else
+        session.delete(:status)
+        render nothing: true
+      end
+  	end	
 end

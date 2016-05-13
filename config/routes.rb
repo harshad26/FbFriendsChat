@@ -13,7 +13,7 @@ Rails.application.routes.draw do
     resource :home, only: [:show]
 
     root to: "home#show"
-
+    
     get 'users/invitefriend/:id' => 'user#invitefriend'
     get '/update_location' => 'home#update_location'
     get '/distance' => 'home#distance'
@@ -26,6 +26,8 @@ Rails.application.routes.draw do
     resources :conversations do
       resources :messages
     end
+
+    get '/status/:status' => 'home#status'
     
     resources :users
   # The priority is based upon order of creation: first created -> highest priority.
