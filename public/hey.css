@@ -439,14 +439,14 @@
     box-sizing: border-box;
   }
   .onoffswitch-inner:before {
-    content: "ON";
+    content: "OFF";
     padding-left: 10px;
-    background-color: #2A6496; color: #FFFFFF;
+    background-color: #DDDDDD; color: #000000;
   }
   .onoffswitch-inner:after {
-    content: "OFF";
+    content: "ON";
     padding-right: 10px;
-    background-color: #DDDDDD; color: #000000;
+    background-color: #2A6496; color: #FFFFFF;
     text-align: right;
   }
   .onoffswitch-switch {
@@ -688,14 +688,14 @@
     box-sizing: border-box;
   }
   .onoffswitch-inner:before {
-    content: "ON";
+    content: "OFF";
     padding-left: 10px;
-    background-color: #2A6496; color: #FFFFFF;
+    background-color: #DDDDDD; color: #000000;
   }
   .onoffswitch-inner:after {
-    content: "OFF";
+    content: "ON";
     padding-right: 10px;
-    background-color: #DDDDDD; color: #000000;
+    background-color: #2A6496; color: #FFFFFF;
     text-align: right;
   }
   .onoffswitch-switch {
@@ -927,14 +927,14 @@
     box-sizing: border-box;
   }
   .onoffswitch-inner:before {
-    content: "ON";
+    content: "OFF";
     padding-left: 10px;
-    background-color: #2A6496; color: #FFFFFF;
+    background-color: #DDDDDD; color: #000000;
   }
   .onoffswitch-inner:after {
-    content: "OFF";
+    content: "ON";
     padding-right: 10px;
-    background-color: #DDDDDD; color: #000000;
+    background-color: #2A6496; color: #FFFFFF;
     text-align: right;
   }
   .onoffswitch-switch {
@@ -1116,14 +1116,14 @@
     box-sizing: border-box;
   }
   .onoffswitch-inner:before {
-    content: "ON";
+    content: "OFF";
     padding-left: 10px;
-    background-color: #2A6496; color: #FFFFFF;
+    background-color: #DDDDDD; color: #000000;
   }
   .onoffswitch-inner:after {
-    content: "OFF";
+    content: "ON";
     padding-right: 10px;
-    background-color: #DDDDDD; color: #000000;
+    background-color: #2A6496; color: #FFFFFF;
     text-align: right;
   }
   .onoffswitch-switch {
@@ -1155,14 +1155,14 @@
     /*margin-left: -72%;
     padding-top: 2%;
     font-size: 22px;*/
-    margin-left: -72%;/*added on 5-5*/
+    margin-left: -72% !important;/*added on 5-5*/
     padding-top: 5%;/*added on 5-5*/
     font-size: 22px;/*added on 5-5*/
     width: 103%;/*added on 5-5*/
     text-align: justify;/*added on 5-5*/
   }
   .heading_message{
-    margin-left: -72%;/*added on 11-5*/
+    margin-left: -72% !important;/*added on 11-5*/
     /*padding-top: 15%;*//*added on 12-5*/
     font-size: 18px;/*added on 12-5*/
     width: 103%;/*added on 11-5*/
@@ -1174,7 +1174,7 @@
   .text-info{
    /* font-size: 22px;*//*added on 5-5*/
     font-size: 18px;/*added on 12-5*/
-    margin-left: -66%;/*added on 13-5*/
+    margin-left: 0;/*added on 13-5*/
   }
   .invitition{
     margin-left: -70%;/*added on 5-5*/
