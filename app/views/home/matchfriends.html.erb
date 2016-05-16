@@ -16,7 +16,8 @@
 																<div class='desc' id="fb_name_<%= item[0]%>">
 																	<%= item.name %></br>
 																	<%=times(item.id) %> Mins <br>
-																	<% if session[:status] and session[:status] == "true" %>
+																	<%# if session[:status] and session[:status] == "true" %>
+																	<% if !session[:status] || session[:status] == "true" %>
 																		<%= (@dt[item.id] == 99999) ? "Not Shared Miles" : @dt[item.id].to_s + " Miles Away" %>
 																	<% end %>
 																</div>

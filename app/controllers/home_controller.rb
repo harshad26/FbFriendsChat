@@ -47,6 +47,7 @@ class HomeController < ApplicationController
                 @dt.merge!( k => dist)
             end
             @sortFriends = @dt.sort_by {|_k, val| val}
+            
 		end
 	end
 
@@ -156,13 +157,7 @@ class HomeController < ApplicationController
   	end
 
   	def status
-      # abort params.inspect
-      if params[:status] =="true"
       	session[:status] = params[:status]
       	render nothing: true
-      else
-        session.delete(:status)
-        render nothing: true
-      end
   	end	
 end

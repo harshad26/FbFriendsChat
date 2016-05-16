@@ -8,12 +8,21 @@ Hey! makes it easier for you to hang out with the people you know close by. Ther
 <h4 class = "locatointitle">Share Location:</h4>
 <div class="onoffswitch">
     <!-- <button></button> -->
-    <% a = session[:status].present? %>
-    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" <%= a==true ? "checked": ""%> data-toggle="toggle">
+    <% if session[:status]=="true" %>
+    <%# a = session[:status].present? %>
+    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" <%= session[:status] ? "checked": ""%> data-toggle="toggle"     >
 				        <label class="onoffswitch-label" for="myonoffswitch">
 				            <span class="onoffswitch-inner"></span>
 				            <span class="onoffswitch-switch"></span>
 				        </label>
+    <% else %>
+
+    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch"  data-toggle="toggle" >
+				        <label class="onoffswitch-label" for="myonoffswitch">
+				            <span class="onoffswitch-inner"></span>
+				            <span class="onoffswitch-switch"></span>
+				        </label>
+    <% end %>
 
 </div>
 <center><p class="text-info invitition">Invite your friends!</p></center>
@@ -42,40 +51,55 @@ Hey! makes it easier for you to hang out with the people you know close by. Ther
 	    //alert($(".onoffswitch-checkbox").is(":checked"));
 	    //var status = ($(".onoffswitch-checkbox").is(":checked"));
 	     
-	    var status = false;
+	    // var status = false;
 	    if($(".onoffswitch-checkbox").is(":checked")== true)
-	    {
-	    	var status = true;
-	    }
+		    {
+		    	// status = true;
+		    
 
-	    $.ajax({
-	  		url: '/status/'+ status,
+		    $.ajax({
+		  		url: '/status/'+ $(".onoffswitch-checkbox").is(":checked"),
+				});
+
+		    // if(status == true) {
+			 //    function getLocation() {
+
+				//   if (navigator.geolocation) {
+				//       navigator.geolocation.getCurrentPosition(showPosition);
+				//   } else { 
+				//       x.innerHTML = "Geolocation is not supported by this browser.";
+				//   }
+				// // }
+
+				// function showPosition(position) {
+				//   //x.innerHTML = "Latitude: " + position.coords.latitude + 
+				//  //"<br>Longitude: " + position.coords.longitude;
+				//   var data = { 'lat': position.coords.latitude, 'lon': position.coords.longitude }; 
+				//   $.ajax({
+				//       type: 'GET', 
+				//       url: '/update_location',
+				//       data: data
+				//   });
+				// }
+
+				// getLocation();
+				$.getJSON('https://geoip-db.com/json/geoip.php?jsonp=?') 
+         .done (function(location) {
+         	//alert(location.country_name);
+            var data = { 'lat': location.latitude, 'lon': location.longitude };
+            $.ajax({
+				      type: 'GET', 
+				      url: '/update_location',
+				      data: data
+				  	});               
+         });
+
+			}
+		
+
+    $.ajax({
+	  		url: '/status/'+ $(".onoffswitch-checkbox").is(":checked"),
 		});
-
-	    if(status == true) {
-		    function getLocation() {
-
-			  if (navigator.geolocation) {
-			      navigator.geolocation.getCurrentPosition(showPosition);
-			  } else { 
-			      x.innerHTML = "Geolocation is not supported by this browser.";
-			  }
-			}
-
-			function showPosition(position) {
-			  //x.innerHTML = "Latitude: " + position.coords.latitude + 
-			 //"<br>Longitude: " + position.coords.longitude;
-			  var data = { 'lat': position.coords.latitude, 'lon': position.coords.longitude }; 
-			  $.ajax({
-			      type: 'GET', 
-			      url: '/update_location',
-			      data: data
-			  });
-			}
-
-			getLocation();
-		}
-	    
 	});
 	</script>
 
