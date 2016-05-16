@@ -26,9 +26,9 @@
 				          		<% end %>	
 									<div class='desc' id="fb_name_<%= item[0]%>">
 										<%= @friendsHash[item[0]] %></br>
-										<% if !session[:status] || session[:status] == "true" %>	
+										<%# if !session[:status] || session[:status] == "true" %>	
 											<%= (item[1] == 99999) ? "Not Shared Miles" : item[1].to_s + " Miles Away" %>
-										<% end %>
+										<%# end %>
 									</div>
 								</div>								
 						    </div>
