@@ -825,12 +825,13 @@
   .toggle-button-selected button { left: 26px; top: 0; margin: 0; border: none; width: 24px; height: 24px; box-shadow: 0 0 4px rgba(0,0,0,0.1); }
  */ .locatointitle{
     margin-top: 10%;/*added on 12-5*/
-    margin-right: 7%;/*added on 13-5*/
+    /*margin-right: 7%;*//*added on 13-5*/
+    margin-right: 33%;/*added on 13-5*/
   }
   .onoffswitch {
     position: relative; width: 90px;
     -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
-    margin-top: -9%; float: right; margin-right: 56%;
+    margin-top: -9%; float: right; /*margin-right: 56%;*/margin-right: 63%;
   }
   
 
