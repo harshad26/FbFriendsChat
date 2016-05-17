@@ -622,13 +622,13 @@
    /* margin-right: 6%;*//*added on 12-5*/
     margin-top: 10%;/*added on 13-5*/
     margin-right: 40%;/*added on 13-5*/
-    margin-right: 65%;/*added on 17-5*/
+    margin-right: 102%;/*added on 17-5*/
     font-size: 12px;/*added on 12-5*/
   }
   .onoffswitch {
     position: relative; width: 62px;
     -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
-    margin-top: -18%; float: right; margin-right: 52%;
+    margin-top: -18%; float: right; margin-right: 70%;
         text-align: center;/*added on 13-5*/
   }
   a.btn.btn-lg.btn-primary.sharebutton {
