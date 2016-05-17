@@ -634,6 +634,9 @@
   a.btn.btn-lg.btn-primary.sharebutton {
     line-height: 20% !important;
   }
+  a.btn.btn-lg.btn-primary.sharebutton {
+    font-size: 14px !important;
+  }
   
 }
 
@@ -831,7 +834,10 @@
   .onoffswitch {
     position: relative; width: 90px;
     -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
-    margin-top: -9%; float: right; /*margin-right: 56%;*/margin-right: 63%;
+    margin-top: -9%; float: right; /*margin-right: 56%;*/margin-right: 67%;
+  }
+  a.btn.btn-lg.btn-primary.sharebutton {
+    font-size: 16px !important;
   }
   
 
@@ -981,7 +987,9 @@
     -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
     margin-top: -4%; float: right; margin-right: 62%;
   }
-  
+  a.btn.btn-lg.btn-primary.sharebutton {
+    font-size: 16px !important;
+  }
 
   
 }
