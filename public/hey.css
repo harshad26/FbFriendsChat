@@ -409,18 +409,14 @@
     padding-top: 2%;
     font-size: 22px;
   }
-  /*.toggle-button { background-color: #83B152; margin: 5px 0; border-radius: 20px; border: 2px solid #D0D0D0; height: 24px; cursor: pointer; width: 50px; position: relative; display: inline-block; user-select: none; -webkit-user-select: none; -ms-user-select: none; -moz-user-select: none; margin-top: -2%; float: right; margin-right: 10%;}
-  .toggle-button button { cursor: pointer; outline: 0; display:block; position: absolute; left: 0; top: 0; border-radius: 100%; width: 30px; height: 30px; background-color: white; float: left; margin: -3px 0 0 -3px; border: 2px solid #D0D0D0; transition: left 0.3s; }
-  .toggle-button-selected { background-color: #ff1a1a; border: 2px solid #7DA652; }
-  .toggle-button-selected button { left: 26px; top: 0; margin: 0; border: none; width: 24px; height: 24px; box-shadow: 0 0 4px rgba(0,0,0,0.1); }
-  */.locatointitle{
+  .locatointitle{
     margin-top: 5%;
     margin-left: -94%;
   }
   .onoffswitch {
     position: relative; width: 90px;
     -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
-    margin-top: -3.5%; float: right; margin-right: 80%;
+    margin-top: 2%; float: right; margin-right: 87%;
   }
   
   @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
@@ -601,8 +597,8 @@
     margin-left: 30% !important;
   }  
   p.text-info.invitition {
-    margin-left: -118%;
-    margin-top: 10%;/*added on 11-5*/
+    margin-left: -76%;
+    margin-top: 35%;/*added on 11-5*/
   }
   p.text-info.mess {
     text-align: justify;/*added on 5-5*/
@@ -628,7 +624,7 @@
   .onoffswitch {
     position: relative; width: 62px;
     -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
-    margin-top: -18%; float: right; margin-right: 70%;
+    margin-top: 0%; float: right; margin-right: 100%;
         text-align: center;/*added on 13-5*/
   }
   a.btn.btn-lg.btn-primary.sharebutton {
@@ -814,7 +810,7 @@
   p.text-info.invitition {
     margin-left: -70%;/*added on 5-5*/
    /* margin-top: 15%;*//*added on 5-5*/
-   margin-top: 10%;/*added on 11-5*/
+   margin-top: 24%;/*added on 11-5*/
    font-size: 18px;/*added on 5-5*/
   } 
   img.heyfb {
@@ -834,7 +830,7 @@
   .onoffswitch {
     position: relative; width: 90px;
     -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
-    margin-top: -9%; float: right; /*margin-right: 56%;*/margin-right: 67%;
+    margin-top: 6%; float: right; /*margin-right: 56%;*/margin-right: 83%;
   }
   a.btn.btn-lg.btn-primary.sharebutton {
     font-size: 16px !important;
@@ -952,7 +948,8 @@
     margin-left: 28%;/* addes on 29/4*/
   }
   .form-control-invite{
-    width: 50%;
+    width: 46%;
+    margin-left: 4%;
   }
   .invitation .btn-primary{
     line-height: 25% !important;
@@ -961,8 +958,8 @@
     width: 15%;
   }
   p.text-info.invitition {
-    margin-left: -50%;/*added on 6-5*/
-    margin-top: 5%;/*added on 11-5*/
+    margin-left: -39%;/*added on 6-5*/
+    margin-top: 9%;/*added on 11-5*/
   }
   .reset_message{
     margin-left: -40%;/*added on 11-5*/
@@ -985,7 +982,7 @@
   .onoffswitch {
     position: relative; width: 90px;
     -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
-    margin-top: -4%; float: right; margin-right: 62%;
+    margin-top: 2%; float: right; margin-right: 71%;
   }
   a.btn.btn-lg.btn-primary.sharebutton {
     font-size: 16px !important;
@@ -1029,7 +1026,7 @@
   .invitition{
     margin-left: -70%;/*added on 5-5*/
    /* margin-top: 18%;*//*added on 5-5*/
-    margin-top: 6%;/*added on 11-5*/
+    margin-top: 9%;/*added on 11-5*/
   }
   .form-control-invite{
     margin-left: -7%;
