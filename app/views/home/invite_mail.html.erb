@@ -7,7 +7,7 @@
 Hey! makes it easier for you to hang out with the people you know close by. There's no need to ask them if they're free or try to make plans for the future. Just select the friends you want to hang out with right now. If they selected you too, you will both be notified. If not, nobody will ever know. You will only know who wants to hang out with you if you want to hang out with them too. Selections reset every two hours.</p></center>
 <!-- <h4 class = "locatointitle">Share Location:</h4> -->
 <div class="onoffswitch">
-    <%= link_to 'Click To Share Location', "#",  class: "btn btn-lg btn-primary sharebutton ", :style => "color:#fff; ", :onclick => "return getLocation();" %>
+    <%= link_to 'Click To Share Location', "#",  class: "btn btn-lg btn-primary sharebutton ", :style => "color:#fff; ", :onclick => "return getLocationUpdate();" %>
 </div>
 <center><p class="text-info invitition">Invite your friends!</p></center>
             
@@ -34,14 +34,40 @@ Hey! makes it easier for you to hang out with the people you know close by. Ther
 	//$(".sharebutton").on('click', function(){
 	
 		// getLocation();
-	    function getLocation() {
+		
+		function errorHandler(err) {
+            if(err.code == 1) {
+               alert("Error: Access is denied!");
+            }
+            
+            else if( err.code == 2) {
+               alert("Error: Position is unavailable!");
+            }
+         }
+         
+         function getLocationUpdate(){
+            if(navigator.geolocation){
+               // timeout at 60000 milliseconds (60 seconds)
+               var options = {timeout:60000};
+               geoLoc = navigator.geolocation;
+               watchID = geoLoc.watchPosition(showLocation, errorHandler, options);
+            }
+            
+            else{
+               alert("Sorry, browser does not support geolocation!");
+            }
+         }
+
+	    /*function getLocation() {
 
 		  if (navigator.geolocation) {
-		      navigator.geolocation.getCurrentPosition(showPosition);
+		      // navigator.geolocation.getCurrentPosition(showPosition);
+		      navigator.geolocation.getCurrentPosition( onSuccess, onError, {timeout: 90000, enableHighAccuracy: true}, showPosition);
+
 		  } else { 
 		      x.innerHTML = "Geolocation is not supported by this browser.";
 		  }
-		}
+		}*/
 
 		function showPosition(position) {
 		  //x.innerHTML = "Latitude: " + position.coords.latitude + 
