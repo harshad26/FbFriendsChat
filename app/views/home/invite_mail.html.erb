@@ -1,18 +1,34 @@
 
 <div class="container">
 	<div class="invitation">
-		
+		<%= form_for :invite, url: invite_mail_send_path , html: {:id => 'invite_mail'},  validate: true do |f| %>
             <center><p class="text-info heading_message", style="text-align: center;"><b>What is this?</b></br></p></center>
 <center><p class="text-info reset_message">
 Hey! makes it easier for you to hang out with the people you know close by. There's no need to ask them if they're free or try to make plans for the future. Just select the friends you want to hang out with right now. If they selected you too, you will both be notified. If not, nobody will ever know. You will only know who wants to hang out with you if you want to hang out with them too. Selections reset every two hours.</p></center>
-<!-- <h4 class = "locatointitle">Share Location:</h4> -->
+<h4 class = "locatointitle">Share Location:</h4>
 <div class="onoffswitch">
-    <%= link_to 'Click To Share Location', "#",  class: "btn btn-lg btn-primary sharebutton ", :style => "color:#fff; ", :onclick => "return getLocation();" %>
+    <!-- <button></button> -->
+    <% if session[:status]=="true" %>
+    <%# a = session[:status].present? %>
+    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" <%= session[:status] ? "checked": ""%> data-toggle="toggle"     >
+				        <label class="onoffswitch-label" for="myonoffswitch">
+				            <span class="onoffswitch-inner"></span>
+				            <span class="onoffswitch-switch"></span>
+				        </label>
+    <% else %>
+
+    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch"  data-toggle="toggle" >
+				        <label class="onoffswitch-label" for="myonoffswitch">
+				            <span class="onoffswitch-inner"></span>
+				            <span class="onoffswitch-switch"></span>
+				        </label>
+    <% end %>
+
 </div>
 <center><p class="text-info invitition">Invite your friends!</p></center>
             
 
-		<%= form_for :invite, url: invite_mail_send_path , html: {:id => 'invite_mail'},  validate: true do |f| %>
+
 			<div class="form-group" style="width:100%;">
 				<div class="field">
 					<%= f.email_field :email, :placeholder => " Friend Email", required: :require, :size => 10, :id => 'valid', :class => 'form-control-invite', :style => "float:left;"  %>
@@ -27,33 +43,51 @@ Hey! makes it easier for you to hang out with the people you know close by. Ther
 	</div>
 </div>
 
-<%# if current_user %>
+<% if current_user %>
 
-<script type="text/javascript">
-	// $(document).on('click', '.sharebutton', function() {
-	//$(".sharebutton").on('click', function(){
-	
-		// getLocation();
-	    function getLocation() {
+<script>
+	$(document).on('click', '.onoffswitch-checkbox', function() {
+	    $(this).toggleClass('toggle-button-selected');
+	    //alert($(".onoffswitch-checkbox").is(":checked"));
+	    //var status = ($(".onoffswitch-checkbox").is(":checked"));
+	     
+	    // var status = false;
+	    if($(".onoffswitch-checkbox").is(":checked")== true)
+		    {
+		    	// status = true;
 
-		  if (navigator.geolocation) {
-		      navigator.geolocation.getCurrentPosition(showPosition);
-		  } else { 
-		      x.innerHTML = "Geolocation is not supported by this browser.";
-		  }
+		    $.ajax({
+		  		url: '/status/'+ $(".onoffswitch-checkbox").is(":checked"),
+				});
+
+		    // if(status == true) {
+			    function getLocation() {
+
+				  if (navigator.geolocation) {
+				      navigator.geolocation.getCurrentPosition(showPosition);
+				  } else { 
+				      x.innerHTML = "Geolocation is not supported by this browser.";
+				  }
+				}
+
+				function showPosition(position) {
+				  //x.innerHTML = "Latitude: " + position.coords.latitude + 
+				 //"<br>Longitude: " + position.coords.longitude;
+				  var data = { 'lat': position.coords.latitude, 'lon': position.coords.longitude }; 
+				  $.ajax({
+				      type: 'GET', 
+				      url: '/update_location',
+				      data: data
+				  });
+				}
+
+				getLocation();
+			//}
 		}
-
-		function showPosition(position) {
-		  //x.innerHTML = "Latitude: " + position.coords.latitude + 
-		 //"<br>Longitude: " + position.coords.longitude;
-		  var data = { 'lat': position.coords.latitude, 'lon': position.coords.longitude }; 
-		  $.ajax({
-		      type: 'GET', 
-		      url: '/update_location',
-		      data: data
-		  });
-		}
-	//});
+    	$.ajax({
+	  		url: '/status/'+ $(".onoffswitch-checkbox").is(":checked"),
+		});
+	});
 	</script>
 
-<%# end %>
+<% end %>

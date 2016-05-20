@@ -156,5 +156,10 @@ class HomeController < ApplicationController
   		end
   	end
 
+  	def status
+      	session[:status] = params[:status]
+      	render nothing: true
+  	end
+
   	
 end
