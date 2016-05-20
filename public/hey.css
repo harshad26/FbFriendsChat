@@ -93,7 +93,7 @@
   }
   .invitation{
     text-align: left;
-    margin-left: 40%;
+    /*margin-left: 40%;*//*added on 20/5*/
     /*margin-top: 15%*//* added on 5-5*/
   }
   .form-control{
@@ -415,12 +415,24 @@
   .toggle-button-selected button { left: 26px; top: 0; margin: 0; border: none; width: 24px; height: 24px; box-shadow: 0 0 4px rgba(0,0,0,0.1); }
   */.locatointitle{
     margin-top: 5%;
-    margin-left: -81%;
+    /*margin-left: -81%;*//*added on 20/5*/
+    /*text-align: left;*//*added on 20/5*/
+    margin: 0;/*added on 20/5*/
+    width: 90%;/*added on 20/5*/
+    float: left;/*added on 20/5*/
   }
   .onoffswitch {
-    position: relative; width: 90px;
-    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
-    margin-top: -3.5%; float: right; margin-right: 74%;
+    position: relative; 
+    width: 90px;
+    -webkit-user-select:none; 
+    -moz-user-select:none; 
+    -ms-user-select: none;
+    /*margin-top: -3.5%; 
+    float: right; 
+    margin-right: 74%;*//*added on 20/5*/
+    margin-top: -3%;
+    float: left;
+    margin-left: 56%;
   }
   .onoffswitch-checkbox {
       display: none;
@@ -463,7 +475,19 @@
   .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
     right: 0px; 
   }
+  /*added on 20/5-start*/
+  .invitation center{
+    width: 50%;
+    margin: 0px auto;
+  }
+  .invitation .share_location{
+    width: 50%;
+    margin: 0px auto;
+    padding-bottom: 2%;
+    padding-top: 3%;
 
+ }
+  /*added on 20/5-start*/
   @media only screen and (min-device-width: 320px) and (max-device-width: 767px) {
 
   .fa-5x {
@@ -612,8 +636,8 @@
   }
   /*added on 2/5-start*/
   .form-control-invite{
-    width: 100%;
-    margin-left: -60%;
+    width: 68%;/*added on 20/5*/
+    /*margin-left: -60%;*//*added on 20/5*/
   }
   .invitation .btn-primary{
     line-height: 36% !important;
@@ -622,7 +646,7 @@
     width: 75%;
   }
   .reset_message{
-    margin-left: -68%;
+    margin-left: 0%;/*added on 20/5*/
    /* padding-top: 15%;*//*added on 5-5*/
     margin-top: 10%;/*added on 11-5*/
     font-size: 12px;/*added on 5-5*/
@@ -631,7 +655,7 @@
   .heading_message{
     /*margin-top: 5%;*//*added on 11-5*/
     margin-top: 0%;/*added on 12-5*/
-     margin-left: -68%;/*added on 11-5*/
+    /*margin-left: -68%;*//*added on 20-5*/
     font-size: 14px;/*added on 11-5*/
     text-align: justify;/*added on 11-5*/
   }
@@ -642,7 +666,7 @@
     margin-left: 30% !important;
   }  
   p.text-info.invitition {
-    margin-left: -118%;
+    /*margin-left: -118%;*//*added on 20/5*/
     margin-top: 10%;/*added on 11-5*/
   }
   p.text-info.mess {
@@ -661,15 +685,26 @@
  */ .locatointitle{
     /*margin-top: 3%;*//*added on 12-5*/
    /* margin-right: 6%;*//*added on 12-5*/
-    margin-top: 10%;/*added on 13-5*/
-    margin-right: 40%;/*added on 13-5*/
+    /*margin-top: 10%;*//*added on 20-5*/
+    /*margin-right: 40%;*//*added on 20-5*/
     font-size: 12px;/*added on 12-5*/
+    margin: 0;/*added on 20/5*/
+    width: 58%;/*added on 20/5*/
+    float: left;/*added on 20/5*/
   }
   .onoffswitch {
-    position: relative; width: 62px;
+    /*position: relative;*/ /*added on 20/5*/
+    position: absolute;/*added on 20/5*/
+    /*width: 62px;*//*added on 20/5*/
+    width: 18%;
     -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
-    margin-top: -22%; float: right; margin-right: 32%;
-        text-align: center;/*added on 13-5*/
+    /*margin-top: -22%; *//*added on 20/5*/
+    margin-top: -2%;
+    /*float: right; *//*added on 20/5*/
+    float: left;
+    /*margin-right: 32%;*//*added on 20/5*/
+    margin-left: 25%;
+    /*text-align: center;*//*added on 20-5*/
   }
   .onoffswitch-checkbox {
       display: none;
@@ -699,12 +734,31 @@
     text-align: right;
   }
   .onoffswitch-switch {
-    display: block; width: 18px; margin: 6px;
+  /*display: block; 
+    width: 18px; 
+    margin: 6px;
     background: #FFFFFF;
-    position: absolute; top: 0; bottom: 7px;left: -3px;
+    position: absolute; 
+    top: 0; 
+    bottom: 7px;
+    left: -3px;
     right: 56px;
-    border: 2px solid #999999; border-radius: 20px;
-    transition: all 0.3s ease-in 0s; 
+    border: 2px solid #999999; 
+    border-radius: 20px;
+    transition: all 0.3s ease-in 0s;*//*added on 20/5*/
+    display: block;
+    width: 18px;
+    height: 18px;
+    margin: 6px;
+    background: #FFFFFF;
+    position: relative;
+    top: 1px;
+    bottom: 7px;
+    left: -3px;
+    right: 56px;
+    border: 2px solid #999999;
+    border-radius: 20px;
+    transition: all 0.3s ease-in 0s;
   }
   .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
     margin-left: 0;
@@ -712,6 +766,22 @@
   .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
     right: 0px; 
   }
+
+  /*added on 20/5-start*/
+
+  .invitation center{
+    width: 100%;
+    margin: 0px auto;
+  }
+ .invitation .share_location{
+    width: 50%;
+    margin: 0px auto;
+    padding-bottom: 10%;
+    padding-top: 8%;
+
+ }
+  /*added on 20/5-end*/
+
 
 }
 
@@ -860,7 +930,7 @@
     width: 22%;
   }
   .reset_message{
-    margin-left: -68%;
+    margin-left: 0%;/*added on 20/5*/
     /*padding-top: 5%;*//*added on 11-5*/
     padding-top: 0%;/*added on 11-5*/
    /* margin-top: 20%;*//*added on 5-5*/
@@ -869,7 +939,7 @@
     font-size: 18px;/*added on 5-5*/
   }
   .heading_message{
-    margin-left: -68%;
+    /*margin-left: -68%;*//*added on 20/5*/
    /* padding-top: 5%;*/
     padding-top: 0%;
     margin-top: 10%;
@@ -887,7 +957,7 @@
     margin-left: 32% !important;
   } 
   p.text-info.invitition {
-    margin-left: -70%;/*added on 5-5*/
+    /*margin-left: -70%;*//*added on 20-5*/
    /* margin-top: 15%;*//*added on 5-5*/
    margin-top: 10%;/*added on 11-5*/
    font-size: 18px;/*added on 5-5*/
@@ -904,11 +974,22 @@
  */ .locatointitle{
     margin-top: 10%;/*added on 12-5*/
     margin-right: 7%;/*added on 13-5*/
+    margin: 0;/*added on 20/5*/
+    width: 58%;/*added on 20/5*/
+    float: left;/*added on 20/5*/
   }
   .onoffswitch {
-    position: relative; width: 90px;
-    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
-    margin-top: -9%; float: right; margin-right: 56%;
+    position: relative; 
+    width: 90px;
+    -webkit-user-select:none; 
+    -moz-user-select:none; 
+    -ms-user-select: none;
+    /*margin-top: -9%; 
+    float: right; 
+    margin-right: 56%;*//*added on 20/5*/
+    margin-top: -5%;
+    float: left;
+    margin-left: 42%;
   }
   .onoffswitch-checkbox {
       display: none;
@@ -951,6 +1032,24 @@
   .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
     right: 0px; 
   }
+  /*added on 20/5-start*/
+  .invitation center{
+    width: 80%;
+    margin: 0px auto;
+  }
+  .invitation .share_location{
+    width: 80%;
+    margin: 0px auto;
+    padding-bottom: 2%;
+    padding-top: 3%;
+  
+ }
+ .form-group {
+    margin: 0px auto;
+    width: 80% !important;
+    margin-left: 39%;
+ }
+  /*added on 20/5-start*/
 
 
 }
@@ -1155,14 +1254,14 @@
     /*margin-left: -72%;
     padding-top: 2%;
     font-size: 22px;*/
-    margin-left: -72% !important;/*added on 5-5*/
+    /*margin-left: -72% !important;*//*added on 20-5*/
     padding-top: 5%;/*added on 5-5*/
     font-size: 22px;/*added on 5-5*/
     width: 103%;/*added on 5-5*/
     text-align: justify;/*added on 5-5*/
   }
   .heading_message{
-    margin-left: -72% !important;/*added on 11-5*/
+    /*margin-left: -72% !important;*//*added on 20-5*/
     /*padding-top: 15%;*//*added on 12-5*/
     font-size: 18px;/*added on 12-5*/
     width: 103%;/*added on 11-5*/
@@ -1170,6 +1269,9 @@
   }
   .form-group{
     margin-top: 2%;/*added on 5-5*/
+    margin: 0px auto;/*added on 20-5*/
+    width: 50% !important;/*added on 20-5*/
+    margin-left: 39%;/*added on 20-5*/
   }
   .text-info{
    /* font-size: 22px;*//*added on 5-5*/
@@ -1177,7 +1279,7 @@
     margin-left: 0;/*added on 13-5*/
   }
   .invitition{
-    margin-left: -70%;/*added on 5-5*/
+    /*margin-left: -70%;*//*added on 20-5*/
    /* margin-top: 18%;*//*added on 5-5*/
     margin-top: 6%;/*added on 11-5*/
   }
@@ -1193,7 +1295,8 @@
     /*margin-top: 22%;*/
     margin-top: 5%;/*added on 7-5*/
     margin-left: 39% !important;
-  }  
+  } 
+
 }
 /*@media only screen and (min-device-width: 375px) and (max-device-width: 436px) {
   div#chatbox_1 {
