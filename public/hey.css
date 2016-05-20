@@ -724,8 +724,10 @@
   }
   .onoffswitch-inner:before {
     content: "OFF";
-    padding-left: 10px;
+    /*padding-left: 10px;*//*added on 20/5*/
     background-color: #DDDDDD; color: #000000;
+    text-align: right;/*added on 20/5*/
+    padding-right: 4px;/*added on 20/5*/
   }
   .onoffswitch-inner:after {
     content: "ON";
@@ -975,7 +977,7 @@
     margin-top: 10%;/*added on 12-5*/
     margin-right: 7%;/*added on 13-5*/
     margin: 0;/*added on 20/5*/
-    width: 58%;/*added on 20/5*/
+    width: 75%;/*added on 20/5*/
     float: left;/*added on 20/5*/
   }
   .onoffswitch {
@@ -989,7 +991,7 @@
     margin-right: 56%;*//*added on 20/5*/
     margin-top: -5%;
     float: left;
-    margin-left: 42%;
+    margin-left: 50%;
   }
   .onoffswitch-checkbox {
       display: none;
@@ -1160,7 +1162,7 @@
   }
   .invitation{
     margin-top: 12%;/* addes on 29/4*/
-    margin-left: 28%;/* addes on 29/4*/
+    /*margin-left: 28%;*//* addes on 20/5*/
   }
   .form-control-invite{
     width: 50%;
@@ -1172,11 +1174,11 @@
     width: 15%;
   }
   p.text-info.invitition {
-    margin-left: -50%;/*added on 6-5*/
+    /*margin-left: -50%;*//*added on 20-5*/
     margin-top: 5%;/*added on 11-5*/
   }
   .reset_message{
-    margin-left: -40%;/*added on 11-5*/
+    margin-left: 0%;/*added on 20-5*/
     margin-top: 3%;/*added on 11-5*/
     font-size: 16px;/*added on 11-5*/
     text-align: justify;/*added on 11-5*/
@@ -1184,19 +1186,31 @@
   }
   .heading_message{
     margin-top: -15%;/*added on 11-5*/
-     margin-left: -41%;/*added on 11-5*/
+    /* margin-left: -41%;*//*added on 20-5*/
     font-size: 18px;/*added on 11-5*/
     text-align: justify;/*added on 11-5*/
   }
   .locatointitle{
     margin-top: 3%;
     /*margin-right: -62%;*/
-    margin-left: -62%;/*added on 11-5*/
+    /*margin-left: -62%;*//*added on 20-5*/
+    margin: 0;
+    width: 90%;
+    float: left;
+
   }
   .onoffswitch {
-    position: relative; width: 90px;
-    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
-    margin-top: -4%; float: right; margin-right: 62%;
+    position: relative; 
+    width: 90px;
+    -webkit-user-select:none; 
+    -moz-user-select:none; 
+    -ms-user-select: none;
+    /*margin-top: -4%; 
+    float: right; 
+    margin-right: 62%;*//*added on 20/5*/
+    margin-top: -3%;
+    float: left;
+    margin-left: 53%;
   }
   .onoffswitch-checkbox {
       display: none;
@@ -1239,6 +1253,24 @@
   .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
     right: 0px; 
   }
+/*added on 20/5-start*/
+  .invitation center{
+    width: 80%;
+    margin: 0px auto;
+  }
+  .invitation .share_location{
+    width: 80%;
+    margin: 0px auto;
+    padding-bottom: 2%;
+    padding-top: 3%;
+  
+ }
+ .form-group {
+    margin: 0px auto;
+    width: 80% !important;
+    margin-left: 28%;
+ }
+  /*added on 20/5-start*/
 
   
 }
