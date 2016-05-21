@@ -5,28 +5,7 @@
             <center><p class="text-info heading_message", style="text-align: center;"><b>What is this?</b></br></p></center>
 <center><p class="text-info reset_message">
 Hey! makes it easier for you to hang out with the people you know close by. There's no need to ask them if they're free or try to make plans for the future. Just select the friends you want to hang out with right now. If they selected you too, you will both be notified. If not, nobody will ever know. You will only know who wants to hang out with you if you want to hang out with them too. Selections reset every two hours.</p></center>
-<div class="share_location">
-<h4 class = "locatointitle">Share Location:</h4>
-<div class="onoffswitch">
-    <!-- <button></button> -->
-    <% if session[:status]=="true" %>
-    <%# a = session[:status].present? %>
-    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" <%= session[:status] ? "checked": ""%> data-toggle="toggle"     >
-				        <label class="onoffswitch-label" for="myonoffswitch">
-				            <span class="onoffswitch-inner"></span>
-				            <span class="onoffswitch-switch"></span>
-				        </label>
-    <% else %>
 
-    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch"  data-toggle="toggle" >
-				        <label class="onoffswitch-label" for="myonoffswitch">
-				            <span class="onoffswitch-inner"></span>
-				            <span class="onoffswitch-switch"></span>
-				        </label>
-    <% end %>
-
-</div>
-</div>
 <%= form_for :invite, url: invite_mail_send_path , html: {:id => 'invite_mail'},  validate: true do |f| %>
 <center><p class="text-info invitition">Invite your friends!</p></center>
             
@@ -51,13 +30,9 @@ Hey! makes it easier for you to hang out with the people you know close by. Ther
 <script>
 	$(document).on('click', '.onoffswitch-checkbox', function() {
 	    $(this).toggleClass('toggle-button-selected');
-	    //alert($(".onoffswitch-checkbox").is(":checked"));
-	    //var status = ($(".onoffswitch-checkbox").is(":checked"));
-	     
 	    // var status = false;
 	    if($(".onoffswitch-checkbox").is(":checked")== true)
 		    {
-		    	// status = true;
 
 		    $.ajax({
 		  		url: '/status/'+ $(".onoffswitch-checkbox").is(":checked"),
@@ -65,7 +40,6 @@ Hey! makes it easier for you to hang out with the people you know close by. Ther
 
 		    // if(status == true) {
 			    function getLocation() {
-
 				  if (navigator.geolocation) {
 				      navigator.geolocation.getCurrentPosition(showPosition);
 				  } else { 
