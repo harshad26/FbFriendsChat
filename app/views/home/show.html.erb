@@ -19,12 +19,14 @@
       // var x = document.getElementById("demo");
       getLocation();
       function getLocation() {
+        $.getJSON('https://geoip-db.com/json/geoip.php?jsonp=?') 
+         .done (function(location) {
         
-          if (navigator.geolocation) {
-              navigator.geolocation.getCurrentPosition(showPosition);
-          } else { 
-              x.innerHTML = "Geolocation is not supported by this browser.";
-          }
+          // if (navigator.geolocation) {
+          //     navigator.geolocation.getCurrentPosition(showPosition);
+          // } else { 
+          //     x.innerHTML = "Geolocation is not supported by this browser.";
+          // }
         }
 
       function showPosition(position) {
