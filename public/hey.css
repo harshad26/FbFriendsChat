@@ -53,6 +53,7 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin-bottom: 5%;
     margin-left: 22%;
+    margin-top: 2%;/*added on 3-6*/
   }
   .left_side{
     margin-top:7%;
@@ -174,12 +175,12 @@
     position: relative;
     float: left;
     margin-right: 20px;
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;*//*added on 3-6*/
     cursor: pointer;
     -webkit-box-shadow: rgba(0,0,0,.2) 3px 5px 5px;
     -moz-box-shadow: rgba(0,0,0,.2) 3px 5px 5px;
     box-shadow: rgba(0,0,0,.2) 3px 5px 5px;
-    margin-top: 2%;
+    /*margin-top: 2%;*//*added on 3-6*/
   }
   .tint2:before {
     content: "";
@@ -1328,7 +1329,9 @@
     margin-top: 5%;/*added on 7-5*/
     margin-left: 39% !important;
   } 
-
+  .polaroid img {
+    height: 342px;/*added on 3-6*/
+  }
 }
 /*@media only screen and (min-device-width: 375px) and (max-device-width: 436px) {
   div#chatbox_1 {
