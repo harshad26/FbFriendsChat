@@ -785,7 +785,9 @@
  }
   /*added on 20/5-end*/
 
-
+.polaroid img {
+    height: 84px;/*added on 3-6*/
+  }
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
