@@ -1281,9 +1281,11 @@
  }
   /*added on 20/5-start*/
  .polaroid img {
-    height: 342px;/*added on 3-6*/
+    height: 250px;/*added on 3-6*/
   }
-  
+  .polaroid {
+   margin-top:6%;/*added on 3-6*/
+  }
 }
 @media only screen and (min-device-width: 1601px){
   .chatboxcontent{
@@ -1339,11 +1341,8 @@
     margin-top: 5%;/*added on 7-5*/
     margin-left: 39% !important;
   } 
-  .polaroid {
-    margin-top: 6%;/*added on 3-6*/
-}
   .polaroid img {
-    height: 250px;/*added on 3-6*/
+    height: 342px;/*added on 3-6*/
   }
 }
 /*@media only screen and (min-device-width: 375px) and (max-device-width: 436px) {
