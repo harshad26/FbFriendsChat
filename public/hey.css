@@ -1054,7 +1054,9 @@
  }
   /*added on 20/5-start*/
 
-
+ .polaroid img {
+    height: 214px;/*added on 3-6*/
+  }
 }
 @media only screen and (min-device-width: 1025px) and (max-device-width: 1600px) {
   .polaroid{
@@ -1106,6 +1108,9 @@
     width: 6% !important;/*added on 7-5*/
     margin-left: 46%;/*added on 7-5*/
     margin-top: 16% !important;/*added on 7-5*/
+  }
+   .polaroid img {
+    height: 342px;/*added on 3-6*/
   }
 
 }
@@ -1272,7 +1277,9 @@
     margin-left: 28%;
  }
   /*added on 20/5-start*/
-
+ .polaroid img {
+    height: 342px;/*added on 3-6*/
+  }
   
 }
 @media only screen and (min-device-width: 1601px){
