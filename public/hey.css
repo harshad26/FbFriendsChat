@@ -1,5 +1,9 @@
 @charset "utf-8";
 /* CSS Document */
+  .friendfb{
+    display: flex;
+    flex-wrap: wrap;
+  }
   body{
     width:100% !important;  
     overflow-x:hidden;

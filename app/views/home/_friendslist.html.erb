@@ -1,6 +1,6 @@
 <div class="middle">
 	<div class="row">
-		<div class="col-lg-12 col-md-12 col-sm-12">
+		<div class="col-lg-12 col-md-12 col-sm-12 friendfb">
 			  	<% if @friendsHash.count > 0 %>
 			  		<% @sortFriends.each do |item| %>			  		
 				  			<% @classphoto =  (@alreadyinvitedusers.include? item[0]) ? "fb-invited" : "fb-photo" %>
